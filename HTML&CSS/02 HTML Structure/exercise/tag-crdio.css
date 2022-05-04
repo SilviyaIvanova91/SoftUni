@@ -1,0 +1,18 @@
+body {
+  background: pink;
+  margin-left: 20px;
+  margin-right: 900px;
+  padding: 10px 10px;
+  border: 4px dashed purple;
+  border-radius: 120;
+  text-indent: 5px;
+  line-height: 25px;
+}
+legend {
+  font-size: 25px;
+  font-weight: bolder;
+  color: blueviolet;
+  margin-top: 10px;
+  margin-left: 20px;
+  text-decoration: none;
+}
