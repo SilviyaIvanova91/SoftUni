@@ -1,0 +1,43 @@
+body {
+  overflow-x: hidden;
+}
+.header {
+  background-color: #bee3f8;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header .logo {
+  width: 40px;
+}
+.navigation {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #2b6cb0;
+  transition: color 300ms ease-in-out;
+}
+
+.navigation ul li a:hover {
+  color: #3c366b;
+}
