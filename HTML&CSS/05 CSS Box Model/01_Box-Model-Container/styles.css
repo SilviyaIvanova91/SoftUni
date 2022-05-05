@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-color: lightslategray;
 }
@@ -14,3 +15,21 @@ p {
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
 }
+=======
+body {
+  background-color: lightslategray;
+}
+
+p {
+  width: 300px;
+  padding: 20px;
+  margin: auto;
+  background-color: #0f4069;
+  color: whitesmoke;
+  border: 2px solid #e6eaef;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+>>>>>>> 8119c6672b9860e39372c20ddf466b3147a00251

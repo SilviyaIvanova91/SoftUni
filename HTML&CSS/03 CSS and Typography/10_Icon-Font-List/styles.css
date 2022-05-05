@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(https://use.fontawesome.com/releases/v5.10.2/css/all.css);
 
 body {
@@ -24,4 +25,32 @@ ul {
 .contact i {
     color: #3498da;
     font-size: 25px;
+=======
+@import url(https://use.fontawesome.com/releases/v5.10.2/css/all.css);
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.check i {
+    color: #2fcc71;
+    font-size: 25px;
+    list-style: none;
+}
+
+.star i {
+    color: coral;
+    font-size: 25px;
+}
+
+.contact i {
+    color: #3498da;
+    font-size: 25px;
+>>>>>>> 8119c6672b9860e39372c20ddf466b3147a00251
 }

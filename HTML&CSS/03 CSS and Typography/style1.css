@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 #welcomeSection {
@@ -53,4 +54,61 @@
 
 #articlesSection p {
     color: red;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#welcomeSection {
+    background-color: #256D1B;
+    padding: 20px 50px;
+}
+
+#welcomeSection h1{
+    text-align: center;
+    color: white;
+    font-family: "Roboto";
+}
+
+#welcomeSection p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: white;
+    font-family: "Roboto";
+}
+
+#articlesSection {
+    background-color: #149911;
+    padding: 10px 20px;
+}
+
+#articlesSection .title {
+    text-align: center;
+    color: white;
+}
+
+#articlesSection #articleList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#articlesSection #articleList .articleItem {
+    background-color: #256D1B;
+    padding: 8px 4px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+#articleList .articleItem .articleHeader {
+    text-align: center;
+    color: #1efc1e;
+}
+
+#articleList .articleItem .articleInfo {
+    font-size: 12px;
+    color: white;
+}
+
+#articlesSection p {
+    color: red;
+>>>>>>> 8119c6672b9860e39372c20ddf466b3147a00251
 }

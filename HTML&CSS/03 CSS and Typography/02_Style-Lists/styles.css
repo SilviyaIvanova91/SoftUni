@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Helvetica, sans-serif;
     line-height: 1.5;
@@ -18,4 +19,26 @@ section h2 {
 
 section li {
     margin-left: 20px;
+=======
+body {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+    background-color: #EDEDED;
+}
+
+section h2 {
+    text-decoration: underline;
+    padding: 20px;
+    margin: 10px 5px;
+    background-color: #3B516B;
+    letter-spacing: 3px;
+    background-color: #3B516B;
+    border-radius: 10px;
+    color: floralwhite;
+}
+
+section li {
+    margin-left: 20px;
+>>>>>>> 8119c6672b9860e39372c20ddf466b3147a00251
 }

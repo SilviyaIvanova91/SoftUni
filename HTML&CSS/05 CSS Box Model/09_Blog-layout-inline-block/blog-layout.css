@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
   font-family: Helvetica, sans-serif;
 }
@@ -45,3 +46,52 @@ aside h1 {
 header {
   margin-bottom: 40px;
 }
+=======
+html {
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(238, 238, 238);
+  color: rgb(51, 51, 51);
+  margin: 20px 30px;
+  width: 100%;
+}
+
+article {
+  max-width: 600px;
+  width: 100%;
+}
+header {
+  display: inline-block;
+}
+header h1,
+p {
+  display: inline-block;
+}
+
+img {
+  width: 80%;
+}
+
+article,
+aside {
+  display: inline-block;
+}
+
+article {
+  width: 65%;
+}
+aside {
+  width: 25%;
+  vertical-align: top;
+}
+
+aside h1 {
+  text-indent: 20px;
+}
+
+header {
+  margin-bottom: 40px;
+}
+>>>>>>> 8119c6672b9860e39372c20ddf466b3147a00251
