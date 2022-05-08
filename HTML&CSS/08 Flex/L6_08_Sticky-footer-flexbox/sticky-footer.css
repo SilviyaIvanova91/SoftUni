@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(238, 238, 238);
+  height: 100vh;
+  font-family: Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+header {
+  text-transform: uppercase;
+  padding: 0 20px;
+  border-bottom: 2px solid black;
+  flex-grow: 1;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  color: rgb(255, 255, 255);
+  background-color: rgb(102, 102, 102);
+  flex-grow: 1;
+  padding-left: 20px;
+}
