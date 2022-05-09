@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
@@ -24,3 +25,31 @@ section {
 article {
   margin: 40px;
 }
+=======
+html {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  max-width: 70vw;
+  margin: 50px 200px;
+}
+
+article {
+  margin: 40px;
+}
+>>>>>>> fdc718b3439fcb8e0a7a3848e9819b9ad47197f9

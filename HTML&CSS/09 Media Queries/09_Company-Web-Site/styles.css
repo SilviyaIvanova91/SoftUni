@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 60px;
+  margin: 0px;
+  background-color: #1abc9c;
+  color: white;
+}
+
+nav {
+  background-color: #333;
+  padding: 14px 26px;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-align: left;
+  text-decoration: none;
+}
+
+aside {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+main {
+  background-color: white;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ddd;
+}
+body {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "aside main"
+    "footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+aside {
+  grid-area: aside;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    display: block;
+  }
+
+  nav a {
+    color: red;
+  }
+}
+
+@media screen and (width: 700px) {
+  nav {
+    display: block;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* TODO Responsive layout - when the screen is less than 700px wide, 
+make the two columns stack on top of each other instead of next to each other */
+
+/* TODO Responsive layout - If the screen is smaller than 700px, 
+display the navigation bar links as block and center the text */

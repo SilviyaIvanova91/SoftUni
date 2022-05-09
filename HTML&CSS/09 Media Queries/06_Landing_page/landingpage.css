@@ -1,0 +1,279 @@
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css ");
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&family=Open+Sans&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Neonderthaw&family=Open+Sans&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  margin: 10px 30px;
+}
+
+header h1 {
+  color: #8b339c;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+header p {
+  font-size: 9px;
+  text-transform: uppercase;
+  font-family: Arial Narrow;
+  padding: 2px;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+  font-family: Helvetica, sans-serif;
+}
+
+header ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+header li {
+  padding-left: 14px;
+  list-style: none;
+}
+
+.website {
+  padding-top: 80px;
+  font-family: Merriweather, serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: 60px;
+}
+
+.website h2 {
+  font-size: 24px;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+.website p {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  padding-bottom: 18px;
+}
+
+.website button {
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 7px;
+  height: 30px;
+}
+
+.fa-solid.fa-earth-americas {
+  position: relative;
+  left: 190px;
+  bottom: 120px;
+}
+
+.team {
+  width: 90%;
+  margin-left: 60px;
+}
+
+.team h2 {
+  text-align: center;
+  font-size: 22px;
+}
+
+.team h2::after {
+  content: "";
+  background: black;
+  display: inline-block;
+  height: 2px;
+  width: 60px;
+  position: relative;
+  top: 25px;
+  right: 85px;
+}
+
+.team img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team article {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 25px;
+}
+
+.team section {
+  width: 30%;
+  text-align: center;
+}
+
+.team .work {
+  position: relative;
+  top: 2px;
+}
+
+.team .charakters {
+  font-style: italic;
+  padding-top: 4px;
+}
+
+.signup {
+  background-color: #68347b;
+  color: white;
+  margin: 30px 0px 30px 0px;
+  padding: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup h2::before {
+  content: "";
+  background: black;
+  display: inline-block;
+  height: 2px;
+  width: 80px;
+  position: relative;
+  top: 20px;
+  left: 160px;
+}
+
+.signup h2 {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.signup div {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.signup div input {
+  width: 300px;
+}
+
+.testimonials {
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 60px;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 22px;
+}
+
+.testimonials h2::before {
+  content: "";
+  background: black;
+  display: inline-block;
+  height: 2px;
+  width: 80px;
+  position: relative;
+  top: 20px;
+  left: 100px;
+}
+
+.testimonials img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonials article {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.testimonials section {
+  width: 30%;
+  text-align: center;
+}
+
+.testimonials .charakterstwo {
+  font-style: italic;
+  padding: 4px 0px;
+}
+
+.testimonials h3 {
+  margin-bottom: 0px;
+}
+.testimonials .worktwo {
+  margin-top: 6px;
+}
+
+footer {
+  margin: 20px 0px 0px 0px;
+  padding: 80px 20px;
+  font-family: Georgia, serif;
+  display: flex;
+  font-size: 12px;
+  border-top: 1px solid lightgray;
+  box-shadow: inset 0px 0px 16px 0px lightgrey;
+}
+
+footer h2 {
+  font-size: 24px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 26px;
+}
+
+footer h3 {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+footer .purple {
+  flex-basis: 25%;
+  margin: 20px 20px;
+  line-height: 14px;
+}
+
+footer .sitemap {
+  flex-basis: 45%;
+  padding: 10px 50px;
+}
+
+footer .sitemap nav {
+  display: flex;
+}
+
+footer .sitemap ul {
+  padding: 0 30px 0 0;
+}
+
+footer .sitemap li {
+  list-style: none;
+  padding: 0;
+  line-height: 16px;
+}

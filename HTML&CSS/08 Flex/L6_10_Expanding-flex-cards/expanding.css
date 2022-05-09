@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-color: rgb(238, 238, 238);
   display: flex;
@@ -30,3 +31,37 @@ img {
 .container article:nth-child(2) {
   flex-shrink: 1;
 }
+=======
+body {
+  background-color: rgb(238, 238, 238);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 200px;
+}
+
+.container {
+  display: flex;
+  min-height: 350px;
+  max-width: 65vw;
+}
+
+.container article {
+  flex-shrink: 4;
+  margin: 8px;
+}
+
+img {
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px 3px lightgrey;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container article:nth-child(2) {
+  flex-shrink: 1;
+}
+>>>>>>> fdc718b3439fcb8e0a7a3848e9819b9ad47197f9
