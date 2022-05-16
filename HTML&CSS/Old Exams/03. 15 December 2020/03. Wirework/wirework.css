@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Open+Sans&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css ");
+
+html {
+  font-family: Helvetica, sans-serif;
+  margin: 0px 0px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .name {
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+}
+header .name h1 {
+  padding-right: 20px;
+  border-right: 2px solid lightgray;
+}
+header .name p {
+  padding-left: 20px;
+  font-size: 10px;
+}
+
+header .nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+header .nav ul li a:hover {
+  color: white;
+  background-color: #e24e2a;
+  cursor: pointer;
+  transition: bottom 30ms ease-in-out;
+}
+
+header .nav ul li a {
+  text-decoration: none;
+  font-size: 10px;
+  padding: 4px 10px;
+  color: #362f29;
+  background-color: #ececec;
+  padding: 12px;
+  margin-right: 2px;
+}
+
+.img img {
+  height: 600px;
+  width: 100%;
+}
+
+.firstParagraph {
+  background-color: #e24e2a;
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  top: -170px;
+}
+
+.firstParagraph p {
+  padding: 80px 50px;
+  line-height: 2rem;
+}
+
+.firstParagraph p .one {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.firstParagraph p .two {
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.second {
+  display: flex;
+  align-items: flex-start;
+  background-color: #383838;
+  padding: 100px 40px;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  position: relative;
+  top: -190px;
+}
+
+.second article {
+  padding: 25px;
+}
+
+.second h2 {
+  font-size: 14px;
+}
+
+.second p {
+  color: #545452;
+  font-size: 12px;
+  border-top: 1px solid #545452;
+  padding-top: 15px;
+}
+
+.second i {
+  font-size: 48px;
+  padding: 20px;
+  background-color: #e24e2a;
+  align-items: center;
+  color: white;
+}
+
+.third {
+  text-align: center;
+  position: relative;
+  background-color: white;
+  text-align: center;
+  padding: 0px 20px;
+  position: relative;
+  top: -120px;
+  color: grey;
+}
+
+.third h2 {
+  font-size: 40px;
+  font-weight: 100;
+  margin-bottom: 0px;
+}
+
+.third button {
+  background-color: #1b9772;
+  padding: 15px 25px;
+  border: none;
+  margin-top: 20px;
+}
+
+.third a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.four {
+  background-color: #383838;
+  color: grey;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 60px 15px;
+  line-height: 1.5rem;
+  font-size: 14px;
+}
+
+.four h2 {
+  color: white;
+  font-weight: 100;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+  background-color: #1b9772;
+  color: lightgray;
+  font-size: 10px;
+  padding: 80px;
+}
+
+footer span {
+  color: white;
+}
