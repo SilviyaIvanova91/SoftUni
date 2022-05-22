@@ -1,0 +1,57 @@
+/* TODO: Add responsive styles here... */
+@media screen and (max-width: 600px) {
+  .navbar-expand-lg .navbar-nav li {
+    display: none;
+  }
+  .navbar {
+    justify-content: center;
+  }
+
+  .hero img {
+    display: none;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .hero h1 {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .hero-btns a:first-child {
+    width: 60%;
+  }
+
+  .service-box {
+    text-align: left;
+  }
+
+  .col-12 {
+    margin-top: 40px;
+  }
+
+  .col-12 h5 {
+    margin-bottom: 20px;
+  }
+  .hero-btns a:last-child {
+    display: none;
+  }
+
+  footer {
+    padding: 60px 30px;
+  }
+
+  .contact-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css ");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 200;
+}
+
+h2 span {
+  font-weight: bold;
+}
+
+article,
+footer {
+  background-color: #efefef;
+}
+
+.header {
+  margin: 30px;
+}
+
+.header .menu {
+  color: #4d4e4e;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 30px 0px 30px;
+  align-items: center;
+}
+
+.header .menu p {
+  font-weight: bold;
+}
+
+.header .menu .fa-solid {
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+.header .info {
+  display: flex;
+  padding: 10px 30px 0px 60px;
+}
+
+.header .info img {
+  width: 500px;
+}
+
+.header .info .textheader {
+  padding: 60px 120px;
+  position: relative;
+}
+
+.header .info .textheader p {
+  margin-top: 30px;
+  font-style: italic;
+  line-height: 1.6rem;
+}
+
+.header .info .textheader::after {
+  content: "";
+  position: absolute;
+  top: 240px;
+  left: 120px;
+  width: 1px;
+  height: 81px;
+  background-color: #4d4e4e;
+}
+
+.header .imgheader {
+  position: relative;
+  bottom: -5px;
+}
+
+.namesecond {
+  margin: 0px 30px 30px;
+  display: flex;
+  padding: 100px 150px;
+}
+
+.namesecond img {
+  width: 500px;
+  padding-right: 30px;
+}
+
+.namesecond .infosecond {
+  padding: 10px 30px;
+}
+
+.namesecond .infosecond h2 {
+  position: relative;
+  left: 110px;
+}
+
+.namesecond .infosecond h2::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -110px;
+  width: 70px;
+  height: 1px;
+  background-color: #4d4e4e;
+}
+
+.namesecond .infosecond p {
+  padding-top: 30px;
+  font-style: italic;
+}
+
+.namesecond .infosecond li {
+  list-style: none;
+  margin-right: 20px;
+  color: white;
+  background-color: #909090;
+  padding: 8px 11px;
+  width: 35px;
+  height: 35px;
+}
+
+.namesecond .infosecond .lisec {
+  display: flex;
+  margin-top: 50px;
+}
+
+.thirdimg {
+  margin: 0px 30px 30px;
+}
+
+.thirdimg img {
+  width: 100%;
+}
+
+.fourth {
+  margin: 0px 30px 30px;
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.fourth img {
+  width: 700px;
+  padding: 60px;
+}
+
+.fourth .fourthinfo {
+  padding: 100px 80px 0px 150px;
+}
+
+.fourth .fourthinfo p {
+  font-style: italic;
+  margin-top: 20px;
+  line-height: 1.6rem;
+  position: relative;
+}
+
+.fourth .fourthinfo p::after {
+  content: "";
+  position: absolute;
+  top: 150px;
+  left: 5px;
+  width: 1px;
+  height: 75px;
+  background-color: #4d4e4e;
+}
+
+.five {
+  margin: 0px 30px 30px;
+  position: relative;
+}
+
+.five .fivetwoimg img {
+  width: 400px;
+  padding: 160px 0px;
+}
+
+.five .fivetwoimg {
+  display: flex;
+  justify-content: space-around;
+}
+
+.five .fiveimg img {
+  width: 600px;
+}
+
+.five .fiveimg {
+  position: absolute;
+  top: 90px;
+  left: 340px;
+}
+
+footer {
+  margin: 0px 30px 30px;
+}
+
+.footerinfo {
+  text-align: center;
+  padding: 80px 200px 40px;
+}
+
+.footerinfo p {
+  padding-top: 30px;
+  font-style: italic;
+}
+
+footer .type {
+  display: flex;
+  justify-content: center;
+}
+
+footer .type input {
+  padding: 8px 10px;
+  margin: 20px;
+  color: black;
+  width: 250px;
+}
+
+footer .textarea {
+  text-align: center;
+}
+
+footer .textarea textarea {
+  padding: 8px 23px 0px 10px;
+}
+
+footer .btn {
+  text-align: center;
+  padding: 30px 0px 120px;
+}
+
+footer .btn a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  background-color: #111111;
+  font-weight: bold;
+  padding: 10px 220px;
+}
+
+footer .last {
+  text-align: center;
+  padding: 20px;
+}
