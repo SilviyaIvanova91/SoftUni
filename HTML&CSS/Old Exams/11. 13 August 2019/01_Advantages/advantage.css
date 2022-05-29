@@ -1,0 +1,66 @@
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css ");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=PT+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+}
+
+table {
+  margin: 100px 220px;
+  width: 800px;
+  position: relative;
+  border-spacing: 0px 2px;
+}
+
+tbody {
+  background-color: #f4f5f7;
+  color: #3e4c5d;
+}
+
+table i {
+  background-color: #23be5e;
+  color: #f4f5f7;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.chek {
+  text-align: center;
+  padding: 0 10px;
+}
+
+table td {
+  padding: 10px;
+}
+
+h3 {
+  background-color: #42abf8;
+  color: white;
+  padding: 10px 20px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  display: inline;
+  font-weight: 400;
+  font-size: 16px;
+  position: absolute;
+  right: 339px;
+  top: 46px;
+}
+
+.bordertop {
+  border-top-left-radius: 10px;
+}
+
+.borderbottoml {
+  border-bottom-left-radius: 10px;
+}
+
+.borderbottomr {
+  border-bottom-right-radius: 10px;
+  text-align: center;
+}
