@@ -1,0 +1,10 @@
+function rounding(numF, numP) {
+  if (numP > 15) {
+    numP = 15;
+  }
+  numF = numF.toFixed(numP);
+  console.log(parseFloat(numF));
+}
+
+rounding(3.1415926535897932384626433832795, 2);
+rounding(10.5, 3);
