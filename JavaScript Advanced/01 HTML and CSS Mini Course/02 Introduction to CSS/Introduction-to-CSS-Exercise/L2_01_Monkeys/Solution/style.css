@@ -1,0 +1,40 @@
+body {
+  background-color: #faebc8;
+  font-family: "Open Sans", sans-serif;
+}
+
+section {
+  border-radius: 12px;
+  background: white;
+  padding: 80px 140px;
+  margin: 100px 200px;
+  box-shadow: 2px 0px 11px 5px;
+}
+
+section article {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  padding: 0px 30px;
+  margin-top: 0px;
+}
+
+section article p {
+  text-align: left;
+}
+
+img {
+  width: 100px;
+}
+
+.diff {
+  padding-bottom: 20px;
+}
+
+.name {
+  text-shadow: 16px 16px 2px rgba(150, 150, 150, 1);
+  font-style: italic;
+  color: #af6e5a;
+  font-weight: 700;
+  text-align: left;
+}
