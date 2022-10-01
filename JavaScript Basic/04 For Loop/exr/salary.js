@@ -32,11 +32,12 @@ function salary(input) {
   if (isHaveSalary) console.log(money);
 }
 
-// if (money <= 0) {
-//   console.log(`You have lost your salary.`);
-// } else {
-//   console.log(money);
-// }
+//-------------other case for console.log()-------------------
+ if (money <= 0) {
+   console.log(`You have lost your salary.`);
+ } else {
+   console.log(money);
+ }
 
 salary([
   "10",
