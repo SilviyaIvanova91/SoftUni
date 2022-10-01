@@ -34,14 +34,17 @@ function skiTrip(input) {
   } else {
     finalprice = price - price * 0.1;
   }
-  //   switch (subscribe) {
-  //     case "positive":
-  //       finalprice = price + price * 0.25;
-  //       break;
-  //     case "negative":
-  //       finalprice = price - price * 0.1;
-  //       break;
-  //   }
+  
+  //--------other case-------------------
+     switch (subscribe) {
+       case "positive":
+         finalprice = price + price * 0.25;
+         break;
+       case "negative":
+         finalprice = price - price * 0.1;
+         break;
+     }
+  //----------------------------------------
   {
     console.log(finalprice.toFixed(2));
   }
