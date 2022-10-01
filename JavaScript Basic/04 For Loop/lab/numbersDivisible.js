@@ -12,11 +12,13 @@ function numbersDivisible(input) {
   console.log(`The sum: ` + sum);
   console.log(res);
 
-  //   for (let i = startNumber; i <= endNumber; i++) {
-  //     if (i % 9 === 0) {
-  //       console.log(i);
-  //     }
-  //   }
+  //--------------other case---------------------
+     for (let i = startNumber; i <= endNumber; i++) {
+       if (i % 9 === 0) {
+         console.log(i);
+       }
+     }
+  //---------------------------------------------
 }
 
 numbersDivisible(["100", "200"]);
