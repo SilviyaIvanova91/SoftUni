@@ -29,10 +29,11 @@ function cleverLily(input) {
 cleverLily(["10", "170.00", "6"]);
 cleverLily(["21", "1570.98", "3"]);
 
-// let index = 0
-// let age = Number(input[index])
-// index++
-// let priceMashine = Number (input[index])
-// index++
-// let priceToy = Number(input[input])
-// index++
+//-------------------------------------------------
+ let index = 0
+ let age = Number(input[index])
+ index++
+ let priceMashine = Number (input[index])
+ index++
+ let priceToy = Number(input[input])
+ index++
