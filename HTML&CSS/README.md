@@ -1,4 +1,6 @@
-<h1> HTML and CSS </h1>
+<h1 text-decoration: none> HTML and CSS </h1>
+----------------------------------------------------------------------------------------
+
 
 <h2 text-decoration: underlined font-weight: bold;>In this course I learned:</h2>
 
