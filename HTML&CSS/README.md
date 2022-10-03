@@ -1,8 +1,5 @@
-My first course in SofUni - HTML and CSS.
-
-In the folders from the Exams, the exercises, which need to be made for the site to be Responsive, files that made by me, are those which create responsive design with CSS.
-
------------------------------------------------------------------------------------
+<h1> HTML and CSS </h1>
+-------------------------------------------------------------------------------
 <h2 text-decoration: underlined font-weight: bold;>In this course I learned:</h2>
 
 <h4 font-weight: bold;>1. Introduction to HTML & CSS</h4>
@@ -54,3 +51,10 @@ In the folders from the Exams, the exercises, which need to be made for the site
   <li>Logical Operators;</li>
   <li>@import.</li>
 </ul>
+
+----------------------------------------------------------------------------------------
+
+--> In the folders from the Exams, the exercises, which need to be made for the site to be Responsive, files that made by me, are those which create responsive design with CSS.
+
+
+
