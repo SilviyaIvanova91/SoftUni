@@ -4,16 +4,17 @@ My first course in SofUni - HTML and CSS.
 In the folders from the Exams, the exercises, which need to be made for the site to be Responsive, files that made by me, are those which create responsive design with CSS.
 
 -----------------------------------------------------------------------------------
-<h2>In this course I learned:</h2>
-1. Introduction to HTML & CSS
-  • Introduction to HTML (tags, metadata, indentation and code formatting);
-  • CSS basics (syntax, inheritance and specificity, selectors and properies).
-2. HTML Structure
-  • Semantic Markup;
-  • HTML Tags;
-  • Forms;
-  • Tables;
-  • Microdata.
+<h2 text-decoration: underlined>In this course I learned:</h2>
+
+1. Introduction to HTML & CSS/n
+  • Introduction to HTML (tags, metadata, indentation and code formatting);/n
+  • CSS basics (syntax, inheritance and specificity, selectors and properies)./n
+2. HTML Structure/n
+  • Semantic Markup;/n
+  • HTML Tags;/n
+  • Forms;/n
+  • Tables;/n
+  • Microdata./n
 3. CSS & Typography
   • Typography;
   • Priciples of Readability;
