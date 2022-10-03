@@ -24,25 +24,25 @@ numberPyramid(["7"]);
 numberPyramid(["12"]);
 numberPyramid(["15"]);
 
-// function numberPyramid(input) {
-//   let n = Number(input[0]);
-//   let current = 1;
-//   let isBigger = false;
-//   let currentLine = "";
+ function numberPyramid(input) {
+   let n = Number(input[0]);
+   let current = 1;
+   let isBigger = false;
+   let currentLine = "";
 
-//   for (let row = 1; row <= n; row++) {
-//     for (let col = 1; col <= row; col++) {
-//       if (current > n) {
-//         isBigger = true;
-//         break;
-//       }
-//       currentLine += current + " ";
-//       current++;
-//     }
-//     console.log(currentLine);
-//     currentLine = "";
-//     if (isBigger) {
-//       break;
-//     }
-//   }
-// }
+   for (let row = 1; row <= n; row++) {
+     for (let col = 1; col <= row; col++) {
+       if (current > n) {
+         isBigger = true;
+         break;
+       }
+       currentLine += current + " ";
+       current++;
+     }
+     console.log(currentLine);
+     currentLine = "";
+     if (isBigger) {
+       break;
+     }
+   }
+ }
