@@ -1,5 +1,5 @@
 <h1> HTML and CSS </h1>
--------------------------------------------------------------------------------
+
 <h2 text-decoration: underlined font-weight: bold;>In this course I learned:</h2>
 
 <h4 font-weight: bold;>1. Introduction to HTML & CSS</h4>
