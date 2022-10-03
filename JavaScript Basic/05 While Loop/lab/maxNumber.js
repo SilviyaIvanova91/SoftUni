@@ -20,21 +20,21 @@ maxNumber(["45", "-20", "7", "99", "Stop"]);
 maxNumber(["999", "Stop"]);
 maxNumber(["-1", "-2", "Stop"]);
 
-// function maxNumber(input) {
-//     let index = 0;
-//     let command = input[index++];
-//     let maxNumber;
-//     if(command !== "Stop") {
-//         maxNumber = Number (command)
-//     }
+ function maxNumber(input) {
+     let index = 0;
+     let command = input[index++];
+     let maxNumber;
+     if(command !== "Stop") {
+         maxNumber = Number (command)
+     }
 
-//     while (command !== "Stop") {
-//       let n = Number(command);
+     while (command !== "Stop") {
+       let n = Number(command);
 
-//       if (maxNumber < n) {
-//         maxNumber = n;
-//       }
-//       command = input[index++];
-//     }
-//     console.log(maxNumber);
-//   }
+       if (maxNumber < n) {
+         maxNumber = n;
+       }
+       command = input[index++];
+     }
+     console.log(maxNumber);
+   }
