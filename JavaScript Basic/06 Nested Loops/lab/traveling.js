@@ -58,21 +58,21 @@ traveling([
   "End",
 ]);
 
-// function traveling(input) {
-//   let index = 0;
-//   let command = input[index++];
-//   let budget = 0;
-//   let sum = 0;
+ function traveling(input) {
+   let index = 0;
+   let command = input[index++];
+   let budget = 0;
+   let sum = 0;
 
-//   while (command !== "End") {
-//     let destination = command;
-//     budget = Number(input[index++]);
-//     let saveMoney = 0;
-//     while (saveMoney < budget) {
-//       let tempMoney = Number(input[index++]);
-//       saveMoney += tempMoney;
-//     }
-//     console.log(`Going to ${destination}!`);
-//     command = input[index++];
-//   }
-// }
+   while (command !== "End") {
+     let destination = command;
+     budget = Number(input[index++]);
+     let saveMoney = 0;
+     while (saveMoney < budget) {
+       let tempMoney = Number(input[index++]);
+       saveMoney += tempMoney;
+     }
+     console.log(`Going to ${destination}!`);
+     command = input[index++];
+   }
+ }
