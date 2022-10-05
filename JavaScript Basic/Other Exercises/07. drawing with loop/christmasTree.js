@@ -25,15 +25,15 @@ christmasTree(["2"]);
 christmasTree(["3"]);
 christmasTree(["4"]);
 
-// function christmasTree(input) {
-//   let n = Number(input[0]);
-//   for (let row = 0; row <= n; row++) {
-//     console.log(
-//       " ".repeat(n - row) +
-//         "*".repeat(row) +
-//         " | " +
-//         "*".repeat(row) +
-//         " ".repeat(n - row)
-//     );
-//   }
-// }
+ function christmasTree(input) {
+   let n = Number(input[0]);
+   for (let row = 0; row <= n; row++) {
+     console.log(
+       " ".repeat(n - row) +
+         "*".repeat(row) +
+         " | " +
+         "*".repeat(row) +
+         " ".repeat(n - row)
+     );
+   }
+ }
