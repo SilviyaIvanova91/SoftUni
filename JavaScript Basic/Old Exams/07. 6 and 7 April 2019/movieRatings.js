@@ -52,41 +52,41 @@ movieRatings([
   "8.2",
 ]);
 
-// function movieRatings(input) {
-//   let movieCount = Number(input[0]);
+ function movieRatings(input) {
+   let movieCount = Number(input[0]);
 
-//   let maxRate = Number.MIN_SAFE_INTEGER;
-//   let maxRateTitle = "";
+   let maxRate = Number.MIN_SAFE_INTEGER;
+   let maxRateTitle = "";
 
-//   let minRate = Number.MAX_SAFE_INTEGER;
-//   let minRateTite = "";
+   let minRate = Number.MAX_SAFE_INTEGER;
+   let minRateTite = "";
 
-//   let avgRate = 0;
+   let avgRate = 0;
 
-//   let i = 1;
+   let i = 1;
 
-//   while (true) {
-//     if (i >= movieCount * 2) {
-//       break;
-//     }
+   while (true) {
+     if (i >= movieCount * 2) {
+       break;
+     }
 
-//     let title = input[i++];
-//     let rate = Number(input[i++]);
+     let title = input[i++];
+     let rate = Number(input[i++]);
 
-//     if (rate > maxRate) {
-//       maxRate = rate;
-//       maxRateTitle = title;
-//     }
+     if (rate > maxRate) {
+       maxRate = rate;
+       maxRateTitle = title;
+     }
 
-//     if (rate < minRate) {
-//       minRate = rate;
-//       minRateTite = title;
-//     }
+     if (rate < minRate) {
+       minRate = rate;
+       minRateTite = title;
+     }
 
-//     avgRate += rate;
-//   }
-//   let avg = avgRate / movieCount;
-//   console.log(`${maxRateTitle} is with highest rating: ${maxRate.toFixed(1)}`);
-//   console.log(`${minRateTite} is with lowest rating: ${minRate.toFixed(1)}`);
-//   console.log(`Average rating: ${avg.toFixed(1)}`);
-// }
+     avgRate += rate;
+   }
+   let avg = avgRate / movieCount;
+   console.log(`${maxRateTitle} is with highest rating: ${maxRate.toFixed(1)}`);
+   console.log(`${minRateTite} is with lowest rating: ${minRate.toFixed(1)}`);
+   console.log(`Average rating: ${avg.toFixed(1)}`);
+ }
