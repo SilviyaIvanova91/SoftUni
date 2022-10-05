@@ -112,80 +112,80 @@ streamOfLetters([
   "End",
 ]);
 
-// function streamOfLetters(input) {
-//   let index = 0;
-//   let letter = input[index++];
+ function streamOfLetters(input) {
+   let index = 0;
+   let letter = input[index++];
 
-//   let nIsAppeared = false;
-//   let cIsAppeared = false;
-//   let oIsAppeared = false;
-//   let printLine = "";
-//   let newWord = "";
+   let nIsAppeared = false;
+   let cIsAppeared = false;
+   let oIsAppeared = false;
+   let printLine = "";
+   let newWord = "";
 
-//   while (letter !== "End") {
-//     let firstCondition =
-//       letter.charCodeAt(0) >= 65 && letter.charCodeAt(0) <= 90;
-//     let secondCondition =
-//       letter.charCodeAt(0) >= 97 && letter.charCodeAt(0) <= 122;
+   while (letter !== "End") {
+     let firstCondition =
+       letter.charCodeAt(0) >= 65 && letter.charCodeAt(0) <= 90;
+     let secondCondition =
+       letter.charCodeAt(0) >= 97 && letter.charCodeAt(0) <= 122;
 
-//     if (firstCondition || secondCondition) {
-//       if (letter === "n") {
-//         if (nIsAppeared) {
-//           newWord += letter;
-//         }
-//         nIsAppeared = true;
-//       } else if (letter === "c") {
-//         if (cIsAppeared) {
-//           newWord += letter;
-//         }
-//         cIsAppeared = true;
-//       } else if (letter === "o") {
-//         if (oIsAppeared) {
-//           newWord += letter;
-//         }
-//         oIsAppeared = true;
-//       } else {
-//         newWord += letter;
-//       }
+     if (firstCondition || secondCondition) {
+       if (letter === "n") {
+         if (nIsAppeared) {
+           newWord += letter;
+         }
+         nIsAppeared = true;
+       } else if (letter === "c") {
+         if (cIsAppeared) {
+           newWord += letter;
+         }
+         cIsAppeared = true;
+       } else if (letter === "o") {
+         if (oIsAppeared) {
+           newWord += letter;
+         }
+         oIsAppeared = true;
+       } else {
+         newWord += letter;
+       }
 
-//       if (nIsAppeared && cIsAppeared && oIsAppeared) {
-//         printLine += `${newWord}`;
-//         newWord = " ";
-//         nIsAppeared = false;
-//         cIsAppeared = false;
-//         oIsAppeared = false;
-//       }
-//     }
-//     letter = input[index++];
-//   }
-//   console.log(printLine);
-// }
+       if (nIsAppeared && cIsAppeared && oIsAppeared) {
+         printLine += `${newWord}`;
+         newWord = " ";
+         nIsAppeared = false;
+         cIsAppeared = false;
+         oIsAppeared = false;
+       }
+     }
+     letter = input[index++];
+   }
+   console.log(printLine);
+ }
 
 // --------------------------------------------------------
 
-// function streamOfLetters(input) {
-//   let str = input.filter((line) => line.match(/^[a-z]$/i)).join("");
-//   const getIndexes = (text) => [
-//     text.search(/n/),
-//     text.search(/o/),
-//     text.search(/c/),
-//   ];
+ function streamOfLetters(input) {
+   let str = input.filter((line) => line.match(/^[a-z]$/i)).join("");
+   const getIndexes = (text) => [
+     text.search(/n/),
+     text.search(/o/),
+     text.search(/c/),
+   ];
 
-//   let message = "";
+   let message = "";
 
-//   let indexes;
-//   while (Math.min(...(indexes = getIndexes(str))) >= 0) {
-//     let chars = Math.max(...indexes) + 1;
+   let indexes;
+   while (Math.min(...(indexes = getIndexes(str))) >= 0) {
+     let chars = Math.max(...indexes) + 1;
 
-//     let word = str
-//       .substring(0, chars)
-//       .replace(/n/, "")
-//       .replace(/o/, "")
-//       .replace(/c/, "");
+     let word = str
+       .substring(0, chars)
+       .replace(/n/, "")
+       .replace(/o/, "")
+       .replace(/c/, "");
 
-//     message += word + " ";
+     message += word + " ";
 
-//     str = str.substring(chars);
-//   }
-//   console.log(message);
-// }
+     str = str.substring(chars);
+   }
+   console.log(message);
+ }
