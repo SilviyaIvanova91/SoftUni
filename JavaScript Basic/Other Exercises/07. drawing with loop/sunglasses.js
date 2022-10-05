@@ -55,17 +55,17 @@ sunglasses(["4"]);
 sunglasses(["5"]);
 
 // Print the top part
-// console.log("*".repeat(n * 2) + " ".repeat(n) + "*".repeat(n * 2));
-// for (let i = 1; i <= n - 2; i++) {
-// TODO: print the middle part
-// }
-// TODO: Print the bottom part
-// Print the middle part
-// for (let i = 1; i <= n - 2; i++) {
-//   TODO: write *///////*
-//   if (i == Math.floor((n - 1) / 2)) result += "|".repeat(n);
-//   else result += " ".repeat(n);
-//   TODO: write *///////*
-//   console.log(result);
-//   result = "";
-// }
+ console.log("*".repeat(n * 2) + " ".repeat(n) + "*".repeat(n * 2));
+ for (let i = 1; i <= n - 2; i++) {
+ TODO: print the middle part
+ }
+ TODO: Print the bottom part
+ Print the middle part
+ for (let i = 1; i <= n - 2; i++) {
+   TODO: write *///////*
+   if (i == Math.floor((n - 1) / 2)) result += "|".repeat(n);
+   else result += " ".repeat(n);
+   TODO: write *///////*
+   console.log(result);
+   result = "";
+ }
