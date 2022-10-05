@@ -95,27 +95,27 @@ diamond(["7"]);
 diamond(["8"]);
 diamond(["9"]);
 
-// let n = Number(arg1);
-// if (n % 2 == 0) {
-//   //Draw the first half
-//   for (let i = 0; i < Math.floor(n / 2); i++) {
-//     console.log(
-//       "-".repeat(Math.floor((n - 1) / 2) - i) +
-//         "*" +
-//         "-".repeat(2 * i) +
-//         "*" +
-//         "-".repeat(Math.floor((n - 1) / 2) - i)
-//     );
-//   }
-// }
-// //Draw the second half
-// for (let i = Math.floor((n - 1) / 2) - 1; i >= 0; i--) {
-//   console.log(
-//     "-".repeat(Math.floor((n - 1) / 2) - i) +
-//       "*" +
-//       "-".repeat(2 * i) +
-//       "*" +
-//       "-".repeat(Math.floor((n - 1) / 2) - i)
-//   );
-// }
-// //TODO: Draw diamond for odd values of N
+ let n = Number(arg1);
+ if (n % 2 == 0) {
+   //Draw the first half
+   for (let i = 0; i < Math.floor(n / 2); i++) {
+     console.log(
+       "-".repeat(Math.floor((n - 1) / 2) - i) +
+         "*" +
+         "-".repeat(2 * i) +
+         "*" +
+         "-".repeat(Math.floor((n - 1) / 2) - i)
+     );
+   }
+ }
+ //Draw the second half
+ for (let i = Math.floor((n - 1) / 2) - 1; i >= 0; i--) {
+   console.log(
+     "-".repeat(Math.floor((n - 1) / 2) - i) +
+       "*" +
+       "-".repeat(2 * i) +
+       "*" +
+       "-".repeat(Math.floor((n - 1) / 2) - i)
+   );
+ }
+ //TODO: Draw diamond for odd values of N
