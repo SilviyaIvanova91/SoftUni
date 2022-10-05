@@ -60,14 +60,14 @@ function favoriteMovie(input) {
   }
 }
 
-// favoriteMovie(["Matrix", "Breaking bad", "Legend", "STOP"]);
-// favoriteMovie([
-//   "Wrong turn",
-//   "The maze",
-//   "Area 51",
-//   "Night Club",
-//   "Ice age",
-//   "Harry Potter",
-//   "Wizards",
-// ]);
+ favoriteMovie(["Matrix", "Breaking bad", "Legend", "STOP"]);
+ favoriteMovie([
+   "Wrong turn",
+   "The maze",
+   "Area 51",
+   "Night Club",
+   "Ice age",
+   "Harry Potter",
+   "Wizards",
+ ]);
 favoriteMovie(["School story 2", "Shrek 2", "Ice age", "STOP"]);
