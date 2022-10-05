@@ -30,14 +30,14 @@ function touristShop(input) {
   }
 }
 
-// touristShop([
-//   "153.20",
-//   "Backpack",
-//   "25.20",
-//   "Shoes",
-//   "54",
-//   "Sunglasses",
-//   "30",
-//   "Stop",
-// ]);
+ touristShop([
+   "153.20",
+   "Backpack",
+   "25.20",
+   "Shoes",
+   "54",
+   "Sunglasses",
+   "30",
+   "Stop",
+ ]);
 touristShop(["54", "Thermal underwear", "24", "Sunscreen", "45"]);
