@@ -29,3 +29,28 @@ cars([
   "print c1",
   "print c2",
 ]);
+
+
+//---------------------------------------------------------------
+function solve(input) {
+    let obj = {}
+    input.forEach(element => {
+        let [action, objName, ...params] = element.split(' ')
+        if (action == 'create' && params.length == 0) {
+            obj[objName] = {}
+        } else if (action == 'create' && params.length != 0) {
+            obj[objName] = Object.create(obj[params[1]])
+        } else if (action == 'set') {
+            obj[objName][params[0]] = params[1]
+        } else if (action == 'print') {
+            print(obj[objName])
+        }
+    })
+    function print(print) {
+        let result = []
+        for (let key in print) {
+            result.push(`${key}:${print[key]}`)
+        }
+        console.log(result.join(', '))
+    }
+}
