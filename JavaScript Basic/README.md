@@ -37,8 +37,6 @@
   <li>Nested loops;</li>
   <li>More complex tasks with repetition structures.</li>
 </ul>
-<h4 font-weight="bold";>7. Media Queries</h4>
-
 
 ----------------------------------------------------------------------------------------
 
