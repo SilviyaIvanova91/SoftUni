@@ -1,4 +1,38 @@
 function cars(arr) {
+  let obj = {};
+  arr.forEach((el) => {
+    let [action, objName, ...params] = el.split(" ");
+    if (action == "create" && params.length == 0) {
+      obj[objName] = {};
+    } else if (action == "create" && params.length != 0) {
+      obj[objName] = Object.create(obj[params[1]]);
+    } else if (action == "set") {
+      obj[objName][params[0]] = params[1];
+    } else if (action == "print") {
+      print(obj[objName]);
+    }
+  });
+  function print(print) {
+    let result = [];
+    for (let key in print) {
+      result.push(`${key}:${print[key]}`);
+    }
+    console.log(result.join(", "));
+  }
+}
+
+cars([
+  "create c1",
+  "create c2 inherit c1",
+  "set c1 color red",
+  "set c2 model new",
+  "print c1",
+  "print c2",
+]);
+
+
+//---------------------------------------------------------------
+function cars(arr) {
   let car = {};
 
   let commands = {
@@ -20,12 +54,3 @@ function cars(arr) {
     commands[command](name, k, v);
   }
 }
-
-cars([
-  "create c1",
-  "create c2 inherit c1",
-  "set c1 color red",
-  "set c2 model new",
-  "print c1",
-  "print c2",
-]);
