@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Poppins, serif ;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1{
+font-weight: 600;
+font-size: 32px;
+padding-top: 30px;
+margin-bottom: 0;
+}
+
+.title h1 span {
+    color: #A4C539;
+}
+
+.title p {
+    color: #666666;
+    margin-top: 8px;
+}
+
+.articles {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px 0px 30px;
+    margin-bottom: 40px;
+  
+}
+
+.articles article {
+    width: 300px;
+    height: 500px;
+    background-color: #EDF3FB;
+    
+}
+
+.articles img {
+    width: 100%;
+}
+
+.articles h2{
+    padding-left: 20px;
+}
+
+.articles p {
+    padding: 5px 20px;
+    line-height: 1.8em;
+    color: #686868;
+}
+
+.articles .btn{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.articles a {
+    text-decoration: none;
+    background-color: #A4C539;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 26px;
+    font-weight: bold;
+    font-size: 14px;
+
+}

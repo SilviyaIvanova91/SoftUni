@@ -1,0 +1,26 @@
+table {
+  border-spacing: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 30px;
+}
+
+table thead th {
+  text-align: center;
+}
+
+table th,
+table td {
+  padding: 7px 60px 7px 8px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+table th:last-child,
+table td:last-child {
+  border-right: 1px solid black;
+}
+
+table tfoot td {
+  border-bottom: 1px solid black;
+}

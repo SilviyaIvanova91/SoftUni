@@ -1,0 +1,168 @@
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css ");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+header {
+  background-color: #f93700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .headerNav ul {
+  display: flex;
+  padding: 10px;
+}
+
+header .headerNav ul li {
+  list-style: none;
+  padding: 20px;
+}
+
+header .headerNav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+header .textNav input {
+  width: 300px;
+  padding: 6px;
+  margin-left: 40px;
+  position: relative;
+  border: none;
+}
+
+header .textNav i {
+  background-color: #b6afaf;
+  color: white;
+  padding: 6px 22px;
+  position: absolute;
+}
+
+header .acountNav {
+  margin-left: 300px;
+  color: white;
+}
+
+header .acountNav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+main {
+  padding: 20px 100px;
+  background-color: #f0e4e4;
+}
+
+.first {
+  display: flex;
+  color: #818585;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.first img {
+  width: 250px;
+}
+
+.second {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0px;
+}
+
+.second img {
+  width: 750px;
+}
+
+.second h2 {
+  color: #f93700;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.second p {
+  color: #818585;
+  font-size: 14px;
+  padding: 15px 0px;
+  margin-bottom: 15px;
+}
+
+.second a {
+  text-decoration: none;
+  background-color: #f93700;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.third {
+  background-color: #cac3c3;
+  color: #757575;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.third img {
+  width: 100px;
+  background-color: #e6d6d6;
+  padding: 12px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+.third h2 {
+  font-size: 18px;
+  margin: 12px 0px 2px;
+}
+
+footer {
+  padding: 20px 100px;
+  color: #757575;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footerInfo {
+  display: flex;
+  align-items: flex-end;
+}
+
+footer h3,
+footer p {
+  padding-right: 15px;
+}
+
+footer .footerContat {
+  display: flex;
+  align-items: flex-start;
+}
+
+footer .footerContat a {
+  text-decoration: none;
+  background-color: #cac3c3;
+  color: #757575;
+  padding: 6px 60px;
+  margin: 0px 15px;
+  border-radius: 4px;
+}
+
+footer .footerContat i {
+  font-size: 28px;
+  margin: 0px 4px;
+}

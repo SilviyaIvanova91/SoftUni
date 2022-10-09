@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600&family=Open+Sans&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css ");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  margin: 10px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #ffa200;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+header i {
+  font-size: 18px;
+  padding: 4px 20px;
+}
+main {
+  box-shadow: -1px 4px 4px 1px grey;
+}
+
+section {
+  padding: 20px 20px 40px 20px;
+}
+
+.first {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.time {
+  font-size: 12px;
+  color: gray;
+}

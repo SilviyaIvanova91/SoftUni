@@ -1,0 +1,24 @@
+.bookstory {
+    Margin: 20px;
+    Padding: 10px;
+    Width: 400px;
+    background-color:  #dddddd;
+    Border: 1px solid #000000;
+    text-align: left;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1 {
+    text-align: center;
+}
+
+q::before {
+    content: open-quote;
+}
+
+q::after { 
+    content: close-quote;
+}

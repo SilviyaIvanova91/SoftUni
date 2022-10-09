@@ -1,0 +1,337 @@
+@import url("https://use.fontawesome.com/releases/v5.10.0/css/all.css ");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 0;
+  margin: 0;
+  font-family: Lato, sans-serif;
+  color: #55546f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Montserrat, sans-serif;
+  color: #55546f;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-height: 50px;
+  background-color: white;
+  margin: 0 0 5px 0;
+}
+
+header img,
+header nav {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 35px;
+}
+
+header img {
+  width: 150px;
+}
+
+header nav {
+  display: inline-block;
+  width: 79%;
+  text-align: right;
+  padding-right: 35px;
+  margin: 0 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: #55546f;
+  margin-right: 10px;
+  padding-right: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.FirstSection {
+  background-color: #54546d;
+  height: 300px;
+  width: 100%;
+}
+
+.FirstSection h1 {
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 50px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  position: relative;
+  bottom: 230px;
+}
+
+.FirstSection::before {
+  content: url("images/calculator-icon.svg");
+  position: relative;
+  left: -7%;
+  top: 50px;
+}
+
+.SecondSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  margin-top: -170px;
+  text-align: center;
+  color: #54546d;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.SecondSection .FirstArticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 3%;
+  width: 25%;
+  background-color: #ffffff;
+  vertical-align: top;
+  height: 350px;
+  padding-top: 10px;
+}
+
+.SecondSection .FirstArticle h2 {
+  margin-bottom: 5px;
+}
+
+.SecondSection .FirstArticle p {
+  margin-top: 0;
+}
+
+.SecondSection .FirstArticle button {
+  background-color: #9a5dc6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.SecondSection .FirstArticle button a {
+  padding: 0px;
+  color: white;
+}
+
+.SecondSection .FirstArticle .FirstArticlefooter {
+  background: rgb(8, 134, 56);
+  background: linear-gradient(
+    90deg,
+    rgba(8, 134, 56, 1) 0%,
+    rgba(38, 184, 94, 1) 50%,
+    rgba(73, 213, 126, 1) 100%
+  );
+  width: 100%;
+  color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.SecondSection .FirstArticle .FirstArticlefooter h3 {
+  font-weight: 400;
+  color: white;
+}
+
+.SecondSection .SecondArticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 3%;
+  background-color: #ffffff;
+  width: 29%;
+  vertical-align: top;
+  height: 350px;
+}
+
+.SecondSection .SecondArticle h2 {
+  margin-bottom: 30px;
+}
+
+.SecondSection .SecondArticle .p {
+  padding: 0px 20px;
+}
+
+.SecondSection .SecondArticle .SecondArticlefooter {
+  display: flex;
+  justify-content: space-around;
+  background: rgb(77, 110, 139);
+  background: linear-gradient(
+    90deg,
+    rgba(77, 110, 139, 1) 0%,
+    rgba(88, 133, 174, 1) 50%,
+    rgba(97, 153, 205, 1) 100%
+  );
+  color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.SecondSection .SecondArticle .SecondArticlefooter h3 {
+  font-weight: 400;
+  color: white;
+}
+
+.SecondSection .SecondArticle .SecondArticlefooter .Seconddiv {
+  position: relative;
+}
+
+.SecondSection .SecondArticle .SecondArticlefooter .Seconddiv::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 70px;
+  top: 15px;
+  left: -30px;
+  background-color: white;
+}
+
+.SecondSection .ThirdArticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 3%;
+  background-color: #ffffff;
+  width: 29%;
+  vertical-align: top;
+  height: 350px;
+}
+
+.SecondSection .ThirdArticle h2 {
+  margin-bottom: 30px;
+}
+
+.SecondSection .ThirdArticle p {
+  padding: 0px 20px;
+}
+
+.SecondSection .ThirdArticle .ThirdArticlefooter {
+  display: flex;
+  justify-content: space-around;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: white;
+  background: rgb(77, 58, 168);
+  background: linear-gradient(
+    90deg,
+    rgba(77, 58, 168, 1) 0%,
+    rgba(110, 93, 198, 1) 50%,
+    rgba(139, 124, 224, 1) 100%
+  );
+}
+
+.SecondSection .ThirdArticle .ThirdArticlefooter h3 {
+  font-weight: 400;
+  color: white;
+}
+
+.SecondSection .ThirdArticle .ThirdArticlefooter .thirddiv {
+  position: relative;
+}
+
+.SecondSection .ThirdArticle .ThirdArticlefooter .thirddiv::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 70px;
+  top: 15px;
+  left: -15px;
+  background-color: white;
+}
+
+.thirdSection {
+  padding: 20px 160px;
+  margin-bottom: 40px;
+}
+
+.thirdSection h2 {
+  font-weight: 600;
+}
+
+.thirdSection table {
+  margin-top: 40px;
+  border-radius: 20px;
+  border-spacing: 0px;
+}
+
+.thirdSection table td {
+  padding: 15px 15px;
+}
+
+.thirdSection table .info {
+  width: 60%;
+}
+
+.thirdSection table .img {
+  width: 10%;
+  text-align: center;
+}
+
+.thirdSection table .img img {
+  width: 15px;
+}
+
+.thirdSection table tr:nth-child(odd) {
+  background-color: rgba(128, 128, 128, 0.404);
+}
+
+.thirdSection table tr:nth-child(even) {
+  background-color: rgba(241, 241, 241, 0.993);
+}
+
+.thirdSection table .first td:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+
+.thirdSection table .first td:nth-child(3) {
+  border-top-right-radius: 10px;
+}
+
+.thirdSection table .end td:nth-child(1) {
+  border-bottom-left-radius: 10px;
+}
+
+.thirdSection table .end td:nth-child(3) {
+  border-bottom-right-radius: 10px;
+}
+
+.fourthSection {
+  padding: 10px 80px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.fourthSection p {
+  padding-right: 60px;
+}
+
+footer {
+  background-color: #54546d;
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+  color: #908798;
+}

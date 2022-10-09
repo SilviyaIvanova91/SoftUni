@@ -1,0 +1,181 @@
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css ");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px 80px;
+  font-family: Roboto, sans-serif;
+  padding: 0px;
+}
+
+h1,
+h2 {
+  font-family: "Abril Fatface", cursive;
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+.hero {
+  background: url(image/image.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 900px;
+  padding: 40px 60px;
+}
+
+.hero .herofirst {
+  position: relative;
+  border: 1px solid gray;
+  width: 250px;
+  padding: 0px 60px 20px 20px;
+  position: relative;
+  box-shadow: 2px 1px 11px black;
+}
+
+.hero .herofirst h2::before {
+  content: "";
+  top: 140px;
+  left: 20px;
+  width: 140px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+}
+
+.hero .heroSecond {
+  background: rgb(162, 153, 146);
+  background: linear-gradient(
+    90deg,
+    rgba(162, 153, 146, 1) 0%,
+    rgba(206, 203, 201, 1) 62%,
+    rgba(162, 153, 146, 1) 95%
+  );
+  width: 300px;
+  color: white;
+  position: relative;
+  top: 65px;
+  right: -795px;
+  box-shadow: 2px -4px 13px black;
+  font-size: 14px;
+  text-align: right;
+  line-height: 1.4rem;
+  padding: 30px 10px 10px;
+  text-shadow: 0px -1px 1px black;
+}
+
+.hero .heroSecond i {
+  font-size: 22px;
+  color: #6b6664;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  background-color: #bab1ad;
+  width: 500px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside h3 {
+  color: white;
+  font-weight: 200;
+  font-size: 50px;
+  margin: 0px;
+}
+
+aside p {
+  color: #4d4f4f;
+  text-transform: uppercase;
+  margin: 0px;
+  font-size: 14px;
+}
+
+.services {
+  padding: 30px 80px 0px;
+  background-color: #f2f0f3;
+}
+
+.services article div {
+  margin-bottom: 40px;
+}
+
+.services h2 {
+  text-transform: uppercase;
+}
+
+.services article div i {
+  float: left;
+  padding-right: 10px;
+}
+
+.services article div span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.services .h2contc {
+  position: relative;
+  margin-top: 100px;
+}
+
+.h2contc::after {
+  content: "";
+  position: absolute;
+  background-color: #bab1ad;
+  top: 50px;
+  left: -80px;
+  height: 2px;
+  width: 940px;
+}
+
+.services .contc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services .contc span {
+  font-style: italic;
+}
+
+.services .contc p {
+  padding-right: 10px;
+  width: 180px;
+}
+
+.services .label {
+  display: flex;
+  align-items: center;
+}
+
+.services .label input {
+  color: white;
+  background-color: #bab1ad;
+  padding: 12px;
+  border: none;
+  width: 250px;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.services .label input::placeholder {
+  color: white;
+  font-size: 14px;
+}
+
+.services .label a {
+  text-decoration: none;
+  background-color: #67784d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}

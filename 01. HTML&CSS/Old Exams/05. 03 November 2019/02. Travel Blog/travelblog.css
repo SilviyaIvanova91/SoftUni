@@ -1,0 +1,170 @@
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css ");
+@import url("https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: Gelasio;
+}
+
+header {
+  background-image: url(Requirements-and-Resources/images/map.jpg);
+  background-repeat: center center;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 80px;
+  padding: 10px 5px 0px 10px;
+}
+
+.login {
+  padding: 20px 60px 10px;
+  display: flex;
+}
+
+.login a {
+  padding-right: 40px;
+  text-decoration: none;
+  color: white;
+}
+
+.welcome h1 {
+  text-align: center;
+  color: white;
+  padding-top: 260px;
+}
+
+.welcome .btn {
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 200px;
+}
+.welcome a {
+  text-decoration: none;
+  color: white;
+  background-color: #146594;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.cover {
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+main {
+  background-color: #e1e1e1;
+  padding-left: 220px;
+  padding-bottom: 20px;
+}
+
+main h2 {
+  color: #53595c;
+  padding: 15px 0px;
+}
+
+main .pack {
+  position: relative;
+}
+
+main .pack img {
+  width: 400px;
+  position: relative;
+}
+
+main .pack p {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  z-index: 1;
+  top: 100px;
+  left: 95px;
+}
+
+main .plan {
+  position: relative;
+}
+
+main .plan img {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: -610px;
+  left: 400px;
+}
+
+main .plan p {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  z-index: 1;
+  top: -605px;
+  left: 510px;
+}
+
+main .budget {
+  position: relative;
+}
+
+main .budget img {
+  width: 500px;
+  height: 305px;
+  position: absolute;
+  top: -310px;
+  left: 400px;
+}
+
+main .budget p {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  z-index: 1;
+  top: -50px;
+  left: 415px;
+}
+
+footer {
+  background-color: #8c8c8c;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #cacaca;
+  padding: 20px;
+}
+
+footer .f,
+footer .s,
+footer .t {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .dash {
+  border-right: 1px solid #cacaca;
+}

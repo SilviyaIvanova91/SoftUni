@@ -1,0 +1,27 @@
+body {
+  margin: auto;
+  padding: 0px;
+  background-color: #cccccc;
+}
+
+h1 {
+  font-size: 28px;
+  font-style: bold;
+  margin: auto;
+}
+
+section {
+  margin-left: 20px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+section > article > header > p {
+  font-style: italic;
+}
+
+section > article > p {
+  font-size: 24px;
+}

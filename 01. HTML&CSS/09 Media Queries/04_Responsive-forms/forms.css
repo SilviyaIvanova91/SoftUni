@@ -1,0 +1,73 @@
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css ");
+
+* {
+  box-sizing: border-box;
+  margin: 0px 6px;
+  padding: 0px 0px;
+}
+
+body {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  margin-top: 80px;
+}
+fieldset {
+  width: 400px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f8f8f8;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+legend {
+  border: 1px solid gray;
+  background-color: #f8f8f8;
+  width: 200px;
+  padding: 6px 8px;
+  text-align: left;
+  border-radius: 3px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 8px;
+  padding: 4px 6px;
+}
+
+.btn button {
+  margin: 16px;
+  padding: 4px 6px;
+  width: 90px;
+  padding: 4px 2px;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 6px;
+}
+
+label {
+  font-family: Helvetiva, sens-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px 0px 0px 0px;
+}
+
+input {
+  padding: 5px;
+  border: none;
+  box-shadow: 0px 0 2px 0px grey;
+}
+
+.fa-solid.fa-user {
+  position: absolute;
+  padding: 35px 8px;
+}
+
+.fa-solid.fa-key {
+  position: absolute;
+  padding: 35px 8px;
+}

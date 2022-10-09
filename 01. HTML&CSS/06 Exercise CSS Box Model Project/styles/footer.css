@@ -1,0 +1,21 @@
+.footer {
+  background-color: #bee3f8;
+  padding: 1rem 2rem;
+}
+
+.footer .content {
+  width: 60%;
+  margin: 0 auto 1rem auto;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.footer .content .about a {
+  margin-bottom: 0.85rem;
+}
+
+.footer .content .about p {
+  font-size: 12px;
+  line-height: 1.1;
+}

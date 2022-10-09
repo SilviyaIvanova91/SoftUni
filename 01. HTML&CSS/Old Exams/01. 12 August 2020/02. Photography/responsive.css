@@ -1,0 +1,17 @@
+@media all and (max-width: 600px) {
+  .thumbnails {
+    flex-direction: column;
+  }
+
+  .thumbnails > div {
+    width: 100%;
+  }
+
+  .thumbnails a img {
+    max-height: 200px;
+  }
+
+  .thumbnails > div > :last-child {
+    margin-bottom: 2em;
+  }
+}

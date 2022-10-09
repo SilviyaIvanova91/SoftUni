@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Poppins;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+section img {
+  width: 100px;
+  margin: 10px 100px;
+}
+
+header .heading ul {
+  display: flex;
+  margin-right: 100px;
+}
+
+header .heading ul li {
+  list-style: none;
+  padding-right: 20px;
+}
+
+header .heading ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.header .firstimg {
+  margin: 0px;
+  width: 100%;
+  position: relative;
+  height: 500px;
+}
+
+.header .secondimg {
+  width: 600px;
+  position: absolute;
+  top: 165px;
+  left: 400px;
+}
+
+.header .info {
+  position: absolute;
+  top: 240px;
+  left: 320px;
+  width: 300px;
+  color: white;
+}
+
+.header .info h1 {
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+
+.header .info h1 span {
+  font-weight: bold;
+}
+
+.header .info p {
+  font-size: 14px;
+  line-height: 2em;
+  padding-top: 10px;
+}
+
+.header .btn {
+  position: absolute;
+  top: 455px;
+  left: 320px;
+}
+
+.header .btn a {
+  color: red;
+  background-color: white;
+  padding: 10px 30px;
+  font-size: 14px;
+  border-radius: 22px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.first .titles {
+  text-align: center;
+  margin-top: 160px;
+  padding: 0px 400px;
+}
+
+.first .titles h2 {
+  font-size: 36px;
+}
+
+.first .titles p {
+  color: #929294;
+  margin-top: 10px;
+}
+
+.first .artc {
+  width: 300px;
+  display: flex;
+  text-align: center;
+  margin: 150px 200px;
+  position: relative;
+  align-items: center;
+}
+
+.first .artc article {
+  margin: 0px 20px;
+  border: 1px solid #f54b15;
+  height: 380px;
+  border-radius: 8px;
+}
+
+.first .artc p {
+  color: #929294;
+  padding-top: 8px;
+}
+
+.first .artc .img {
+  margin-top: 40px;
+}
+
+.first .artc .back {
+  width: 160px;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: -10px;
+}
+
+.first .artc .back1 {
+  width: 160px;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 335px;
+}
+
+.first .artc .back2 {
+  width: 160px;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 662px;
+}
+
+.first .artc h3 {
+  margin-top: 40px;
+}
+
+.first .artc p {
+  padding: 10px 30px;
+  line-height: 1.8rem;
+}
+
+.second {
+  position: relative;
+}
+
+.second .imgsecond {
+  width: 350px;
+  margin-left: 250px;
+}
+
+.second .secondinfo {
+  position: absolute;
+  top: 90px;
+  left: 660px;
+  width: 350px;
+}
+
+.second .secondinfo h2 {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.second .secondinfo h2 span {
+  font-weight: bold;
+}
+
+.second .secondinfo p {
+  color: #929294;
+  padding-top: 20px;
+  line-height: 1.5rem;
+}
+
+.second .btn {
+  position: absolute;
+  top: 355px;
+  left: 650px;
+}
+
+.second .btn a {
+  text-decoration: none;
+  color: white;
+  background-color: #f54b15;
+  padding: 15px 40px;
+  font-size: 14px;
+  border-radius: 22px;
+  font-weight: bold;
+}
+
+.third {
+  position: relative;
+  margin-top: 40px;
+}
+
+.third .thirdimg {
+  width: 100%;
+  margin: 0px;
+}
+
+.third .info {
+  color: white;
+  position: absolute;
+  top: 150px;
+  left: 500px;
+  width: 400px;
+}
+
+.third .info h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.third .info p {
+  padding-top: 15px;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.third .contact {
+  position: absolute;
+  top: 290px;
+  left: 540px;
+  display: flex;
+  color: white;
+}
+
+.third .contact .btn {
+  margin-right: 10px;
+}
+
+.third .contact .btn a {
+  text-decoration: none;
+  color: #f54b15;
+  background-color: white;
+  padding: 15px 40px;
+  font-size: 14px;
+  border-radius: 22px;
+  font-weight: bold;
+}
+
+.third .contact span {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+footer {
+  margin: 100px 60px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer h3 {
+  margin-bottom: 25px;
+}
+
+footer p {
+  line-height: 2rem;
+}
+
+footer .last {
+  margin-bottom: 10px;
+}
