@@ -21,6 +21,23 @@ cookingbyNumbers("32", "chop", "chop", "chop", "chop", "chop");
 cookingbyNumbers("9", "dice", "spice", "chop", "bake", "fillet");
 
 //-------------------------------------------
+// function cookingbyNumbers(...commands) {
+//   let inital = Number(commands.shift());
+
+//   const parser = {
+//     chop: (x) => x / 2,
+//     dice: (x) => Math.sqrt(x),
+//     spice: (x) => ++x,
+//     bake: (x) => x * 3,
+//     fillet: (x) => x - x * 0.2,
+//   };
+//   for (let command of commands) {
+//     inital = parser[command](inital);
+//     console.log(inital);
+//   }
+// }
+
+//-------------------------------------------
 // function cookingbyNumbers(
 //   input,
 //   command1,
