@@ -7,8 +7,8 @@ function numbersfrom1to5() {
 }
 numbersfrom1to5();
 
-// function numbersfrom1to5() {
-//   for (let a = 1; a <= 5; a++) {
-//     console.log(a);
-//   }
-// }
+ function numbersfrom1to5() {
+   for (let a = 1; a <= 5; a++) {
+     console.log(a);
+   }
+ }
