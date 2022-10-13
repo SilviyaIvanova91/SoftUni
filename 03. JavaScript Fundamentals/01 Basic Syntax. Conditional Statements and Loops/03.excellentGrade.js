@@ -9,6 +9,6 @@ function excellentGrade(grade) {
 excellentGrade(5.5);
 excellentGrade(4.35);
 
-// function excellentGrade(grade)  {
-//     console.log(grade >= 5.5 ? `Excellent` : `Not excellent`);
-// }
+ function excellentGrade(grade)  {
+     console.log(grade >= 5.5 ? `Excellent` : `Not excellent`);
+ }
