@@ -76,40 +76,37 @@ thePyramidOfKingDjoser(11, 0.75);
 thePyramidOfKingDjoser(12, 1);
 thePyramidOfKingDjoser(23, 0.5);
 
-// function thePyramidOfKingDjoser(size, increments) {
-//   let stone = 0;
-//   let marable = 0;
-//   let gold = 0;
-//   let lapuslazul = 0;
-//   let steps = 1;
+//-------------------------------------------------------------------------
+ function thePyramidOfKingDjoser(size, increments) {
+   let stone = 0;
+   let marable = 0;
+   let gold = 0;
+   let lapuslazul = 0;
+   let steps = 1;
 
-//   while (size >= 1) {
-//     if (size > 2) {
-//       if (steps % 5 === 0) {
-//         lapuslazul += size * 4 - 4 * increments;
-//       } else {
-//         marable += size * 4 - 4 * increments;
-//       }
-//       steps++;
-//       stone += Math.pow(size - 2, 2) * increments;
-//     } else {
-//       gold += Math.pow(size, 2) * increments;
-//     }
+   while (size >= 1) {
+     if (size > 2) {
+       if (steps % 5 === 0) {
+         lapuslazul += size * 4 - 4 * increments;
+       } else {
+         marable += size * 4 - 4 * increments;
+       }
+       steps++;
+       stone += Math.pow(size - 2, 2) * increments;
+     } else {
+       gold += Math.pow(size, 2) * increments;
+     }
 
-//     size -= 2;
-//   }
-//   console.log(
-//     `Stone required: ${Math.ceil(stone)}\nMarble required: ${Math.ceil(
-//       marable
-//     )}\nLapis Lazuli required: ${Math.ceil(
-//       lapuslazul
-//     )}\nGold required: ${gold}\nFinal pyramid height: ${Math.floor(
-//       steps * increments
-//     )}`
-//   );
-// }
+     size -= 2;
+   }
+   console.log(
+     `Stone required: ${Math.ceil(stone)}\nMarble required: ${Math.ceil(
+       marable
+     )}\nLapis Lazuli required: ${Math.ceil(
+       lapuslazul
+     )}\nGold required: ${gold}\nFinal pyramid height: ${Math.floor(
+       steps * increments
+     )}`
+   );
+ }
 
-// thePyramidOfKingDjoser(11, 1);
-// thePyramidOfKingDjoser(11, 0.75);
-// thePyramidOfKingDjoser(12, 1);
-// thePyramidOfKingDjoser(23, 0.5);
