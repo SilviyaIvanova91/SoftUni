@@ -92,6 +92,86 @@ ticTacToe([
   "0 0",
 ]);
 
+//------------------------------------
+// function ticTacToe(input) {
+//   let matrix = [
+//     [false, false, false],
+//     [false, false, false],
+//     [false, false, false],
+//   ];
+//   let isFirstPlayer = true;
+//   for (let coordinates of input) {
+//     let [row, col] = coordinates.split(" ");
+
+//     if (matrix[row][col]) {
+//       console.log(`This place is already taken. Please choose another!`);
+//       continue;
+//     }
+
+//     let marker = isFirstPlayer ? "X" : "O";
+//     matrix[row][col] = marker;
+//     if (checkWin(matrix, marker)) {
+//       console.log(`Player ${marker} wins!`);
+//       printTable(matrix);
+//       return;
+//     }
+
+//     if (!checkFreeSpace(matrix)) {
+//       console.log(`The game ended! Nobody wins :(`);
+//       printTable(matrix);
+//       return;
+//     }
+
+//     isFirstPlayer = !isFirstPlayer;
+//   }
+
+//   function printTable(matrix) {
+//     matrix.forEach((row) => console.log(row.join("\t")));
+//   }
+
+//   function checkFreeSpace(matrix) {
+//     for (let x = 0; x < matrix.length; x++) {
+//       for (let y = 0; y < matrix[x].length; y++) {
+//         if (!matrix[x][y]) {
+//           return true;
+//         }
+//       }
+//     }
+//     return false;
+//   }
+
+//   function checkWin(matrix, marker) {
+//     for (let i = 0; i < matrix.length; i++) {
+//       if (
+//         matrix[i][0] == marker &&
+//         matrix[i][1] == marker &&
+//         matrix[i][2] == marker
+//       ) {
+//         return true;
+//       } else if (
+//         matrix[0][i] === marker &&
+//         matrix[1][i] === marker &&
+//         matrix[2][i] === marker
+//       ) {
+//         return true;
+//       } else if (
+//         matrix[0][0] === marker &&
+//         matrix[1][1] === marker &&
+//         matrix[2][2] === marker
+//       ) {
+//         return true;
+//       } else if (
+//         matrix[0][2] === marker &&
+//         matrix[1][1] === marker &&
+//         matrix[2][0] === marker
+//       ) {
+//         return true;
+//       }
+//       return false;
+//     }
+//   }
+// }
+
 //-------------------------------
 // function play(matrix) {
 //   let dashboard = [
