@@ -46,50 +46,50 @@ function vacation(numPeople, typeGroup, day) {
 vacation(30, "Students", "Sunday");
 vacation(40, "Regular", "Saturday");
 
-// function vacation(numPeople, typeGroup, day) {
-//   let studentsFridayPrice = 8.45;
-//   let businessFridayPrice = 10.9;
-//   let regularFridayPrice = 15;
-//   let studentsSaturdayPrice = 9.8;
-//   let businessSaturdayPrice = 15.6;
-//   let regularSaturdayPrice = 20;
-//   let studentsSundayPrice = 10.46;
-//   let businessSundayPrice = 16;
-//   let regularSundayPrice = 22.5;
+ function vacation(numPeople, typeGroup, day) {
+   let studentsFridayPrice = 8.45;
+   let businessFridayPrice = 10.9;
+   let regularFridayPrice = 15;
+   let studentsSaturdayPrice = 9.8;
+   let businessSaturdayPrice = 15.6;
+   let regularSaturdayPrice = 20;
+   let studentsSundayPrice = 10.46;
+   let businessSundayPrice = 16;
+   let regularSundayPrice = 22.5;
 
-//   let studentsDiscountPercentages = 15;
-//   let businessDiscountCount = 10;
-//   let regularDiscountPercentages = 5;
+   let studentsDiscountPercentages = 15;
+   let businessDiscountCount = 10;
+   let regularDiscountPercentages = 5;
 
-//   let price = 0;
-//   if (typeGroup === "Business" && numPeople >= 100) {
-//     numPeople -= businessDiscountCount;
-//   }
+   let price = 0;
+   if (typeGroup === "Business" && numPeople >= 100) {
+     numPeople -= businessDiscountCount;
+   }
 
-//   if (typeGroup === "Students" && day === "Friday") {
-//     price += numPeople * studentsFridayPrice;
-//   } else if (typeGroup === "Students" && day === "Saturday") {
-//     price += numPeople * studentsSaturdayPrice;
-//   } else if (typeGroup === "Students" && day === "Sunday") {
-//     price += numPeople * studentsSundayPrice;
-//   } else if (typeGroup === "Business" && day === "Friday") {
-//     price += numPeople * businessFridayPrice;
-//   } else if (typeGroup === "Business" && day === "Saturday") {
-//     price += numPeople * businessSaturdayPrice;
-//   } else if (typeGroup === "Business" && day === "Sunday") {
-//     price += numPeople * businessSundayPrice;
-//   } else if (typeGroup === "Regular" && day === "Friday") {
-//     price += numPeople * regularFridayPrice;
-//   } else if (typeGroup === "Regular" && day === "Saturday") {
-//     price += numPeople * regularSaturdayPrice;
-//   } else if (typeGroup === "Regular" && day === "Sunday") {
-//     price += numPeople * regularSundayPrice;
-//   }
+   if (typeGroup === "Students" && day === "Friday") {
+     price += numPeople * studentsFridayPrice;
+   } else if (typeGroup === "Students" && day === "Saturday") {
+     price += numPeople * studentsSaturdayPrice;
+   } else if (typeGroup === "Students" && day === "Sunday") {
+     price += numPeople * studentsSundayPrice;
+   } else if (typeGroup === "Business" && day === "Friday") {
+     price += numPeople * businessFridayPrice;
+   } else if (typeGroup === "Business" && day === "Saturday") {
+     price += numPeople * businessSaturdayPrice;
+   } else if (typeGroup === "Business" && day === "Sunday") {
+     price += numPeople * businessSundayPrice;
+   } else if (typeGroup === "Regular" && day === "Friday") {
+     price += numPeople * regularFridayPrice;
+   } else if (typeGroup === "Regular" && day === "Saturday") {
+     price += numPeople * regularSaturdayPrice;
+   } else if (typeGroup === "Regular" && day === "Sunday") {
+     price += numPeople * regularSundayPrice;
+   }
 
-//   if (typeGroup === "Students" && numPeople >= 30) {
-//     price -= (studentsDiscountPercentages / 100) * price;
-//   } else if (typeGroup === "Regular" && numPeople >= 10 && numPeople <= 20) {
-//     price -= (regularDiscountPercentages / 100) * price;
-//   }
-//   console.log(`Total price: ${price.toFixed(2)}`);
-// }
+   if (typeGroup === "Students" && numPeople >= 30) {
+     price -= (studentsDiscountPercentages / 100) * price;
+   } else if (typeGroup === "Regular" && numPeople >= 10 && numPeople <= 20) {
+     price -= (regularDiscountPercentages / 100) * price;
+   }
+   console.log(`Total price: ${price.toFixed(2)}`);
+ }
