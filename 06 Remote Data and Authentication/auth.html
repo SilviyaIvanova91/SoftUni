@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth Demo</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+    <script src="auth.js" defer></script>
+  </head>
+  <body>
+    <h2>Register</h2>
+    <form id="register-form">
+      <label>Email: <input name="email" type="text" /></label>
+      <label>Password: <input name="password" type="password" /></label>
+      <label>Repeat: <input name="password" type="repass" /></label>
+      <button>Sign Up</button>
+    </form>
+
+    <h2>Login</h2>
+    <form id="login-form">
+      <label>Email: <input name="email" type="text" /></label>
+      <label>Password: <input name="password" type="password" /></label>
+      <button>Sign In</button>
+    </form>
+
+    <button id="logoutBtn">Logout</button>
+  </body>
+</html>
