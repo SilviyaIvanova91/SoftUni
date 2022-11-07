@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA Demo</title>
+    <script src="./app.js" type="module"></script>
+    <style>
+      section {
+        display: none;
+        padding: 16px 32px;
+      }
+
+      label {
+        display: block;
+      }
+
+      #catalog-view {
+        background-color: rgb(195, 221, 232);
+      }
+
+      #details-view {
+        background-color: rgb(195, 232, 214);
+      }
+
+      #login-view {
+        background-color: rgb(232, 217, 195);
+      }
+
+      #register-view {
+        background-color: rgb(232, 197, 195);
+      }
+
+      .user,
+      .guest {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SPA Demo</h1>
+    <nav>
+      <a id="catalog-link" href="javascript:voit(0)">Catalog</a>
+      <a class="guest" id="login-link" href="javascript:voit(0)">Login</a>
+      <a class="guest" id="register-link" href="javascript:voit(0)">Register</a>
+      <span class="user" id="welcome-msg"></span>
+      <a class="user" id="logout-link" href="javascript:voit(0)">LogOut</a>
+    </nav>
+
+    <section id="catalog-view">
+      <h2>All Recipes</h2>
+
+      <ul id="recipe-list">
+        <li>First recipe</li>
+        <li>Second recipe</li>
+      </ul>
+    </section>
+
+    <section id="details-view">
+      <h2 id="recipe-name">Recipe Details</h2>
+      <p>Ingredients</p>
+      <ul id="recipe-ingredients"></ul>
+      <p>Preparation Steps</p>
+      <ul id="recipe-steps"></ul>
+    </section>
+
+    <section id="login-view">
+      <label>Email: <input type="text" name="email" /></label>
+      <label>Password: <input type="password" name="password" /></label>
+      <button>Login</button>
+    </section>
+  </body>
+</html>
