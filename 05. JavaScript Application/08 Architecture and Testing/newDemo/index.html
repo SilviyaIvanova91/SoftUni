@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA Demo</title>
+    <script src="./src/app.js" type="module"></script>
+    <style>
+      section {
+        padding: 16px 32px;
+      }
+
+      label {
+        display: block;
+      }
+
+      #catalog-view {
+        background-color: rgb(195, 221, 232);
+      }
+
+      #details-view {
+        background-color: rgb(195, 232, 214);
+      }
+
+      #login-view {
+        background-color: rgb(232, 217, 195);
+      }
+
+      #register-view {
+        background-color: rgb(232, 197, 195);
+      }
+
+      .user,
+      .guest {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>SPA Demo</h1>
+    <nav>
+      <a id="home-link" href="javascript:void(0)">Home</a>
+      <a id="catalog-link" href="javascript:void(0)">Catalog</a>
+      <a class="guest" id="login-link" href="javascript:void(0)">Login</a>
+      <a class="guest" id="register-link" href="javascript:void(0)">Register</a>
+      <a class="user" id="create-link" href="javascript:void(0)">Create</a>
+      <span class="user" id="welcome-msg"></span>
+      <a class="user" id="logout-link" href="javascript:void(0)">Logout</a>
+    </nav>
+
+    <main></main>
+
+    <section id="home-view">
+      <h2>Welcome to our site! Enjoy delicious recipes!</h2>
+    </section>
+
+    <section id="catalog-view">
+      <h2>All Recipes</h2>
+
+      <ul id="recipe-list">
+        <li>First recipe</li>
+        <li>Second recipe</li>
+      </ul>
+    </section>
+
+    <section id="details-view">
+      <h2 id="recipe-name">Recipe Details</h2>
+
+      <p>Ingredients</p>
+      <ul id="recipe-ingredients"></ul>
+
+      <p>Preparation steps</p>
+      <ul id="recipe-steps"></ul>
+    </section>
+
+    <section id="login-view">
+      <h2>Login</h2>
+
+      <form id="login-form">
+        <label>Email: <input type="text" name="email" /></label>
+        <label>Password: <input type="password" name="password" /></label>
+        <button>Login</button>
+      </form>
+    </section>
+
+    <section id="register-view">
+      <h2>Register</h2>
+
+      <form id="register-form">
+        <label>Email: <input type="text" name="email" /></label>
+        <label>Username: <input type="text" name="username" /></label>
+        <label>Password: <input type="password" name="password" /></label>
+        <label>Repeat: <input type="password" name="repass" /></label>
+        <button>Register</button>
+      </form>
+    </section>
+
+    <section id="create-view">
+      <h2>Create Recipe</h2>
+
+      <form id="create-form">
+        <label>Name: <input type="text" name="name" /></label>
+        <label>Name: <input type="text" name="img" /></label>
+        <label>Name: <textarea name="ingredients"> </textarea></label>
+        <label>Name: <textarea name="steps"></textarea></label>
+        <button>Post</button>
+      </form>
+    </section>
+  </body>
+</html>
