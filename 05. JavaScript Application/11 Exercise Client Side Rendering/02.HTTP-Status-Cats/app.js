@@ -30,7 +30,7 @@ let main = document.getElementById("allCats");
 render(result, main);
 
 
-//-----------Second condition-------------------------
+//-----------Second solution-------------------------
 let root = document.getElementById("allCats");
 
 const cattemplate = html` <ul>
