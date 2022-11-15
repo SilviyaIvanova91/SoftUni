@@ -15,7 +15,7 @@ document.getElementById("btnLoadTowns").addEventListener("click", (e) => {
   render(cardTemplate, root);
 });
 
-//------------Second condition---------------
+//------------Second solution---------------
 let form = document.getElementById("form");
 form.addEventListener("click", onSubmit);
 let root = document.getElementById("root");
