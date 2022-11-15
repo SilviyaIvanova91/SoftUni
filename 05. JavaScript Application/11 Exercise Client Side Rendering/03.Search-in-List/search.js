@@ -35,7 +35,7 @@ function search() {
      document.querySelector("input").value = "";
 }
 
-//-----------Second Condition--------------
+//-----------Second solution--------------
 
 let townsRoot = document.getElementById("towns");
 let resultRoot = document.getElementById("result");
