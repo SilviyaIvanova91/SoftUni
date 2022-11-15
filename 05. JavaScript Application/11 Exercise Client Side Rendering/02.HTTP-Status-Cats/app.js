@@ -28,3 +28,41 @@ function onClick(e) {
 let result = cats.map(cardtemplate);
 let main = document.getElementById("allCats");
 render(result, main);
+
+
+//-----------Second condition-------------------------
+let root = document.getElementById("allCats");
+
+const cattemplate = html` <ul>
+  ${cats.map((cat) => createCard(cat))}
+</ul>`;
+
+render(cattemplate, root);
+
+function createCard(cat) {
+  return html`
+    <li>
+      <img src="./images/${cat.imageLocation}.jpg" width="250" height="250" />
+      <div class="info">
+        <button class="showBtn" @click=${showContent}>Show status code</button>
+        <div class="status" style="display: none" id=${cat.id}>
+          <h4>Status code: ${cat.statusCode}</h4>
+          <p>${cat.statusMessage}</p>
+        </div>
+      </div>
+    </li>
+  `;
+}
+
+function showContent(e) {
+  e.preventDefault();
+  let contentContainer = e.target.parentElement.querySelector("div");
+  let currentState = contentContainer.style.display;
+  if (currentState == "block") {
+    contentContainer.style.display = "none";
+    e.target.textContent = "Show status code";
+  } else {
+    contentContainer.style.display = "block";
+    e.target.textContent = "Hide status code";
+  }
+}
