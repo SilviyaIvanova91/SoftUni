@@ -28,9 +28,53 @@ function search() {
   resultHTML.textContent = `${result.length} matches found`;
 
   //--- if we want to clear input and decoration------
-  //   Array.from(document.querySelectorAll(".active")).forEach((t) => {
-  //     t.style.fontWeight = "100";
-  //     t.style.textDecoration = "none";
-  //   });
-  //   document.querySelector("input").value = "";
+     Array.from(document.querySelectorAll(".active")).forEach((t) => {
+       t.style.fontWeight = "100";
+       t.style.textDecoration = "none";
+     });
+     document.querySelector("input").value = "";
+}
+
+//-----------Second solution--------------
+
+let townsRoot = document.getElementById("towns");
+let resultRoot = document.getElementById("result");
+document.querySelector("button").addEventListener("click", search);
+
+update();
+
+function serachtemplate(townName, match) {
+  const ul = html` <ul>
+    ${townName.map((townName) => createtemplate(townName, match))}
+  </ul>`;
+
+  return ul;
+}
+
+function createtemplate(town, match) {
+  return html`
+    <li class="${match && town.toLowerCase().includes(match) ? "active" : ""}">
+      ${town}
+    </li>
+  `;
+}
+
+function update(text) {
+  const ul = serachtemplate(towns, text);
+  render(ul, townsRoot);
+}
+
+function search(e) {
+  let textNode = document.getElementById("searchText");
+  const text = textNode.value.toLowerCase();
+  update(text);
+  updateCount();
+  textNode.value = "";
+}
+
+function updateCount() {
+  const count = document.querySelectorAll(".active").length;
+  const coutnEl = count ? html`<p>${count} matches found</p>` : "";
+
+  render(coutnEl, resultRoot);
 }
