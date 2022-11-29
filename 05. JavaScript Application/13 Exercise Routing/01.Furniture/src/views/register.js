@@ -1,14 +1,15 @@
-import page from "//unpkg.com/page/page.mjs";
-import { html, render } from "https://unpkg.com/lit-html?module";
+import { register } from "../api/user.js";
+import { html, render, page } from "../lib.js";
+import { createSubmitHandler } from "../util.js";
 
-let registerTemplate = () => html`
+const createRegisterTemp = (onRegister) => html`
   <div class="row space-top">
     <div class="col-md-12">
       <h1>Register New User</h1>
       <p>Please fill all fields.</p>
     </div>
   </div>
-  <form @submit=${onSubmitForm}>
+  <form @submit=${onRegister}>
     <div class="row space-top">
       <div class="col-md-4">
         <div class="form-group">
@@ -39,31 +40,19 @@ let registerTemplate = () => html`
   </form>
 `;
 
-function onSubmitForm(e) {
-  e.preventdefault();
-  let formData = new FormData(e.currentTarget);
-  let email = formData.get("email");
-  let password = formData.get("password");
-  let repeatPassword = formData.get("rePass");
+export async function registerView(ctx) {
+  ctx.render(createRegisterTemp(createSubmitHandler(onRegister)));
 
-  if (password != repeatPassword) {
-    alert("Passwords mismatch");
-    return;
+  async function onRegister({ email, password, rePass }) {
+    if (!email || !password || !rePass) {
+      return alert("All fields are required!");
+    }
+    if (password != rePass) {
+      return alert("Passwords dont match!");
+    }
+
+    await register(email, password);
+    ctx.updateNav();
+    ctx.page.redirect("/catalog");
   }
-
-  fetch("http://localhost:3030/users/register", {
-    method: "POST",
-    body: JSON.stringify({ email, password }),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      localStorage.setItem("token", data.accessToken);
-      localStorage.setItem("ownerId", data._id);
-      updateInfo();
-      page.redirect("/catalog");
-    })
-    .catch((err) => alert(err.message));
 }
-
-export const registerView = (ctx) =>
-  render(registerTemplate(), document.querySelector(".container"));
