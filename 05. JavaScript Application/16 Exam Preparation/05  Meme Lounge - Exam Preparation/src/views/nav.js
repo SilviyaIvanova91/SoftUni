@@ -31,8 +31,8 @@ export function updateNav() {
   render(navTemplate(user), nav);
 }
 
-function onLogOut() {
-  logout();
+async function onLogOut() {
+await  logout();
   updateNav();
   page.redirect("/");
 }
