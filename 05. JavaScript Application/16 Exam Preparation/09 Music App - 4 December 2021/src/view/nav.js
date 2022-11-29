@@ -29,8 +29,8 @@ export function updateNav() {
   render(navTemplate(user), nav);
 }
 
-export function onLogout() {
-  logout();
+async export function onLogout() {
+await  logout();
 
   sessionStorage.clear();
   updateNav();

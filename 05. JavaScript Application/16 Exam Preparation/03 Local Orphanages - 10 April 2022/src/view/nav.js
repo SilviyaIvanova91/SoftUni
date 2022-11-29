@@ -36,8 +36,8 @@ export async function updateNav() {
   render(navTemplate(user), header);
 }
 
-export function onLogout() {
-  logout();
+async export function onLogout() {
+ await logout();
   updateNav();
   page.redirect("/dashboard");
 }

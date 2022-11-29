@@ -28,7 +28,7 @@ page("/edit/:id", editPage);
 page.start();
 
 async function onLogout(ctx) {
-  logout();
+await  logout();
   clearUserData();
 
   ctx.page.redirect("/");
