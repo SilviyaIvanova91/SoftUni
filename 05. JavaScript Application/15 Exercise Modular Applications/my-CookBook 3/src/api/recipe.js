@@ -9,6 +9,7 @@ let endpoints = {
   recent:
     "/data/recipes?select=_id%2Cname%2Cimg&sortBy=_createdOn%20desc&pageSize=3",
   recipes: `/data/recipes?sortBy=_createdOn%20desc&pageSize=${pageSize}&offset=`,
+  getByQuery: (query) => `/data/recipes?where=name%20LIKE%20%22${query}%22`,
 };
 
 export async function getRecent() {
@@ -33,4 +34,16 @@ export async function getAll(page = 1) {
 
 export async function create(data) {
   return api.post(endpoints.create, data);
+}
+
+export async function deleteById(id) {
+  return api.del(endpoints.byId + id);
+}
+
+export async function editById(id, data) {
+  return api.put(endpoints.byId + id, data);
+}
+
+export async function getByQuery(query) {
+  return api.get(endpoints.getByQuery(query));
 }
