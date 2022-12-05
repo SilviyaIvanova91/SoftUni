@@ -8,6 +8,6 @@ charstoString("%", "2", "o");
 charstoString("1", "5", "p");
 
 //---------------------------------------------------
-// function charstoString(char1, char2, char3) {
-//     console.log(`${char1}${char2}${char3}`);
-//   }
+ function charstoString(char1, char2, char3) {
+     console.log(`${char1}${char2}${char3}`);
+   }

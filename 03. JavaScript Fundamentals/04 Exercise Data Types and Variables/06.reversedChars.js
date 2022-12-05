@@ -10,6 +10,6 @@ reversedChars("A", "B", "C");
 reversedChars("1", "L", "&");
 
 //---------------------------------------------------
-// function reversedChars(num1, num2, num3) {
-//     console.log(`${num3} ${num2} ${num1}`);
-//   }
+ function reversedChars(num1, num2, num3) {
+     console.log(`${num3} ${num2} ${num1}`); 
+  }
