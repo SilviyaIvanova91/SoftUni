@@ -11,12 +11,12 @@ arrayRotation([32, 21, 61, 1], 4);
 arrayRotation([2, 4, 15, 31], 5);
 
 //----------------------------------------------
-// function arrayRotation(arr, rotation) {
-//   while (rotation > 0) {
-//     let elToMove = arr.shift();
-//     arr.push(elToMove);
+ function arrayRotation(arr, rotation) {
+   while (rotation > 0) {
+     let elToMove = arr.shift();
+     arr.push(elToMove);
 
-//     rotation--;
-//   }
-//   console.log(arr.join(" "));
-// }
+     rotation--;
+   }
+   console.log(arr.join(" "));
+ }
