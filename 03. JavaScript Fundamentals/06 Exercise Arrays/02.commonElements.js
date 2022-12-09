@@ -18,20 +18,20 @@ commonElements(
 );
 
 //---------------------------------------------------
-// function commonElements(firstARr, secondArr) {
-//   for (let elem of firstARr) {
-//       if (secondArr.includes(elem)) {
-//         console.log(elem)
-//     }
-//   }
-// }
+ function commonElements(firstARr, secondArr) {
+   for (let elem of firstARr) {
+       if (secondArr.includes(elem)) {
+         console.log(elem)
+     }
+   }
+ }
 //--------------------------------------------------
-// function commonElements(firstARr, secondArr) {
-//   for (let elem of firstARr) {
-//     for (let elem2 of secondArr) {
-//       if (elem === elem2) {
-//         console.log(elem);
-//       }
-//     }
-//   }
-// }
+ function commonElements(firstARr, secondArr) {
+   for (let elem of firstARr) {
+     for (let elem2 of secondArr) {
+       if (elem === elem2) {
+         console.log(elem);
+       }
+     }
+   }
+ }
