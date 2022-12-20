@@ -51,13 +51,13 @@ function simpleCalculator(numOne, numTwo, operator) {
   console.log(res(numOne, numTwo));
 }
 //---------------------------------------------------
-// function solve(num1, num2, operator) {
-//   let mathOpp = {
-//     multiply: '*',
-//     divide: '/',
-//     add: '+',
-//     subtract: '-'
-//   }
-//   let doMath = (a, b) => new Function('a', 'b', `return ${a} ${mathOpp[operator]} ${b}`)(a, b)
-//   console.log(doMath(num1, num2))
-// }
+ function solve(num1, num2, operator) {
+   let mathOpp = {
+     multiply: '*',
+     divide: '/',
+     add: '+',
+     subtract: '-'
+   }
+   let doMath = (a, b) => new Function('a', 'b', `return ${a} ${mathOpp[operator]} ${b}`)(a, b)
+   console.log(doMath(num1, num2))
+ }
