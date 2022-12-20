@@ -9,7 +9,7 @@ function mathPower(num, power) {
 mathPower(2, 8);
 mathPower(3, 4);
 
-// function mathPower(num, power) {
-//     let newNum = Math.pow(num, power);
-//     console.log(newNum);
-//   }
+ function mathPower(num, power) {
+     let newNum = Math.pow(num, power);
+     console.log(newNum);
+   }
