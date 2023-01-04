@@ -35,31 +35,31 @@ function oddAndEvenSum(arr) {
 }
 
 //-----------------------------------
-// function oddAndEvenSum(arr) {
-//   let numberAsText = arr.toString();
-//   function totalOddSum(numAsString) {
-//     let odd = 0;
-//     for (let i = 0; i < numAsString.length; i++) {
-//       let curNum = Number(numAsString[i]);
-//       if (curNum % 2 !== 0) {
-//         odd += curNum;
-//       }
-//     }
-//     return odd;
-//   }
-//   function totalEvenSum(numAsString) {
-//     let even = 0;
-//     for (let i = 0; i < numAsString.length; i++) {
-//       let curNum = Number(numAsString[i]);
-//       if (curNum % 2 === 0) {
-//         even += curNum;
-//       }
-//     }
-//     return even;
-//   }
-//   console.log(
-//     `Odd sum = ${totalOddSum(numberAsText)}, Even sum = ${totalEvenSum(
-//       numberAsText
-//     )}`
-//   );
-// }
+ function oddAndEvenSum(arr) {
+   let numberAsText = arr.toString();
+   function totalOddSum(numAsString) {
+     let odd = 0;
+     for (let i = 0; i < numAsString.length; i++) {
+       let curNum = Number(numAsString[i]);
+       if (curNum % 2 !== 0) {
+         odd += curNum;
+       }
+     }
+     return odd;
+   }
+   function totalEvenSum(numAsString) {
+     let even = 0;
+     for (let i = 0; i < numAsString.length; i++) {
+       let curNum = Number(numAsString[i]);
+       if (curNum % 2 === 0) {
+         even += curNum;
+       }
+     }
+     return even;
+   }
+   console.log(
+     `Odd sum = ${totalOddSum(numberAsText)}, Even sum = ${totalEvenSum(
+       numberAsText
+     )}`
+   );
+ }
