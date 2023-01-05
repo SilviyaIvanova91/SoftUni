@@ -1,16 +1,16 @@
-// function addandSubtract(numOne, numTwo, numThree) {
-//   function add(firstNum, secNum) {
-//     return firstNum + secNum;
-//   }
-//   let substract = (addResult, thirdNum) => addResult - thirdNum;
-//   let result = add(numOne, numTwo);
-//   let finalResult = substract(result, numThree);
-//   console.log(finalResult);
-// }
+ function addandSubtract(numOne, numTwo, numThree) {
+   function add(firstNum, secNum) {
+     return firstNum + secNum;
+   }
+   let substract = (addResult, thirdNum) => addResult - thirdNum;
+   let result = add(numOne, numTwo);
+   let finalResult = substract(result, numThree);
+   console.log(finalResult);
+ }
 
-// addandSubtract(23, 6, 10);
-// addandSubtract(1, 17, 30);
-// addandSubtract(42, 58, 100);
+ addandSubtract(23, 6, 10);
+ addandSubtract(1, 17, 30);
+ addandSubtract(42, 58, 100);
 
 //-------------------------------------------------------
 function addandSubtract(numOne, numTwo, numThree) {
@@ -28,31 +28,31 @@ addandSubtract(1, 17, 30);
 addandSubtract(42, 58, 100);
 
 //---------------------------------------------------
-// function addandSubtract(numOne, numTwo, numThree) {
-//   let result = add(numOne, numTwo);
-//   let finalResult = substract(result, numThree);
+ function addandSubtract(numOne, numTwo, numThree) {
+   let result = add(numOne, numTwo);
+   let finalResult = substract(result, numThree);
 
-//   console.log(finalResult);
+   console.log(finalResult);
 
-//   function add(numOne, numTwo) {
-//     return numOne + numTwo;
-//   }
-//   function substract(result, numThree) {
-//     return result - numThree;
-//   }
-// }
+   function add(numOne, numTwo) {
+     return numOne + numTwo;
+   }
+   function substract(result, numThree) {
+     return result - numThree;
+   }
+ }
 
 //---------------------------------------------------
-// function addandSubtract(numOne, numTwo, numThree) {
-//   let add = (numOne, numTwo) => {
-//     return numOne + numTwo;
-//   };
-//   let substract = (result, numThree) => {
-//     return result - numThree;
-//   };
+ function addandSubtract(numOne, numTwo, numThree) {
+   let add = (numOne, numTwo) => {
+     return numOne + numTwo;
+   };
+   let substract = (result, numThree) => {
+     return result - numThree;
+   };
 
-//   let result = add(numOne, numTwo);
-//   let finalResult = substract(result, numThree);
+   let result = add(numOne, numTwo);
+   let finalResult = substract(result, numThree);
 
-//   console.log(finalResult);
-// }
+   console.log(finalResult);
+ }

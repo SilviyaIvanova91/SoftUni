@@ -13,25 +13,25 @@ NxNMatrix(7);
 NxNMatrix(2);
 
 //----------------------------------------
-// function NxNMatrix(num) {
-//   let newArr = [];
-//   for (let i = 0; i < num; i++) {
-//     let row = [];
+ function NxNMatrix(num) {
+   let newArr = [];
+   for (let i = 0; i < num; i++) {
+     let row = [];
 
-//     for (let j = 0; j < num; j++) {
-//       row.push(num);
-//     }
-//     newArr.push(row.join(" "));
-//   }
-//   console.log(newArr.join("\n"));
-// }
+     for (let j = 0; j < num; j++) {
+       row.push(num);
+     }
+     newArr.push(row.join(" "));
+   }
+   console.log(newArr.join("\n"));
+ }
 
 //-----------------------------------------
-// function NxNMatrix(number) {
-//   let rowGenerator = (num) => {
-//     return `${num} `.repeat(num);
-//   };
-//   for (let i = 1; i <= number; i++) {
-//     console.log(rowGenerator(number));
-//   }
-// }
+ function NxNMatrix(number) {
+   let rowGenerator = (num) => {
+     return `${num} `.repeat(num);
+   };
+   for (let i = 1; i <= number; i++) {
+     console.log(rowGenerator(number));
+   }
+ }
