@@ -200,7 +200,7 @@ module.exports = (req, res) => {
         throw err;
       }
 
-      console.log("--------->>>" + formidable.fields);
+      console.log("--------->>>" );
       // let oldPath = files.upload.filepath;
       // let newPath = path.normalize(
       //   path.join(
