@@ -201,20 +201,17 @@ module.exports = (req, res) => {
       }
 
       console.log("--------->>>" );
-      // let oldPath = files.upload.filepath;
+     // let oldPath = files.upload.path;
       // let newPath = path.normalize(
       //   path.join(
       //     __dirname,
-      //     "/content/images/" + files.upload.name
+      //     "../content/images/" + files.upload.originalFilename
       //   )
       // );
 
-      // fs.rename(oldPath, newPath, (err) => {
-      //   if (err) {
-      //     console.log(err);
-      //     throw err;
-      //   }
-      //   console.log(`Image uploaded to ${newPath}`);
+      // fs.copyFile(oldPath, newPath, (err) => {
+      //   if (err) throw err;
+      //   console.log("File was uploaded successfuly");
       // });
 
       fs.readFile("./data/cats.json", (err, data) => {
