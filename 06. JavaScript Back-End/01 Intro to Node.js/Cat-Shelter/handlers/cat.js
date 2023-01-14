@@ -5,7 +5,6 @@ const qs = require("querystring");
 const formidable = require("formidable");
 const breeds = require("../data/breeds.json");
 const cats = require("../data/cats.json");
-const globalPath = __dirname.toString().replace("handlers", "");
 
 module.exports = (req, res) => {
   const pathname = url.parse(req.url).pathname;
@@ -86,7 +85,7 @@ module.exports = (req, res) => {
       // let newPath = path.normalize(
       //   path.join(
       //     __dirname,
-      //     "../content/images/" + files.upload.originalFilename
+      //     "../content/images/" + files.upload.name
       //   )
       // );
 
@@ -205,8 +204,8 @@ module.exports = (req, res) => {
       // let oldPath = files.upload.filepath;
       // let newPath = path.normalize(
       //   path.join(
-      //     globalPath,
-      //     "/content/images/" + files.upload.originalFilename
+      //     __dirname,
+      //     "/content/images/" + files.upload.name
       //   )
       // );
 
