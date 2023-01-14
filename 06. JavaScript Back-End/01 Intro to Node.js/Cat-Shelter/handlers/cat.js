@@ -193,29 +193,22 @@ module.exports = (req, res) => {
   } else if (pathname.includes("/cats-edit") && req.method === "POST") {
     let form = new formidable.IncomingForm();
 
-    const catId = pathname.substring(pathname.lastIndexOf("/") + 1);
-    let currentCatIndex = cats.findIndex((c) => c.id == catId);
-    let currentCat = cats.find((c) => c.id == catId);
     form.parse(req, (err, fields, files) => {
       if (err) {
         throw err;
       }
 
-      console.log("--------->>>" + formidable.fields);
-      // let oldPath = files.upload.filepath;
+      // let oldPath = files.upload.path;
       // let newPath = path.normalize(
       //   path.join(
-      //     globalPath,
-      //     "/content/images/" + files.upload.originalFilename
+      //     __dirname,
+      //     "../content/images/" + files.upload.originalFilename
       //   )
       // );
 
-      // fs.rename(oldPath, newPath, (err) => {
-      //   if (err) {
-      //     console.log(err);
-      //     throw err;
-      //   }
-      //   console.log(`Image uploaded to ${newPath}`);
+      // fs.copyFile(oldPath, newPath, (err) => {
+      //   if (err) throw err;
+      //   console.log("File was uploaded successfuly");
       // });
 
       fs.readFile("./data/cats.json", (err, data) => {
@@ -224,12 +217,19 @@ module.exports = (req, res) => {
         }
 
         const allCats = JSON.parse(data);
+        const catId = pathname.substring(pathname.lastIndexOf("/") + 1);
+        let currentCatIndex = allCats.findIndex((c) => c.id == catId);
+        let currentCat = allCats.find((c) => c.id == catId);
 
+        console.log("--------->" + currentCatIndex);
+        console.log("--------->" + catId);
+        console.log("--------->" + fields.name);
         // allCats.splice(currentCatIndex, 1, {
         //   id: catId,
         //   ...fields,
         //   image: currentCat.image,
         // });
+
         const json = JSON.stringify(allCats);
 
         fs.writeFile("./data/cats.json", json, (err) => {
