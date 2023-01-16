@@ -198,7 +198,12 @@ module.exports = (req, res) => {
         throw err;
       }
 
+<<<<<<< HEAD
       // let oldPath = files.upload.path;
+=======
+      console.log("--------->>>" );
+     // let oldPath = files.upload.path;
+>>>>>>> 5f9e699b0caac8545af51ed59bb08e162c2893b7
       // let newPath = path.normalize(
       //   path.join(
       //     __dirname,
