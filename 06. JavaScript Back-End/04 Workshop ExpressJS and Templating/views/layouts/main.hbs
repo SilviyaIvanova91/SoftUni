@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/site.css" />
+  </head>
+  <body>
+    <div id="page-content">
+      <header>
+        <a href="/" class="title-logo">
+          <img src="/static/assets/logo.png" />
+          <span>SoftUni Sleepover</span>
+        </a>
+        {{#if hasUser}}
+          <span>Welcome, {{username}}</span>
+        {{/if}}
+        <nav class="main-nav nav-mid">
+          <ul>
+            <li>
+              <a href="/catalog">Browse Accomodation</a>
+              <a href="/create">Host</a>
+            </li>
+            {{!-- {{#if hasUser}}
+              <li>
+                <a href="/create">Host</a>
+              </li> --}}
+            {{!-- <li>
+                <a href="/facility/create">Create Facility</a>
+              </li>
+              <li>
+                <a href="/auth/logout">Logout</a>
+              </li>
+            {{else}}
+              <li>
+                <a href="/auth/login">Login</a>
+              </li>
+              <li>
+                <a href="/auth/register">Register</a>
+              </li>
+            {{/if}} --}}
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        {{{body}}}
+      </main>
+
+      <footer>Silviya Ivanova &copy; 2022</footer>
+    </div>
+
+  </body>
+</html>
