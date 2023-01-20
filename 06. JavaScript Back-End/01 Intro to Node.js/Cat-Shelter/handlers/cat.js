@@ -198,12 +198,7 @@ module.exports = (req, res) => {
         throw err;
       }
 
-<<<<<<< HEAD
       // let oldPath = files.upload.path;
-=======
-      console.log("--------->>>" );
-     // let oldPath = files.upload.path;
->>>>>>> 5f9e699b0caac8545af51ed59bb08e162c2893b7
       // let newPath = path.normalize(
       //   path.join(
       //     __dirname,
@@ -226,14 +221,11 @@ module.exports = (req, res) => {
         let currentCatIndex = allCats.findIndex((c) => c.id == catId);
         let currentCat = allCats.find((c) => c.id == catId);
 
-        console.log("--------->" + currentCatIndex);
-        console.log("--------->" + catId);
-        console.log("--------->" + fields.name);
-        // allCats.splice(currentCatIndex, 1, {
-        //   id: catId,
-        //   ...fields,
-        //   image: currentCat.image,
-        // });
+        allCats.splice(currentCatIndex, 1, {
+          id: catId,
+          ...fields,
+          image: currentCat.image,
+        });
 
         const json = JSON.stringify(allCats);
 
