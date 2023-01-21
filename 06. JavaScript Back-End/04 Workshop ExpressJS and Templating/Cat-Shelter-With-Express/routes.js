@@ -13,5 +13,7 @@ router.get("/cats/add-cat", addCatController.getCatPage);
 router.post("/cats/add-cat", addCatController.createCat);
 router.get("/edit/:id", addCatController.getCatsDetails);
 router.post("/edit/:id", addCatController.editCatDetails);
+router.get("/delete/:id", addCatController.getShelterCats);
+router.post("/delete/:id", addCatController.shelterCatDetails);
 
 module.exports = router;
