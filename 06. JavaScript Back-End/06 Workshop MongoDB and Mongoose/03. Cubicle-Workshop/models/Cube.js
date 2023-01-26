@@ -1,7 +1,6 @@
 const { Schema, model, Types } = require("mongoose");
 
 const cubeSchema = new Schema({
-  id: { type: Number },
   name: { type: String, require: true },
   description: { type: String, require: true, maxLength: 100 },
   imageUrl: {
