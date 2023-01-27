@@ -1,23 +1,22 @@
-const errorController = require("../controllers/errorController");
+let router = require("express").Router();
+
 const homeController = require("../controllers/homeController");
+const errorController = require("../controllers/errorController");
 const createController = require("../controllers/createController");
+const accessorryController = require("../controllers/accessorryController");
 
-module.exports = (app) => {
-  app.use(homeController);
-  app.use("/create", createController);
+router.get("/", homeController.getHomePage);
+router.get("/about", homeController.getAboutPage);
+router.get("/404", errorController.getErrorPage);
 
-  app.all("*", errorController);
-};
+router.get("/create", createController.getCreateCube);
+router.post("/create", createController.postCreateCube);
+router.get("/details/:id", createController.getDetails);
 
-// const router = require("express").Router();
+router.get("/create/accessory", accessorryController.getAccessory);
+router.post("/create/accessory", accessorryController.postAccessory);
 
-// const homeController = require("../controllers/homeController");
-// const createController = require("../controllers/createController");
+router.get("/cubes/:id/attach", createController.getAttachAccessory);
+router.post("/cubes/:id/attach", createController.postAttachAccessory);
 
-// router.get("/", homeController.getHomePage);
-// router.get("/about", homeController.getAboutPage);
-// router.get("/404", homeController.getErrorPage);
-
-// router.get("/create", createController.getCube);
-// router.post("/create", createController.createCube);
-//router.get("/details/:id", createController.getDetails);
+module.exports = router;

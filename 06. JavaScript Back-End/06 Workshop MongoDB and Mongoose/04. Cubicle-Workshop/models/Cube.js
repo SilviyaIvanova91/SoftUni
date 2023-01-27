@@ -9,7 +9,7 @@ const cubeSchema = new Schema({
     match: [/^https?:\/\//, "This is not a valid image URL"],
   },
   difficultyLevel: { type: Number, required: true, min: 1, max: 5 },
-  // accessories: { type: [Types.ObjectId],default: [], ref:'Accessory'}
+  accessories: { type: [Types.ObjectId], default: [], ref: "Accessory" },
 });
 
 const Cube = model("Cube", cubeSchema);
