@@ -12,7 +12,7 @@ authController.get("/register", (req, res) => {
 
 authController.post("/register", async (req, res) => {
   try {
-    if (validator.isEmail(req.body.email == false)) {
+    if (validator.isEmail(req.body.email) == false) {
       throw new Error("Invalid email");
     }
     if (req.body.username == "" || req.body.password == "") {
@@ -24,7 +24,12 @@ authController.post("/register", async (req, res) => {
     if (req.body.password != req.body.repass) {
       throw new Error("Password don't match");
     }
-    const token = await register(req.body.username, req.body.password);
+
+    const token = await register(
+      req.body.email,
+      req.body.username,
+      req.body.password
+    );
 
     res.cookie("token", token);
     res.redirect("/auth/register");
@@ -32,7 +37,7 @@ authController.post("/register", async (req, res) => {
     console.log(error);
     const errors = parseError(error);
     res.render("register", {
-      title: "register Page",
+      title: "Register Page",
       errors,
       body: {
         email: req.body.email,
