@@ -19,7 +19,6 @@ async function login(username, password) {
   }
 
   const token = createSession({ _id: user._id, username: user.username });
-
   return token;
 }
 

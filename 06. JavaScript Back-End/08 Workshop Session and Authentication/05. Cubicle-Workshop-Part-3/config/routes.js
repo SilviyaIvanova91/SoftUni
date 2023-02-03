@@ -16,6 +16,9 @@ router.get("/create", createController.getCreateCube);
 router.post("/create", createController.postCreateCube);
 router.get("/details/:id", createController.getDetails);
 
+router.get("/edit/:id", createController.getEditcube);
+router.post("/edit/:id", createController.postEditcube);
+
 router.get("/create/accessory", accessorryController.getAccessory);
 router.post("/create/accessory", accessorryController.postAccessory);
 

@@ -3,6 +3,8 @@ const Cube = require("../models/Cube");
 function hasUser() {
   return (req, res, next) => {
     if (req.user) {
+      const token = req.cookies["token"];
+      req.user = token["token"];
       next();
     } else {
       res.redirect("/login");
