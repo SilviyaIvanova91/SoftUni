@@ -4,6 +4,7 @@ const {
   getById,
   generateOptions,
   edit,
+  deleteCube,
 } = require("../services/cubeServices");
 let Accessory = require("../models/Accessory");
 
@@ -13,7 +14,15 @@ exports.getCreateCube = (req, res) => {
 
 exports.postCreateCube = async (req, res) => {
   try {
-    let result = await create(req.body);
+    const cube = {
+      name: req.body.name,
+      description: req.body.description,
+      imageUrl: req.body.imageUrl,
+      difficultyLevel: req.body.difficultyLevel,
+      owner: req.user._id,
+    };
+
+    await create(cube);
     // console.log(result);
     res.redirect("/");
   } catch (error) {
@@ -33,6 +42,13 @@ exports.getDetails = async (req, res) => {
   if (!cube) {
     return res.redirect("404");
   }
+  console.log(req.params.id);
+  console.log(cube._id);
+  if (cube.owner == req.user._id) {
+    cube.isOwner = true;
+  }
+  console.log(cube.isOwner);
+  //const owner = isOwner(req.params.id, cube);
 
   res.render("details", { cube });
 };
@@ -76,4 +92,18 @@ exports.postEditcube = async (req, res) => {
   await edit(req.params.id, { name, description, imageUrl, difficultyLevel });
 
   res.redirect(`/details/${req.params.id}`);
+};
+
+exports.getDeletecube = async (req, res) => {
+  const cube = await getById(req.params.id);
+
+  cube.options = generateOptions(cube.difficultyLevel);
+
+  res.render("delete", { cube });
+};
+
+exports.postDeletecube = async (req, res) => {
+  await deleteCube(req.params.id);
+
+  res.redirect("/");
 };

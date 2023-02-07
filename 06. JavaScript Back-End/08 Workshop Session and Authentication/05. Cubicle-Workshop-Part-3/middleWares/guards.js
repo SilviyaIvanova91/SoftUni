@@ -3,8 +3,9 @@ const Cube = require("../models/Cube");
 function hasUser() {
   return (req, res, next) => {
     if (req.user) {
-      const token = req.cookies["token"];
-      req.user = token["token"];
+      if (req.user != undefined) {
+        next();
+      }
       next();
     } else {
       res.redirect("/login");
@@ -22,19 +23,8 @@ function isGuest() {
   };
 }
 
-function isOwner() {
-  return async (req, res, next) => {
-    if (req.user) {
-      res.redirect("/login");
-    } else {
-      const cube = await Cube.findById(req.params.id).lean();
-      if (cube.creatorrId === req.user._id) {
-        next();
-      } else {
-        res.redirect("/");
-      }
-    }
-  };
+function isOwner(user, cube) {
+  return cube._id == user;
 }
 
 module.exports = {
@@ -42,3 +32,18 @@ module.exports = {
   isGuest,
   isOwner,
 };
+
+// function isOwner() {
+//   return async (req, res, next) => {
+//     if (req.user) {
+//       res.redirect("/login");
+//     } else {
+//       const cube = await Cube.findById(req.params.id).lean();
+//       if (cube.creatorrId === req.user._id) {
+//         next();
+//       } else {
+//         res.redirect("/");
+//       }
+//     }
+//   };
+// }

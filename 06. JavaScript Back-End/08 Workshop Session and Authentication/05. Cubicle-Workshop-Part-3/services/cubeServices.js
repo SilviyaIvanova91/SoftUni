@@ -9,20 +9,7 @@ function getById(id) {
 }
 
 async function create(cubeData) {
-  const cube = {
-    name: cubeData.name,
-    description: cubeData.description,
-    imageUrl: cubeData.imageUrl,
-    difficultyLevel: Number(cubeData.difficultyLevel),
-  };
-
-  console.log(cube);
-  let missing = Object.entries(cube).filter(([k, v]) => !v);
-  if (missing.length > 0) {
-    throw new Error(missing.map((m) => `${m[0]} is required!`).join("\n"));
-  }
-
-  const result = await Cube.create(cube);
+  const result = await Cube.create(cubeData);
 
   return result;
 }
@@ -36,6 +23,10 @@ async function edit(id, cube) {
   existingCube.difficultyLevel = cube.difficultyLevel;
 
   await existingCube.save();
+}
+
+async function deleteCube(id) {
+  await Cube.findByIdAndDelete(id);
 }
 
 function generateOptions(category) {
@@ -54,5 +45,6 @@ module.exports = {
   getById,
   create,
   edit,
+  deleteCube,
   generateOptions,
 };

@@ -4,24 +4,6 @@ const User = require("../models/User");
 
 const JWT_SECRET = "thisiscubesecretkeyforvalidation";
 
-async function login(username, password) {
-  const user = await User.findOne({ username }).collation({
-    locale: "en",
-    strength: 2,
-  });
-  if (!user) {
-    throw new Error("Incorect email or password");
-  }
-
-  const hasMatch = await bcrypt.compare(password, user.hashedPassword);
-  if (!hasMatch) {
-    throw new Error("Incorect email or password");
-  }
-
-  const token = createSession({ _id: user._id, username: user.username });
-  return token;
-}
-
 async function register(username, password) {
   const existingUsername = await User.findOne({ username }).collation({
     locale: "en",
@@ -39,14 +21,32 @@ async function register(username, password) {
   });
   //console.log(user);
 
-  const token = createSession({ _id: user._id, username: user.username });
+  const token = createSession(user);
 
+  return token;
+}
+
+async function login(username, password) {
+  const user = await User.findOne({ username }).collation({
+    locale: "en",
+    strength: 2,
+  });
+  if (!user) {
+    throw new Error("Incorect username or password");
+  }
+
+  const hasMatch = await bcrypt.compare(password, user.hashedPassword);
+  if (hasMatch == false) {
+    throw new Error("Incorect username or password");
+  }
+
+  const token = createSession(user);
   return token;
 }
 
 function createSession({ _id, username }) {
   const payload = { _id, username };
-  const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "2h" });
+  const token = jwt.sign(payload, JWT_SECRET);
 
   return token;
 }

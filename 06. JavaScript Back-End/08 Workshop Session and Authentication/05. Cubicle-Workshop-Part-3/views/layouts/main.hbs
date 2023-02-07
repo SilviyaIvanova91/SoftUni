@@ -13,7 +13,7 @@
           <li><img class="logo" src="/static/images/logo.png" /></li>
           <li><a href="/">Browse</a></li>
           <li><a href="/about">About</a></li>
-          {{#if isAuthenticated}}
+          {{#if username}}
             <li><a href="/create">Add a Cube</a></li>
             <li><a href="/create/accessory">Add accessory</a></li>
             <li><a href="/logout">Logout</a></li>
@@ -25,6 +25,11 @@
       </header>
 
       <main>
+        {{#if error}}
+          <div id="notifications">
+            <p id="notifications-message">{{error}} </p>
+          </div>
+        {{/if}}
         {{{body}}}
       </main>
 

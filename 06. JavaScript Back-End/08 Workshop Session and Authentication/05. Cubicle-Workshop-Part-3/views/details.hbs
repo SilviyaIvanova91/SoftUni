@@ -7,9 +7,10 @@
   <a class="btn" href="/">Back</a>
   <a class="btn" href="/cubes/{{cube._id}}/attach">Attach</a>
 
+{{#if cube.isOwner}}
   <a class="btn" href="/edit/{{cube._id}}">Edit</a>
   <a class="btn" href="/delete/{{cube._id}}">Delete</a>
-
+{{/if}}
 
 </div>
  <h2>Accessories</h2>
