@@ -30,31 +30,15 @@ async function deleteBook(id) {
   await Book.findByIdAndDelete(id);
 }
 
-// async function wishBook(bookId, userId) {
-//   const user = await User.findById(userId);
-//   const book = await Book.findById(bookId);
-//   console.log(user);
-//   console.log(book);
-
-//   if (book.owner == user._id) {
-//     res.render("book/details", { error: "Cannot add your own book!" });
-//     throw new Error("Cannot add your own book!");
-//   }
-
-//   user.wishingList.push(book);
-//   await user.save();
-// }
-
-async function getMyWishBooks(bookId, userId) {
+async function wishBook(bookId, userId) {
   const book = await Book.findById(bookId);
 
   book.wishingList.push(userId);
-  await book.save();
+  book.save();
 }
 
 async function getUserWishing(userId) {
-  const user = await User.findById(userId).populate("wishingList").lean();
-  return user;
+  return Book.find({ wishingList: userId }).lean();
 }
 
 module.exports = {
@@ -63,6 +47,6 @@ module.exports = {
   create,
   edit,
   deleteBook,
-  getMyWishBooks,
   getUserWishing,
+  wishBook,
 };

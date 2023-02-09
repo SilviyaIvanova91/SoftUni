@@ -3,6 +3,7 @@ let router = require("express").Router();
 const homeController = require("../controllers/homeController");
 const authController = require("../controllers/authController");
 const bookController = require("../controllers/booksController");
+const profileController = require("../controllers/profileController");
 
 const { hasUser } = require("../middlewares/guards");
 
@@ -22,8 +23,8 @@ router.post("/book/edit/:id", hasUser(), bookController.postEditBook);
 
 router.get("/book/delete/:id", hasUser(), bookController.getDeleteBook);
 
-router.get("/book/wish", hasUser(), bookController.getWishingBooks);
+router.get("/book/wish/:id", hasUser(), bookController.wishingBook);
 
-router.get("/profile", hasUser(), bookController.getProfile);
+router.get("/profile", hasUser(), profileController.userController);
 
 module.exports = router;

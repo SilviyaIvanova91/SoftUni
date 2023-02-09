@@ -46,18 +46,25 @@ exports.postCreateBook = async (req, res) => {
 exports.getDetails = async (req, res) => {
   const book = await Book.findById(req.params.id).lean();
 
-  if (req.user) {
-    const user = req.user.email;
-
-    book.hasUser = req.user ? true : false;
-    book.isOwner = req.user && req.user._id == book.owner;
-    //book.added = req.user && user.wishingList.includes(book._id)
-  }
-
   if (!book) {
     return res.redirect("404", { error: "Book not found!" });
   }
 
+  if (!book.wishingList) {
+    book.wishingList = [];
+  }
+
+  if (req.user) {
+    if (book.owner == req.user._id) {
+      book.isOwner = true;
+    } else if (
+      book.wishingList
+        .map((b) => b.toString())
+        .includes(req.user._id.toString())
+    ) {
+      book.isWished = true;
+    }
+  }
   res.render("books/details", { book });
 };
 
@@ -87,19 +94,6 @@ exports.getDeleteBook = async (req, res) => {
   res.redirect("/catalog");
 };
 
-exports.getWishingBooks = async (req, res) => {
-  const bookId = req.params.bookId;
-  let book = await getById(bookId);
-  console.log(book);
-  // let book = await getById(req.params.id);
-  // console.log(book);
-
-  // book.wishingList.push(req.user._id);
-
-  // await book.save();
-  // res.rediresct(`/book/details/${req.params.id}`);
-};
-
 exports.getProfile = async (req, res) => {
   try {
     const user = await getUserWishing(req.user._id);
@@ -108,5 +102,25 @@ exports.getProfile = async (req, res) => {
   } catch (error) {
     console.log(error.message);
     res.redirect("/404");
+  }
+};
+
+exports.wishingBook = async (req, res) => {
+  const book = await getById(req.params.id).lean();
+
+  try {
+    if (book.owner == req.user._id) {
+      book.isOwner = true;
+      return res.render(`book/details`, {
+        book,
+        error: "Cannot wish your own book",
+      });
+    }
+
+    await wishBook(req.params.id, req.user._id);
+
+    res.redirect(`/book/details/${req.params.id}`);
+  } catch (error) {
+    return res.render(`books/details`, { book, error: error.message });
   }
 };

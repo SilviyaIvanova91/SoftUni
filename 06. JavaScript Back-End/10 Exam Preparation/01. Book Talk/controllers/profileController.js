@@ -1,9 +1,8 @@
-const { getByUserWishing } = require("../services/booksServices");
+const { getUserWishing } = require("../services/booksServices");
 
-exports.prfileController = async (req, res) => {
-  const wishings = await getByUserWishing(req.user._id);
+exports.userController = async (req, res) => {
+  const wishings = await getUserWishing(req.user._id);
+  console.log(wishings);
 
-  res.render("profile", {
-    user: Object.assign({ wishings: wishings.map((b) => b.title) }, req.user),
-  });
+  res.render("profile", { wishings });
 };

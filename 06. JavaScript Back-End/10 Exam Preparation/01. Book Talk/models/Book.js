@@ -14,7 +14,7 @@ const bookSchema = new Schema({
   imageUrl: {
     type: String,
     required: true,
-    validate: /^https?:\/\//i,
+    //  validate: /^https?:\/\//i,
   },
   bookReview: {
     type: String,
@@ -27,7 +27,7 @@ const bookSchema = new Schema({
     minLength: [3, "Genre must be at least 2 characters long!"],
   },
   stars: { type: Number, required: true, minValue: 1, maxValue: 5 },
-  wishingList: [{ type: Types.ObjectId, ref: "User" }],
+  wishingList: { type: [Types.ObjectId], ref: "User" },
 
   owner: { type: Types.ObjectId, ref: "User" },
 });

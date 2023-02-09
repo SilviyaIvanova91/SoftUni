@@ -14,7 +14,8 @@ router.post("/auth/register", async (req, res) => {
       req.body.password == "" ||
       req.body.rePass == ""
     ) {
-      return res.render("auth/register", { error: "All fields are required!" });
+      res.render("auth/register", { error: "All fields are required!" });
+      return;
     }
 
     if (req.body.password != req.body.rePass) {
