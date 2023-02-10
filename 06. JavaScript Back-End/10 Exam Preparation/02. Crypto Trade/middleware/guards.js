@@ -9,11 +9,9 @@ function hasUser() {
 }
 
 function isOwner() {
-  return (req, res, next) => {
-    if (
-      req.user &&
-      res.locals.crypto.owner.toString() == req.user._id.toString()
-    ) {
+  return async (req, res, next) => {
+    const crypto = await getById(req.params.id);
+    if (req.user && crypto.owner == req.user._id) {
       res.locals.isOwner = true;
       next();
     } else {
