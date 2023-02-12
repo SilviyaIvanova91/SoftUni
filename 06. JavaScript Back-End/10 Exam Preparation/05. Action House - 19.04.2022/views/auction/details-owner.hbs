@@ -1,0 +1,55 @@
+<!-- Details Page - Auction owner -->
+<section id="catalog-section">
+
+  <h1 class="item">
+    {{auction.title}}
+    <div class="f-right">
+      <a
+        class="action pad-small f-left"
+        href="/auction/edit/{{auction._id}}"
+      >Edit</a>
+      <a
+        class="action pad-small f-left"
+        href="/auction/delete/{{auction._id}}"
+      >Delete</a>
+    </div>
+  </h1>
+  <div class="item padded">
+    <div class="layout right large">
+      <div class="col">
+        <img src="{{auction.imageUrl}}" class="img-large" />
+      </div>
+
+      <div class="content pad-med">
+        <p>In category: <strong>{{auction.category}}</strong></p>
+        <p>
+          {{auction.description}}
+        </p>
+
+        <div class="align-center">
+          <div>Current price: $<strong>{{auction.price}}</strong></div>
+
+          <div>
+            {{#if auction.isBidder}}
+              <!-- If there is a bidder -->
+              Bid by
+              <strong>{{auction.isBidder.firstName}}
+                {{auction.isBidder.lastName}}</strong>
+
+              <!-- # Bonus: If there is a bidder -->
+
+              <a class="action pad-med cta" href="/auction/close">Close Auction</a>
+
+              <!--  # End of Bonus  -->
+            {{else}}
+              <!-- If there are no bids -->
+              No bids
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>Listed by Peter Jackson</footer>
+  </div>
+</section>

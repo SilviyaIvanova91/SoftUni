@@ -1,0 +1,70 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/site.css" />
+    <title>{{title}}</title>
+  </head>
+
+  <body>
+
+    <div id="page-content">
+
+      <header>
+        <a href="/" class="title-logo">
+          <img src="/static/assets/logo.png" />
+          <span>Auction House</span>
+        </a>
+        <nav class="main-nav nav-mid">
+          <ul>
+            <li>
+              <a href="/auction/catalog">Browse</a>
+            </li>
+            {{#if user}}
+              <!-- User actions -->
+              <li class="user">
+                <a href="/auction/create">Publish</a>
+              </li>
+
+              <!-- Bonus action -->
+              <li class="user">
+                <a href="/auction/closed/:id">Closed Auctions</a>
+              </li>
+
+              <li class="user">
+                <a href="/auth/logout">Logout</a>
+              </li>
+            {{else}}
+              <!-- Guest actions -->
+              <li class="guest">
+                <a href="/auth/register">Register</a>
+              </li>
+              <li class="guest">
+                <a href="/auth/login">Login</a>
+              </li>
+            {{/if}}
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+
+        <!-- In case of error, display the following div-->
+
+        {{#if error}}
+          <div class="error-box">
+            <p>{{error}}</p>
+          </div>
+        {{/if}}
+
+        {{{body}}}
+
+      </main>
+
+      <footer>SoftUni &copy; 2022 | Design by Viktor Kostadinov</footer>
+    </div>
+
+  </body>
+
+</html>
