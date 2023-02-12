@@ -16,6 +16,7 @@ exports.bookHotel = async (hotelId, userId) => {
   const hotel = await Hotel.findById(hotelId);
 
   hotel.bookings.push(userId);
+  hotel.rooms--;
   hotel.save();
 };
 
