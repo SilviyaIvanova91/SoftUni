@@ -1,0 +1,5 @@
+<select id="payment" name="method">
+    {{#each paymentMethod}}
+    <option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>
+    {{/each}}
+</select>
