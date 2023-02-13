@@ -33,13 +33,13 @@
               <!-- If current user can place a bid -->
               <form
                 class="vertical"
-                method="post"
+                method="get"
                 action="/auction/bid/{{auction._id}}"
               >
                 <label><span>Bid amount</span><input
                     type="number"
                     name="amout"
-                    value="{{user.amout}}"
+                    value=""
                   /></label>
                 <input class="action" type="submit" value="Place bid" />
               </form>

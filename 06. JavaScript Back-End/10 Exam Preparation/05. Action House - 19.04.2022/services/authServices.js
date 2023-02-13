@@ -17,7 +17,7 @@ exports.register = async (email, firstName, lastName, password) => {
     lastName,
     hashedPassword,
   });
-  console.log(user);
+
   return createSession(user);
 };
 
@@ -28,7 +28,7 @@ exports.login = async (email, password) => {
   }
 
   const hasMatch = await bcrypt.compare(password, user.hashedPassword);
-  console.log(hasMatch);
+
   if (!hasMatch) {
     throw new Error("Invalid username or password!");
   }

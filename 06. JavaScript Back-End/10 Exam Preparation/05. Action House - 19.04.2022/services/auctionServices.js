@@ -1,4 +1,6 @@
 const Auction = require("../models/Auction");
+const User = require("../models/User");
+const ClosedAuction = require("../models/ClosedAction");
 
 exports.getAll = async () => {
   return Auction.find({}).lean();
@@ -12,10 +14,11 @@ exports.create = async (auctionData) => {
   return Auction.create(auctionData);
 };
 
-exports.auctionBidder = async (auctionId, userId) => {
+exports.auctionBidder = async (auctionId, userId, amout) => {
   const auction = await Auction.findById(auctionId);
 
-  auction.bidder.push(userId);
+  auction.bidder = userId;
+  auction.price = amout;
   auction.save();
 };
 
@@ -33,4 +36,26 @@ exports.edit = async (id, auction) => {
 
 exports.deleteAuction = async (id) => {
   await Auction.findByIdAndDelete(id);
+};
+
+exports.getUserAuction = (userId) => {
+  return User.find(userId);
+};
+
+exports.getAllClosed = () => {
+  return ClosedAuction.find({}).lean();
+};
+
+exports.createClosedAuction = (auction, bidUser) => {
+  console.log(auction);
+  const newAuction = {
+    title: auction.title,
+    imageUrl: auction.imageUrl,
+    price: auction.price,
+
+    owner: auction.author,
+  };
+  newAuction.bidder = bidUser;
+  console.log(newAuction);
+  return ClosedAuction.create(newAuction);
 };

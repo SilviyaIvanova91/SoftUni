@@ -30,15 +30,17 @@
           <div>Current price: $<strong>{{auction.price}}</strong></div>
 
           <div>
-            {{#if auction.isBidder}}
+            {{#if auction.bidder}}
               <!-- If there is a bidder -->
               Bid by
-              <strong>{{auction.isBidder.firstName}}
-                {{auction.isBidder.lastName}}</strong>
+              <strong>{{bidUser}}</strong>
 
               <!-- # Bonus: If there is a bidder -->
 
-              <a class="action pad-med cta" href="/auction/close">Close Auction</a>
+              <a
+                class="action pad-med cta"
+                href="/auction/closed/{{auction._id}}"
+              >Close Auction</a>
 
               <!--  # End of Bonus  -->
             {{else}}

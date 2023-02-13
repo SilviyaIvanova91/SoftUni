@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const User = require("../models/User");
 
 const { hasUser, isOwner } = require("../middleware/guards");
 const {
@@ -8,6 +9,9 @@ const {
   auctionBidder,
   edit,
   deleteAuction,
+  getUserAuction,
+  getAllClosed,
+  createClosedAuction,
 } = require("../services/auctionServices");
 const { getErrorMessage } = require("../utils/errorUtils");
 const { generateOptions } = require("../utils/optionUtils");
@@ -41,25 +45,22 @@ router.post("/create", hasUser(), async (req, res) => {
 
 router.get("/details/:id", async (req, res) => {
   const auction = await getById(req.params.id);
-  const currentAmount = Number(req.user.userAmount);
 
   if (!auction) {
     throw new Error("Course not found!");
   }
 
-  if (!auction.bidder) {
-    auction.bidder = [];
-  }
-
-  auction.isHighestBidder = auction.currentUserAmount;
-
   auction.isOwner = req.user && auction.author == req.user._id ? true : false;
-
-  auction.isBidder =
-    req.user && auction.bidder.find((x) => x == req.user._id) ? true : false;
-
-  if (auction.isOwner) {
+  auction.isBidder = req.user && auction.bidder == req.user._id ? true : false;
+  if (auction.isOwner && auction.bidder.length == 0) {
     res.render("auction/details-owner", { auction });
+  } else if (auction.isOwner) {
+    auction.isBidder = true;
+    const user = await getUserAuction(auction.bidder);
+    const bidUser = Object.assign(
+      user.map((b) => `${b.firstName} ${b.lastName}`)
+    );
+    res.render("auction/details-owner", { auction, bidUser });
   } else {
     res.render("auction/details", { auction });
   }
@@ -67,6 +68,7 @@ router.get("/details/:id", async (req, res) => {
 
 router.get("/bid/:id", hasUser(), async (req, res) => {
   const auction = await getById(req.params.id);
+
   try {
     if (auction.owner == req.user._id) {
       auction.isOwner = true;
@@ -76,11 +78,18 @@ router.get("/bid/:id", hasUser(), async (req, res) => {
       });
     }
 
-    await auctionBidder(req.params.id, req.user._id);
-    res.redirect(`/auction/details/${req.params.id}`);
+    if (auction.isBidder == req.user._id) {
+      auction.isBidder = true;
+      return;
+    } else if (req.query.amout > auction.price) {
+      await auctionBidder(req.params.id, req.user._id, req.query.amout);
+      res.redirect(`/auction/details/${req.params.id}`);
+    } else {
+      throw new Error("You cannot bid with less or equal amout than current");
+    }
   } catch (error) {
     return res.render(`auction/details`, {
-      hotel,
+      auction,
       error: getErrorMessage(error),
     });
   }
@@ -104,6 +113,16 @@ router.get("/delete/:id", isOwner(), hasUser(), async (req, res) => {
   await deleteAuction(req.params.id);
 
   res.redirect("/auction/catalog");
+});
+
+router.get("/closed/:id", async (req, res) => {
+  const auction = await getById(req.params.id);
+  const user = await getUserAuction(auction.bidder);
+  const bidUser = Object.assign(
+    user.map((b) => `${b.firstName} ${b.lastName}`)
+  );
+  await createClosedAuction(auction, bidUser);
+  res.redirect("/auction/closed");
 });
 
 module.exports = router;
