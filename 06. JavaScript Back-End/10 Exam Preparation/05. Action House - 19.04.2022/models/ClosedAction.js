@@ -20,6 +20,14 @@ const closedAuctionSchema = new Schema({
     ref: "User",
     default: [],
   },
+  bidderFirstName: {
+    type: String,
+    required: [true, "Bidder First Name is required!"],
+  },
+  bidderLastName: {
+    type: String,
+    required: [true, "Bidder Last Name is required!"],
+  },
 });
 
 const ClosedAuction = model("ClosedAuction", closedAuctionSchema);

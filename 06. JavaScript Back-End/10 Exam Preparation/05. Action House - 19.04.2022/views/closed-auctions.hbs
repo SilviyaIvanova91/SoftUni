@@ -2,10 +2,10 @@
 <section id="catalog-section" class="spaced">
   <h1 class="item">Closed Auctions</h1>
 
-  {{#if closedAuctions}}
+  {{#if closedAuction}}
     <!-- List of closed auctions for the current user -->
     <ul class="catalog cards">
-      {{#each closedAuctions}}
+      {{#each closedAuction}}
       {{> closedCard}}
       {{/each}}
     </ul>

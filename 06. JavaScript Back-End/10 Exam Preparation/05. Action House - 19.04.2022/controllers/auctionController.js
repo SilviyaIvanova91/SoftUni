@@ -12,6 +12,7 @@ const {
   getUserAuction,
   getAllClosed,
   createClosedAuction,
+  closedAuctions,
 } = require("../services/auctionServices");
 const { getErrorMessage } = require("../utils/errorUtils");
 const { generateOptions } = require("../utils/optionUtils");
@@ -118,11 +119,16 @@ router.get("/delete/:id", isOwner(), hasUser(), async (req, res) => {
 router.get("/closed/:id", async (req, res) => {
   const auction = await getById(req.params.id);
   const user = await getUserAuction(auction.bidder);
-  const bidUser = Object.assign(
-    user.map((b) => `${b.firstName} ${b.lastName}`)
+  const bidUserFirstName = Object.assign(user.map((b) => b.firstName))[0];
+  const bidUserLastName = Object.assign(user.map((b) => b.lastName))[0];
+
+  await closedAuctions(
+    auction,
+    req.params.id,
+    bidUserFirstName,
+    bidUserLastName
   );
-  await createClosedAuction(auction, bidUser);
-  res.redirect("/auction/closed");
+  res.redirect("/auction/catalog");
 });
 
 module.exports = router;

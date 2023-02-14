@@ -42,20 +42,24 @@ exports.getUserAuction = (userId) => {
   return User.find(userId);
 };
 
-exports.getAllClosed = () => {
-  return ClosedAuction.find({}).lean();
+exports.getUserClosedAuction = (userId) => {
+  return ClosedAuction.find({ owner: userId }).lean();
 };
 
-exports.createClosedAuction = (auction, bidUser) => {
-  console.log(auction);
+exports.closedAuctions = async (
+  auction,
+  auctionId,
+  bidUserFirstName,
+  bidUserLastName
+) => {
   const newAuction = {
     title: auction.title,
     imageUrl: auction.imageUrl,
     price: auction.price,
-
     owner: auction.author,
+    bidderFirstName: bidUserFirstName,
+    bidderLastName: bidUserLastName,
   };
-  newAuction.bidder = bidUser;
-  console.log(newAuction);
-  return ClosedAuction.create(newAuction);
+  const closedAuction = await ClosedAuction.create(newAuction);
+  await Auction.findByIdAndDelete(auctionId);
 };

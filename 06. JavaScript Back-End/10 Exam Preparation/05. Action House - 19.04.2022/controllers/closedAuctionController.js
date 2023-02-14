@@ -1,12 +1,17 @@
-const { getAllClosed } = require("../services/auctionServices");
+const { hasUser } = require("../middleware/guards");
+const {
+  getUserClosedAuction,
+  getUserAuction,
+} = require("../services/auctionServices");
 
 const router = require("express").Router();
 
-router.get("/closed", async (req, res) => {
-  const closedAuctions = await getAllClosed();
+router.get("/closed", hasUser(), async (req, res) => {
+  const closedAuction = await getUserClosedAuction(req.user._id);
+
   res.render("closed-auctions", {
-    title: "Closed Actions Page",
-    closedAuctions,
+    title: "Closed Auctions Page",
+    closedAuction,
   });
 });
 

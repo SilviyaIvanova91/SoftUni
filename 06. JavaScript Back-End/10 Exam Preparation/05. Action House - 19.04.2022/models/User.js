@@ -22,6 +22,7 @@ const userSchema = new Schema({
     required: [true, "Password is required!"],
     minLength: [5, "Password must be at least 5"],
   },
+  closedAuction: [{ type: Types.ObjectId, ref: "ClosedActions" }],
 });
 
 const User = model("User", userSchema);
