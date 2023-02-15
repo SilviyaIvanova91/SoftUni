@@ -22,8 +22,8 @@ function isGuest() {
 
 function isOwner() {
   return async (req, res, next) => {
-    const crypto = await getById(req.params.id);
-    if (req.user && crypto.owner == req.user._id) {
+    const job = await getById(req.params.id);
+    if (req.user && job.author == req.user._id) {
       res.locals.isOwner = true;
       next();
     } else {

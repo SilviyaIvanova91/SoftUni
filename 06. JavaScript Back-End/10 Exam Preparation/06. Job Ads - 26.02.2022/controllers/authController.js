@@ -11,6 +11,9 @@ router.post("/register", async (req, res) => {
     if (req.body.password != req.body.rePass) {
       throw new Error("Password don't match");
     }
+    if (req.body.password.length < 5) {
+      throw new Error("Password should be at least 6 characters long");
+    }
 
     const token = await register(
       req.body.email,

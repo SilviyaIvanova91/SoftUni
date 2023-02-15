@@ -20,17 +20,19 @@
         {{#if user}}
           {{#if job.isOwner}}
             <!--only for registered users and author of the ad-->
-            <a href="/jobs/edit/{{_id}}" class="btn-edit">Edit</a>
-            <a href="/jobs/delete/{{_id}}" class="btn-delete">Delete</a>
+            <a href="/jobs/edit/{{job._id}}" class="btn-edit">Edit</a>
+            <a href="/jobs/delete/{{job._id}}" class="btn-delete">Delete</a>
           {{else}}
 
-            {{#if jobs.isApply}}
+            {{#if job.isApply}}
               <!--logged in user who has already applied for current ad-->
               <p class="already-applied">You have already applied!</p>
             {{else}}
               <!--logged in user who did not apply for current ad-->
-              <a href="/jobs/apply" class="btn-apply">Apply now!</a>
-              <p class="applied-people">Hurry up, 1 people have already applied.</p>
+              <a href="/jobs/apply/{{job._id}}" class="btn-apply">Apply now!</a>
+              <p class="applied-people">Hurry up,
+                {{job.ussersApplied.length}}
+                people have already applied.</p>
 
             {{/if}}
 
@@ -48,17 +50,13 @@
     <section id="info-about-candidates">
       <h2>Candidates for this ad:</h2>
       <!--If there are people who have applied, show each of them in the following format-->
-      {{#each length}}
+      {{#each applyUser}}
         <article class="info-about-candidates-card">
-          <h2>Email: petar@abv.bg</h2>
-          <h3>Description of the candidate's skills: Experience with HTML 5, CSS
-            3, Node.js</h3>
+          <h2>Email: {{email}}</h2>
+          <h3>Description of the candidate's skills:
+            {{skills}}</h3>
         </article>
       {{/each}}
-      {{! <article class="info-about-candidates-card">
-        <h2>Email: ivan@abv.bg</h2>
-        <h3>Description of the candidate's skills: Experience with Node.js</h3>
-      </article> }}
       <!--If not, you don't need to visualize anything further-->
     </section>
   {{/if}}

@@ -4,13 +4,6 @@
   </article>
 
   <!--If there are job ads in the database, show each one-->
-  <article class="all-ads-card">
-    <article class="all-ads-card-image">
-      <!-- Do not forget to change the path to the image -->
-      <img src="/static/img/job-icon1.png" alt="job-icon" />
-    </article>
-
- 
 
   {{#if ads}}
     {{#each ads}}
@@ -45,7 +38,7 @@
   {{/if}}
 </section>
 
-   {{!-- <article class="all-ads-card-content">
+{{! <article class="all-ads-card-content">
       <!--You must put the headline value in <h2>-->
       <h2>UI / UX Designers</h2>
       <h3>Company Name: Digital Solutions</h3>
@@ -59,4 +52,4 @@
     <article class="all-ads-card-buttons">
       <a href="#" class="btn-details">Details</a>
     </article>
-  </article> --}}
+  </article> }}

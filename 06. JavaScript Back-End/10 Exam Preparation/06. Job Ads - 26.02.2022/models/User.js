@@ -4,6 +4,7 @@ const userSchema = new Schema({
   email: {
     type: String,
     required: [true, "Email is required"],
+    match: [/^[A-Za-z]+@[A-Za-z]+\.[A-Za-z]+?/, "Invalid email!"],
   },
   hashedPassword: {
     type: String,
@@ -12,6 +13,10 @@ const userSchema = new Schema({
   skills: {
     type: String,
     required: [true, "Description is required"],
+    maxLength: [
+      40,
+      "The description of skills should be maximumof 40 characters long",
+    ],
   },
   adds: [
     {

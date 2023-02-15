@@ -1,10 +1,14 @@
 const router = require("express").Router();
-const { hasUser } = require("../middleware/guards");
+const { hasUser, isOwner } = require("../middleware/guards");
 const {
   create,
   getAll,
   getById,
   getByCreateUser,
+  aplyyJob,
+  getAppliedUser,
+  edit,
+  deleteAuction,
 } = require("../services/jobsServices");
 const { getErrorMessage } = require("../utils/errorUtils");
 
@@ -48,8 +52,77 @@ router.get("/details/:id", async (req, res) => {
     job.ussersApplied.map((c) => c.toString()).includes(req.user._id.toString())
       ? true
       : false;
+
   const length = job.ussersApplied.length > 0 ? true : false;
-  res.render("jobs/details", { title: "Details Page", job, email });
+
+  const applyUser = await getAppliedUser(job.ussersApplied);
+  console.log(applyUser);
+
+  res.render("jobs/details", {
+    title: "Details Page",
+    job,
+    email,
+    length,
+    applyUser,
+  });
+});
+
+router.get("/apply/:id", hasUser(), async (req, res) => {
+  const ad = await getById(req.params.id);
+  const userInfo = req.user;
+  try {
+    if (ad.author == req.user._id) {
+      ad.isOwner = true;
+      return res.render(`jobs/details`, {
+        ad,
+        error: "Cannot aplly for your own job",
+      });
+    }
+
+    await aplyyJob(req.params.id, req.user._id, userInfo);
+    res.redirect(`/jobs/details/${req.params.id}`);
+  } catch (error) {
+    return res.render(`jobs/details`, {
+      ad,
+      error: getErrorMessage(error),
+    });
+  }
+});
+
+router.get("/edit/:id", hasUser(), isOwner(), async (req, res) => {
+  const job = await getById(req.params.id);
+  res.render("jobs/edit", { title: "Edit Page", job });
+});
+
+router.post("/edit/:id", hasUser(), isOwner(), async (req, res) => {
+  const { headline, location, companyName, companyDescription } = req.body;
+  try {
+    await edit(req.params.id, {
+      headline,
+      location,
+      companyName,
+      companyDescription,
+    });
+
+    res.redirect(`/jobs/details/${req.params.id}`);
+  } catch (error) {
+    return res.render(`jobs/details/${req.params.id}`, {
+      error: getErrorMessage(error),
+    });
+  }
+});
+
+router.get("/delete/:id", hasUser(), async (req, res) => {
+  try {
+    await deleteAuction(req.params.id);
+
+    res.redirect("/jobs/catalog");
+  } catch (error) {
+    console.log(error);
+    return res.render(`jobs/details/${req.params.id}`, {
+      error: getErrorMessage(error),
+    });
+  }
 });
 
 module.exports = router;
