@@ -7,5 +7,6 @@ Completed courses ->
   3. JavaScript Fundamentals
   4. JavaScript Advanced
   5. JavaScript Applications
+  6. JavaScript Back-End
   
-I am studying now ->  JavaScript Back-End
+I am studying now ->  React JS
