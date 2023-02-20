@@ -1,0 +1,176 @@
+<div class="container">
+  <div class="col-9">
+
+    <!-- Start Pet Photo Post Section -->
+    <div class="card">
+      <div class="top">
+
+        <!-- Start User Details and Image Location Section -->
+        <div class="userDetails">
+
+          <!-- Link to User Profile Details Page-->
+          <div>
+            <div class="profilepic">
+              <div class="profile_img">
+                <div class="image">
+                  <img src="/static/images/person.png" alt="img8" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>
+
+            <!-- Link to User Profile Details Page -->
+            <p>
+              <!-- User's username -->
+              {{photos.owner}}
+            </p>
+            <!-- photo's location -->
+            <span>{{photos.location}}</span>
+
+{{#if photos.isOwner}}
+            <!-- IF the viewer is the creator of the photo -->
+            <div class="edit-delete-btns">
+
+              <!-- Edit Pet Photo -->
+              <a href="/photos/edit/{{photos._id}}">
+                <img
+                  class="edit-img"
+                  src="/static/images/edit-pen-icon-6.jpg"
+                  alt="edit button"
+                />
+              </a>
+
+              <!--Delete Pet Photo -->
+              <a href="/photos/delete/{{photos._id}}">
+                <img
+                  class="bin-img"
+                  src="/static/images/icon-remove-22.jpg"
+                  alt="bin button"
+                />
+              </a>
+            </div>
+{{/if}}
+          </h3>
+        </div>
+
+      </div>
+
+      <!-- Start Pet Photo -->
+      <div class="imgBx">
+        <!-- Pet Photo -->
+        <img src="{{photos.imageUrl}}" alt="post" class="cover" />
+      </div>
+
+      <div class="bottom">
+
+        <p class="message">
+          <b class="petDescription">{{photos.description}}</b>
+        </p>
+
+        <!-- Photo description -->
+        <div class="pet-details">
+          <p class="petName">Name: {{photos.name}}</p>
+          <p class="petAge">Age: {{photos.age}}</p>
+        </div>
+
+{{#if user}}
+ {{#if photos.commentList}}
+                {{#each photos.commentList}}
+        <div class="comments">
+
+          <div class="comments-top">
+   
+            <div class="userDetails">
+              <div class="comment-data">
+                <div class="profilepic">
+                  <div class="profile_img">
+                    <div class="image">
+                      <!-- User Profile Image -->
+                      <img src="/static/images/person.png" alt="img8" />
+                    </div>
+                  </div>
+                </div>
+
+                <!--User's username-->
+            
+               <p><b>{{username}}</b>- {{comment}}</p> 
+              
+              </div>
+            </div>
+
+          </div>
+        </div>
+            {{/each}}
+                {{/if}}
+
+      </div>
+{{#if photos.isOwner}}
+{{else}}
+
+      <div class="addComments">
+        <!-- Start Add Comments Form -->
+        <form method="POST" action="/photos/comment/{{photos._id}}">
+          <textarea
+            id="comment-textarea"
+            name="comment"
+            cols="40"
+            rows="10"
+            placeholder="Add comment..."
+          ></textarea>
+          <!-- Post Comments Button -->
+          <button type="submit">Post</button>
+        </form>
+      </div>
+{{/if}}
+      {{/if}}
+    </div>
+  </div>
+</div>
+
+{{! 
+     <div class="userDetails">
+              <div class="comment-data">
+                <div class="profilepic">
+                  <div class="profile_img">
+                    <div class="image">
+                      <!-- User Profile Image -->
+                      <img src="/static/images/person.png" alt="img8" />
+                    </div>
+                  </div>
+                </div>
+
+                <!--User's username-->
+                <p><b>StevIvanov</b>- OMG where can i get one</p>
+              </div>
+            </div>
+            <div class="userDetails">
+              <div class="comment-data">
+                <div class="profilepic">
+                  <div class="profile_img">
+                    <div class="image">
+                      <!-- User Profile Image -->
+                      <img src="/static/images/person.png" alt="img8" />
+                    </div>
+                  </div>
+                </div>
+
+                <!--User's username-->
+                <p><b>StevIvanov</b>- OMG where can i get one</p>
+              </div>
+            </div>
+            <div class="userDetails">
+              <div class="comment-data">
+                <div class="profilepic">
+                  <div class="profile_img">
+                    <div class="image">
+                      <!-- User Profile Image -->
+                      <img src="/static/images/person.png" alt="img8" />
+                    </div>
+                  </div>
+                </div>
+
+                <!--User's username-->
+                <p><b>StevIvanov</b>- OMG where can i get one</p>
+              </div>
+            </div> }}

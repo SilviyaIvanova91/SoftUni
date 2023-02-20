@@ -1,0 +1,19 @@
+const { verifyToken } = require("../services/authServices");
+
+module.exports = () => (req, res, next) => {
+  const token = req.cookies.token;
+  if (token) {
+    try {
+      const userData = verifyToken(token);
+      ///  console.log(" --->>>>>> Read succesfull user", userData.username);
+      req.user = userData;
+      res.locals.user = userData;
+    } catch (error) {
+      console.log("Invalid token!");
+      res.clearCookie("token");
+      res.redirect("/404");
+      return;
+    }
+  }
+  next();
+};
