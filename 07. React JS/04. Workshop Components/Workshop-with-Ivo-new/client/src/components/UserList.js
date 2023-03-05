@@ -2,9 +2,19 @@ import { useEffect, useState } from "react";
 import { UserDetails } from "./UserDetails";
 import { User } from "./User";
 import * as userService from "../services/userServices";
+import { UserCreate } from "./UserCreate";
+import { UserDelete } from "./UserDelete";
 
-export const UserList = ({ users }) => {
+export const UserList = ({
+  users,
+  onUserCreateSubmit,
+  onUserDelete,
+  onUserUpdateSubmit,
+}) => {
   const [selectedUser, setSelecteduser] = useState(null);
+  const [showDeleteUser, setShowDeleteUser] = useState(null);
+  const [showEditUser, setShowEditUser] = useState(null);
+  const [showAddUser, setShowAddUser] = useState(false);
 
   const onInfoClick = async (userId) => {
     const user = await userService.getOne(userId);
@@ -14,11 +24,64 @@ export const UserList = ({ users }) => {
 
   const onClose = () => {
     setSelecteduser(null);
+    setShowAddUser(false);
+    setShowDeleteUser(null);
+    setShowEditUser(null);
+  };
+
+  const onUserAddClick = () => {
+    setShowAddUser(true);
+  };
+
+  const onUserCreateSubmitHandler = (e) => {
+    onUserCreateSubmit(e);
+    setShowAddUser(false);
+  };
+
+  const onUserUpdateSubmitHandler = (e, userId) => {
+    onUserUpdateSubmit(e, userId);
+    // setShowEditUser(null)
+    onClose();
+  };
+
+  const onDeleteClick = (userId) => {
+    setShowDeleteUser(userId);
+  };
+
+  const onDeleteHandler = () => {
+    onUserDelete(showDeleteUser);
+    onClose();
+  };
+
+  const onEditClick = async (userId) => {
+    const user = await userService.getOne(userId);
+
+    setShowEditUser(user);
   };
 
   return (
     <>
       {selectedUser && <UserDetails {...selectedUser} onClose={onClose} />}
+
+      {showAddUser && (
+        <UserCreate
+          onClose={onClose}
+          onUserCreateSubmit={onUserCreateSubmitHandler}
+        />
+      )}
+
+      {showDeleteUser && (
+        <UserDelete onClose={onClose} onDelete={onDeleteHandler} />
+      )}
+
+      {showEditUser && (
+        <UserCreate
+          user={showEditUser}
+          onClose={onClose}
+          onUserCreateSubmit={onUserUpdateSubmitHandler}
+        />
+      )}
+
       <div className="table-wrapper">
         <table className="table">
           <thead>
@@ -122,12 +185,21 @@ export const UserList = ({ users }) => {
 
             {users.map((u) => (
               <tr>
-                <User key={u._id} {...u} onInfoClick={onInfoClick} />
+                <User
+                  key={u._id}
+                  {...u}
+                  onInfoClick={onInfoClick}
+                  onDeleteClick={onDeleteClick}
+                  onEditClick={onEditClick}
+                />
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <button className="btn-add btn" onClick={onUserAddClick}>
+        Add new user
+      </button>
     </>
   );
 };

@@ -26,6 +26,43 @@ function App() {
       });
   }, []);
 
+  const onUserCreateSubmit = async (e) => {
+    // 1. stop automatic from submit
+    e.preventDefault();
+
+    // Take from data from DOM tree
+    const formDate = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formDate);
+
+    // Send ajax request to server
+    const createdUser = await UserServices.create(data);
+
+    //If successfill add new user to the state
+    setUsers((state) => [...state, createdUser]);
+  };
+
+  const onUserDelete = async (userId) => {
+    //Delete from server
+    await UserServices.remove(userId);
+
+    //Delete from state
+    setUsers((state) => state.filter((x) => x._id !== userId));
+  };
+
+  const onUserUpdateSubmit = async (e, userId) => {
+    e.preventDefault();
+
+    // Take from data from DOM tree
+    const formDate = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formDate);
+
+    // Send ajax request to server
+    const updatedUser = await UserServices.update(userId, data);
+
+    //If successfill add new user to the state
+    setUsers((state) => state.map((x) => (x._id === userId ? updatedUser : x)));
+  };
+
   return (
     <Fragment>
       <Header />
@@ -34,9 +71,12 @@ function App() {
         <section className="card users-container">
           <Serach />
 
-          <UserList users={users} />
-
-          <button className="btn-add btn">Add new user</button>
+          <UserList
+            users={users}
+            onUserCreateSubmit={onUserCreateSubmit}
+            onUserUpdateSubmit={onUserUpdateSubmit}
+            onUserDelete={onUserDelete}
+          />
         </section>
       </main>
 

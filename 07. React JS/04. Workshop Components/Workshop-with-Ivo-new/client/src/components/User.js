@@ -9,6 +9,8 @@ export const User = ({
   createdAt,
   phoneNumber,
   onInfoClick,
+  onDeleteClick,
+  onEditClick,
 }) => {
   const blankUrl =
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png";
@@ -32,7 +34,7 @@ export const User = ({
         <button
           className="btn edit-btn"
           title="Edit"
-          onClick={() => console.log(_id)}
+          onClick={() => onEditClick(_id)}
         >
           <svg
             aria-hidden="true"
@@ -53,7 +55,7 @@ export const User = ({
         <button
           className="btn delete-btn"
           title="Delete"
-          onClick={() => console.log(_id)}
+          onClick={() => onDeleteClick(_id)}
         >
           <svg
             aria-hidden="true"
