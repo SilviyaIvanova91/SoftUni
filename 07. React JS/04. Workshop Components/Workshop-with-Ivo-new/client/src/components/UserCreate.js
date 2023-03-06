@@ -1,4 +1,12 @@
-export const UserCreate = ({ user, onClose, onUserCreateSubmit }) => {
+export const UserCreate = ({
+  user,
+  onClose,
+  onUserCreateSubmit,
+  formValues,
+  formChangeHandler,
+  formErrors,
+  validateForm,
+}) => {
   return (
     <div className="overlay">
       <div className="backdrop" onClick={onClose}></div>
@@ -29,7 +37,10 @@ export const UserCreate = ({ user, onClose, onUserCreateSubmit }) => {
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="firstName">First name</label>
-                <div className="input-wrapper">
+                <div
+                  className="input-wrapper"
+                  style={formErrors.firstName ? { borderColor: "red" } : {}}
+                >
                   <span>
                     <i className="fa-solid fa-user"></i>
                   </span>
@@ -37,12 +48,14 @@ export const UserCreate = ({ user, onClose, onUserCreateSubmit }) => {
                     id="firstName"
                     name="firstName"
                     type="text"
-                    defaultValue={user?.firstName}
+                    value={formValues.firstName}
+                    onChange={formChangeHandler}
+                    onBlur={validateForm}
                   />
                 </div>
-                <p className="form-error">
-                  First name should be at least 3 characters long!
-                </p>
+                {formErrors.firstName && (
+                  <p className="form-error">{formErrors.firstName}</p>
+                )}
               </div>
               <div className="form-group">
                 <label htmlFor="lastName">Last name</label>
@@ -54,12 +67,14 @@ export const UserCreate = ({ user, onClose, onUserCreateSubmit }) => {
                     id="lastName"
                     name="lastName"
                     type="text"
-                    defaultValue={user?.lastName}
+                    value={formValues.lastName}
+                    onChange={formChangeHandler}
+                    onBlur={validateForm}
                   />
                 </div>
-                <p className="form-error">
-                  Last name should be at least 3 characters long!
-                </p>
+                {formErrors.lastName && (
+                  <p className="form-error">{formErrors.lastName}</p>
+                )}
               </div>
             </div>
 

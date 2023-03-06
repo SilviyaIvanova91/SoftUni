@@ -10,6 +10,10 @@ export const UserList = ({
   onUserCreateSubmit,
   onUserDelete,
   onUserUpdateSubmit,
+  formValues,
+  formChangeHandler,
+  formErrors,
+  validateForm,
 }) => {
   const [selectedUser, setSelecteduser] = useState(null);
   const [showDeleteUser, setShowDeleteUser] = useState(null);
@@ -67,6 +71,10 @@ export const UserList = ({
         <UserCreate
           onClose={onClose}
           onUserCreateSubmit={onUserCreateSubmitHandler}
+          formValues={formValues}
+          formChangeHandler={formChangeHandler}
+          formErrors={formErrors}
+          validateForm={validateForm}
         />
       )}
 
@@ -79,6 +87,10 @@ export const UserList = ({
           user={showEditUser}
           onClose={onClose}
           onUserCreateSubmit={onUserUpdateSubmitHandler}
+          formValues={formValues}
+          formChangeHandler={formChangeHandler}
+          formErrors={formErrors}
+          validateForm={validateForm}
         />
       )}
 

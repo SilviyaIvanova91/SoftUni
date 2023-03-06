@@ -9,6 +9,15 @@ import { useEffect } from "react";
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [formValues, setFormvalues] = useState({
+    firstName: "",
+    lastName: "",
+  });
+  const [formErrors, setFormErrors] = useState({
+    firstName: "",
+    lastName: "",
+  });
+
   // useEffect(() => {
   //   async function getUsers() {
   //     const users = await UserServices.getAll();
@@ -63,6 +72,31 @@ function App() {
     setUsers((state) => state.map((x) => (x._id === userId ? updatedUser : x)));
   };
 
+  const formChangeHandler = (e) => {
+    setFormvalues((state) => ({ ...state, [e.target.name]: e.target.value }));
+  };
+
+  const validateForm = (e) => {
+    const value = e.target.value;
+    let errors = {};
+
+    if (
+      e.target.name === "firstName" &&
+      (value.length < 3 || value.length > 20)
+    ) {
+      errors.firstName = "First name should be between 3 and 20 characters";
+    }
+
+    if (
+      e.target.name === "lastName" &&
+      (value.length < 3 || value.length > 20)
+    ) {
+      errors.lastName = "Last name should be between 3 and 20 characters";
+    }
+
+    setFormErrors(errors);
+  };
+
   return (
     <Fragment>
       <Header />
@@ -76,6 +110,10 @@ function App() {
             onUserCreateSubmit={onUserCreateSubmit}
             onUserUpdateSubmit={onUserUpdateSubmit}
             onUserDelete={onUserDelete}
+            formValues={formValues}
+            formChangeHandler={formChangeHandler}
+            formErrors={formErrors}
+            validateForm={validateForm}
           />
         </section>
       </main>
