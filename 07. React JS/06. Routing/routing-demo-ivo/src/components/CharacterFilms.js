@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-const url = "https://swapi.dev/api/people";
+const url = "https://swapi.dev/api";
 
 export const CharacterFilms = () => {
   const [films, setFilms] = useState([]);
@@ -10,7 +10,7 @@ export const CharacterFilms = () => {
   //fetch something like /people/${characterId}/films from swapi, but there is no such thing
   useEffect(() => {
     fetch(`${url}/films`)
-      .then((res) => res.json())
+      .then((result) => result.json())
       .then((data) => setFilms(data.results));
   }, [characterId]);
 

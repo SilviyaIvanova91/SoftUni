@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Route, Routes, useNavigate, useParams } from "react-router-dom";
 import { CharacterFilms } from "./CharacterFilms";
-import styles from "./Navigation.module.css";
 import { Navigation, NavItem } from "./Navigation";
 
 const url = "https://swapi.dev/api/people";
@@ -31,13 +30,13 @@ export const Character = () => {
 
       <Navigation>
         <NavItem to="films">Films</NavItem>
-        <NavItem to="vechicles">Vechicles</NavItem>
+        <NavItem to="vehicles">Vechicles</NavItem>
         <NavItem to="starships">Starships</NavItem>
       </Navigation>
 
       <Routes>
         <Route path="/films" element={<CharacterFilms />} />
-        <Route path="/vechicles" element={<h5>Vechicles</h5>} />
+        <Route path="/vehicles" element={<h5>Vehicles</h5>} />
         <Route path="/starships" element={<h5>Starships</h5>} />
       </Routes>
     </>
