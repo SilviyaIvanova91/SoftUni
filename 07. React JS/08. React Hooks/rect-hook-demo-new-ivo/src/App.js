@@ -31,7 +31,7 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(values),
+      body: JSON.stringify({ ...values, isCompleted: false }),
     });
 
     const result = await response.json();
@@ -49,15 +49,34 @@ function App() {
   };
 
   const onTodoDeleteClick = async (todoId) => {
-    const response = await fetch(`${baseUrl}/${todoId}`, {
+    await fetch(`${baseUrl}/${todoId}`, {
       method: "DELETE",
     });
 
     setTodos((state) => state.filter((x) => x._id !== todoId));
   };
 
+  const onTodoClick = async (todoId) => {
+    const todo = todos.find((x) => x._id === todoId);
+
+    await fetch(`${baseUrl}/${todoId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...todo, isCompleted: !todo.isCompleted }),
+    });
+
+    setTodos((state) =>
+      state.map((x) =>
+        x._id === todoId ? { ...x, isCompleted: !x.isCompleted } : x
+      )
+    );
+  };
+
   const contextValue = {
     onTodoDeleteClick,
+    onTodoClick,
   };
 
   return (
