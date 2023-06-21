@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1 id="main-heading">HELLO WORLD!</h1> -->
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact-us">Contact us</a>
+    </nav>
+
+    <div id="app"></div>
+
+    <script>
+      function getPath(path) {
+        return path
+          .replace(
+            `file:///d%3A/Angular/01%20Intro%20to%20Angular%20and%20TypeScript/`,
+            ""
+          )
+          .replace("index.html", "/");
+      }
+
+      const app = document.getElementById("app");
+
+      const routes = {
+        "/": "<h1>HOME</h1>",
+        "/about": "<h1>ABOUT</h1>",
+        "/contact-us": "<h1>CONTACT US</h1>",
+      };
+
+      function render(path) {
+        const contentForPath = routes[path];
+        if (!contentForPath) {
+          return;
+        }
+        app.innerHTML = contentForPath;
+      }
+
+      document.querySelectorAll("a").forEach((el) => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          //   console.log(e.target);
+          const { target } = e;
+          const path = target.getAttribute("href");
+          // console.log(path);
+          render(path);
+          history.pushState("", "", path);
+        });
+      });
+
+      // console.log(getPath(window.location.toString()));
+
+      // render(window.location.pathname); //this will work only with http protocol
+      render(getPath(window.location.toString())); // this is only for demo using the file protocol
+      // console.log(app);
+
+      window.addEventListener("popstate", (e) => {
+        e.preventDefault();
+        render(location.pathname); //this will work only with http protocol
+      });
+
+      window.addEventListener("hashchange", (e) => {
+        e.preventDefault();
+        render(location.pathname); //this will work only with http protocol
+      });
+    </script>
+
+    <!-- <script defer async>
+      const meanHeading = document.getElementById("main-heading");
+      console.log(meanHeading);
+    </script> -->
+  </body>
+</html>
