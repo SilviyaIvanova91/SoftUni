@@ -12,7 +12,7 @@ Completed courses ->
 6. JavaScript Back-End
 7. React JS
 
-I am studying now:/n
-->  TypeScript/n
+I am studying now:\n
+->  TypeScript\n
 ->  Angular
 
