@@ -1,0 +1,9 @@
+<div class="games-container">
+  <h2>List of games</h2>
+
+  <div class="games-grid">
+    @for (game of games; track game.id) {
+      <app-game-cart [game]="game" (addToCart)="onAddToCart($event)"> </app-game-cart>
+    }
+  </div>
+</div>

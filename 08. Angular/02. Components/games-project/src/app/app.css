@@ -1,0 +1,57 @@
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  background: #1a1a2e;
+  color: white;
+  padding: 18px 24px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+}
+
+nav button {
+  padding: 8px 18px;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.15s;
+}
+
+nav button:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+main {
+  min-height: 420px;
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #999;
+  font-size: 13px;
+  margin-top: 16px;
+}

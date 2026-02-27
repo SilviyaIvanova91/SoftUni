@@ -1,0 +1,13 @@
+<div class="home">
+  <h2>{{ welcomeMessage }}</h2>
+
+  <p>{{ description }}</p>
+
+  <h3>Why choose us?</h3>
+
+  <ul>
+    @for (feature of features; track $index) {
+      <li>{{ feature }}</li>
+    }
+  </ul>
+</div>

@@ -1,0 +1,117 @@
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* БЕЛЕЖКА: Този клас се добавя динамично с [class.on-sale] */
+.card.on-sale {
+  border-color: #4caf50;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #4caf50;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.card img {
+  width: 100%;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin: 10px 0 6px;
+  color: #1a1a2e;
+  font-size: 15px;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.price-tag {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin-left: 4px;
+  font-weight: normal;
+}
+
+.price-tag.expensive {
+  background: #ffebee;
+  color: #c62828;
+}
+.price-tag.moderate {
+  background: #fff3e0;
+  color: #e65100;
+}
+.price-tag.cheap {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-like,
+.btn-dislike {
+  padding: 4px 14px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.1s;
+}
+
+.btn-like:hover {
+  background: #e8f5e9;
+}
+.btn-dislike:hover {
+  background: #ffebee;
+}
+
+.btn-buy {
+  width: 100%;
+  padding: 9px;
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.15s;
+}
+
+.btn-buy:hover {
+  background: #2d2d4e;
+}

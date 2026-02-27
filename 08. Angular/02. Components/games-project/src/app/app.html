@@ -1,0 +1,23 @@
+<div class="app-container">
+  <header>
+    <h1>{{ title }}</h1>
+
+    <nav>
+      <button (click)="changeView('home')">Home</button>
+      <button (click)="changeView('about')">About</button>
+      <button (click)="changeView('games')">Games Catalog</button>
+    </nav>
+  </header>
+
+  <main>
+    @if (currentView === 'home') {
+      <app-home></app-home>
+    } @else if (currentView === 'about') {
+      <app-about></app-about>
+    } @else if (currentView === 'games') {
+      <app-games></app-games>
+    }
+  </main>
+</div>
+
+<router-outlet />

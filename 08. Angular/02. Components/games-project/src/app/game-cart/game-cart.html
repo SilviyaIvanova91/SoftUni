@@ -1,0 +1,7 @@
+<div class="card">
+  <img [src]="game.imageUrl" />
+  <h3>{{ game.title }}</h3>
+  <div class="price">{{ game.price }} евро</div>
+
+  <button class="btn-buy" (click)="onBuyClick()">Add to cart</button>
+</div>

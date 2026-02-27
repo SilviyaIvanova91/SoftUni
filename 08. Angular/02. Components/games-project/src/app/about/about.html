@@ -1,0 +1,15 @@
+<div class="about">
+  <h2>About us - {{ companyName }}</h2>
+
+  <p>Created the company {{ foundYear }}</p>
+
+  <div class="manager-info">
+    <h3>Manager</h3>
+    <p>Name: {{ menager?.name }}</p>
+    <p>Email: {{ menager?.email }}</p>
+  </div>
+
+  @if (menager) {
+    <p class="contact">Contact with me: {{ menager.email }}</p>
+  }
+</div>
