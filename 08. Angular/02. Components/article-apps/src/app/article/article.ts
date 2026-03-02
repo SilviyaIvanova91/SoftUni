@@ -10,8 +10,8 @@ import { Article } from '../model/article-model';
 })
 export class ArticleComponent {
   private symbols: number = 250;
-  @Input() article: Article;
-  @Input() articleDesc: string;
+  @Input() article!: Article;
+  @Input() articleDesc!: string;
 
   descToShow: string;
   articleDescLen: number;
@@ -36,7 +36,7 @@ export class ArticleComponent {
   }
 
   toggleImage(): void {
-    this.imageIsShown = this.imageIsShown;
+    this.imageIsShown = !this.imageIsShown;
     this.imageButtonTitle = this.imageButtonTitle === 'Show Image' ? 'Hide Image' : 'Show Image';
   }
 
