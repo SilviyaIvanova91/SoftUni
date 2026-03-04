@@ -1,0 +1,20 @@
+<div class="rxjs-demo">
+  <h3>RxJS Demo</h3>
+
+  <div class="buttons">
+    <button class="btn" (click)="demo1()">1. of() + subscribe</button>
+    <button class="btn" (click)="demo2()">2. pipe() + map() + filter</button>
+    <button class="btn" (click)="demo3()">3. tap()</button>
+
+    <button class="btn" (click)="clearResults()">clear the space</button>
+  </div>
+
+  <div class="result">
+    @if (results.length === 0) {
+      <p class="empty">Click one of the buttons to see details</p>
+    }
+    @for (r of results; track $index) {
+      <div class="result">{{ r }}</div>
+    }
+  </div>
+</div>

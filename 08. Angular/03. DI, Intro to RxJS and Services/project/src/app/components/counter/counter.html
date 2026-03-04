@@ -1,0 +1,15 @@
+<div class="counter-container">
+  <h3>Counter Showcase</h3>
+
+  <div class="counter-value">
+    {{ counterService.getCount() }}
+  </div>
+
+  <div class="counter-buttons">
+    <button class="btn decrement" (click)="counterService.decrement()">-Decrement</button>
+
+    <button class="btn reset" (click)="counterService.reset()">Reset</button>
+
+    <button class="btn increment" (click)="counterService.increment()">+Increment</button>
+  </div>
+</div>

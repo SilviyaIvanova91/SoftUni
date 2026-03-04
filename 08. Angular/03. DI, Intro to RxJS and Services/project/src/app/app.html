@@ -1,0 +1,28 @@
+<div class="app">
+  <header>
+    <h1>Angular project</h1>
+
+    <nav>
+      <div class="nav">
+        <button class="navbtn" (click)="changeView('counter')">Counter</button>
+        <button class="navbtn" (click)="changeView('posts')">Posts</button>
+        <button class="navbtn" (click)="changeView('rxjs')">RxJS</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    @if (currentView === 'counter') {
+      <app-counter />
+    } @else if (currentView === 'posts') {
+      <app-rxjs-demo />
+    } @else if (currentView === 'rxjs') {
+      <app-posts />
+    }
+    <!-- <app-counter />
+
+    <app-rxjs-demo />
+
+    <app-posts /> -->
+  </main>
+</div>

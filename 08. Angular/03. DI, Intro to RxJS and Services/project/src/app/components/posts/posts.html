@@ -1,0 +1,22 @@
+<div class="posts-container">
+  <div class="posts-header">
+    <h3>Posts of API</h3>
+    <div class="header-buttons">
+      <button class="btn refresh" (click)="loadPosts()">Refresh</button>
+    </div>
+  </div>
+
+  @if (posts.length > 0) {
+    <div class="posts-grid">
+      @for (post of posts; track post.id) {
+        <div class="post-card">
+          <h4>{{ post.title }}</h4>
+          <p>{{ post.body }}</p>
+          <div class="post-actions">
+            <button class="btn-delete" (click)="deletePost(post.id)">Delete Post</button>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

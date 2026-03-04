@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* ============================================================
+   GLOBAL STYLES
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* Global cursor pointer for buttons */
+button {
+  cursor: pointer;
+}
+
+/* Code blocks */
+code {
+  font-family: 'Fira Code', 'Consolas', monospace;
+}

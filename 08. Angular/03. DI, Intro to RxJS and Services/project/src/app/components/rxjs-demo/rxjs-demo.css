@@ -1,0 +1,51 @@
+.rxjs-demo {
+  padding: 20px;
+  border: 2px solid #06b6d4;
+  border-radius: 12px;
+  background: #ecfeff;
+  margin-top: 30px;
+}
+
+.rxjs-demo h3 {
+  margin: 0 0 16px 0;
+  color: #0891b2;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #0891b2;
+  color: white;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: #0e7490;
+}
+
+.results {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 120px;
+}
+
+.empty {
+  color: #94a3b8;
+  margin: 0;
+}
+
+.result {
+  padding: 6px 0;
+  font-family: monospace;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
