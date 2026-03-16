@@ -1,0 +1,123 @@
+.command-center {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #38bdf8;
+}
+
+.badge {
+  background: #22c55e;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.welcome-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 20px;
+  color: #22c55e;
+  margin: 0 0 8px 0;
+}
+
+.welcome-card p {
+  color: #94a3b8;
+  margin: 0;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #22c55e;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.actions {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-logout {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-logout:hover {
+  background: #dc2626;
+}
+
+.info-section {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.info-section h3 {
+  margin: 0 0 12px 0;
+  color: #e2e8f0;
+}
+
+.info-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #94a3b8;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+}
+
+.info-section code {
+  background: #0f172a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #38bdf8;
+}
