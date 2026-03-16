@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
-import { HeaderComponent } from './layout/header/header';
-import { FooterComponent } from './layout/footer/footer';
-import { HomeComponent } from './features/home/home';
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { NavComponent } from '../layout/nav/nav';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, FooterComponent, HomeComponent],
+  imports: [RouterOutlet, NavComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
