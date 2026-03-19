@@ -1,0 +1,8 @@
+<main>
+  <div class="theme-title">
+    <!-- theme component  -->
+    @for (theme of themes; track theme._id) {
+      <app-theme-item [theme]="theme" />
+    }
+  </div>
+</main>

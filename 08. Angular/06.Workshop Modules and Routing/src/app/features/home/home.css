@@ -1,0 +1,88 @@
+/* ── Home / Welcome ─────────────────────────────────────── */
+
+.welcome {
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  margin-top: 0.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.welcome:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.welcome h3 {
+  background: linear-gradient(135deg, var(--color-primary-dk) 0%, var(--color-primary) 100%);
+  color: #fff;
+  border-radius: 0;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.welcome > p {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  background: transparent !important;
+}
+
+.logged {
+  padding: 1rem 1.5rem;
+  background-color: rgba(238, 242, 247, 0.6);
+}
+
+.welcome ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.welcome li {
+  list-style: none;
+}
+
+.welcome a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dk) 100%);
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 0.6em 1.8em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(245, 159, 0, 0.3);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.welcome a:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 159, 0, 0.4);
+  background: linear-gradient(135deg, var(--color-accent-lt) 0%, var(--color-accent) 100%);
+}
+
+.welcome a i {
+  font-size: 0.9em;
+}

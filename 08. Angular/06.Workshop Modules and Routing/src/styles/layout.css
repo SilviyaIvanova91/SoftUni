@@ -1,0 +1,43 @@
+/* Layout utilities */
+
+.site {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+table {
+  border: 1px solid #d0d7de;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+table td,
+table th {
+  border: 1px solid #d0d7de;
+  padding: 0.6em 1em;
+}
+
+table td {
+  background: #f6f8fa;
+}
+
+table thead th,
+table tfoot td {
+  font-weight: 700;
+  text-align: left;
+  background: #234465;
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) td {
+  background: #eef2f7;
+}
+
+table tbody tr:hover td {
+  background: #dde8f5;
+  transition: background 0.15s ease;
+}
