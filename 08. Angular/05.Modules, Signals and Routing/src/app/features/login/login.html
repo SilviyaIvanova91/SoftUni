@@ -1,0 +1,13 @@
+<div class="login">
+  <div class="login-card">
+    <h1>Control Login</h1>
+
+    @if (!isLoggedIn()) {
+      <button (click)="onLogin()" class="btn btn-login">Login</button>
+    } @else {
+      <p class="status-logged">You are logged in!</p>
+
+      <button (click)="onLogout()" class="btn btn-logout">Logout</button>
+    }
+  </div>
+</div>
