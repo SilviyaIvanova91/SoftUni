@@ -1,0 +1,103 @@
+<div class="mission-form-page">
+  <h1>Create New Mission</h1>
+  <p class="subtitle">Plan a new mission using reactive forms</p>
+
+  <div class="form-layout">
+    <div class="form-container">
+      <form [formGroup]="missionForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Mission Name</label>
+          <input type="text" id="name" formControlName="name" placeholder="e.g., Artemis III" />
+
+          @if (nameControl?.invalid && nameControl?.touched) {
+            <div class="error-message">
+              @if (nameControl?.errors?.['required']) {
+                Mission name is required
+              }
+              @if (nameControl?.errors?.['minlength']) {
+                Name must be at least 3 characters
+              }
+              @if (nameControl?.errors?.['maxlength']) {
+                Name cannot exceed 50 characters
+              }
+            </div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <select id="destination" formControlName="destination">
+            <option value="">Select destination</option>
+            @for (dest of destinations; track dest) {
+              <option [value]="dest">{{ dest }}</option>
+            }
+          </select>
+
+          @if (destinationControl?.invalid && destinationControl?.touched) {
+            <div class="error-message">Destination is required</div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status" formControlName="status">
+            <option value="">Select status</option>
+            @for (status of statuses; track status) {
+              <option [value]="status">{{ status }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="launchDate">Launch Date</label>
+          <input type="data" id="launchDate" formControlName="launchDate" />
+
+          @if (launchDateControl?.invalid && launchDateControl?.touched) {
+            <div class="error-message">
+              @if (launchDateControl?.errors?.['required']) {
+                Launch Date is required
+              }
+              @if (launchDateControl?.errors?.['pattern']) {
+                invalid data format
+              }
+            </div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="crew">Crew Size</label>
+          <input type="number" id="crew" formControlName="crew" min="1" max="20" />
+          @if (crewControl?.invalid && crewControl?.touched) {
+            <div class="error-message">
+              @if (crewControl?.errors?.['required']) {
+                Crew size is required
+              }
+              @if (crewControl?.errors?.['min']) {
+                Minimum crew size is 1
+              }
+              @if (crewControl?.errors?.['max']) {
+                Maximum crew size is 20
+              }
+            </div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description (Optional)</label>
+          <textarea
+            id="description"
+            formControlName="description"
+            rows="3"
+            placeholder="Brief mission description..."
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn" [disabled]="missionForm.invalid">
+            Create Mission
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

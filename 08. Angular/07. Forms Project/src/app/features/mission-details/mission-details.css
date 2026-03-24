@@ -1,0 +1,96 @@
+.mission-detail {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.mission-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #334155;
+}
+
+.mission-header h1 {
+  margin: 0;
+  color: #38bdf8;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-planned {
+  background: #3b82f6;
+  color: white;
+}
+
+.status-active {
+  background: #22c55e;
+  color: white;
+}
+
+.status-completed {
+  background: #64748b;
+  color: white;
+}
+
+.mission-info {
+  margin-bottom: 24px;
+}
+
+.info-row {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #334155;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  width: 140px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.value {
+  color: #e2e8f0;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #334155;
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #475569;
+}
+
+.not-found {
+  text-align: center;
+  padding: 40px;
+}
+
+.not-found h2 {
+  color: #ef4444;
+  margin-bottom: 8px;
+}
+
+.not-found p {
+  color: #94a3b8;
+  margin-bottom: 24px;
+}

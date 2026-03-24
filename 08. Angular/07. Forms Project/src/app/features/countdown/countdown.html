@@ -1,0 +1,24 @@
+<div class="signals-demo">
+  <h1>Signals Demo</h1>
+
+  <div class="counter-card">
+    <div class="count-display">{{ count() }}</div>
+
+    <div class="controls">
+      <button (click)="decrement()" class="btn">- 1</button>
+      <button (click)="reset()" class="btn btn-reset">Reset</button>
+      <button (click)="increment()" class="btn">+ 1</button>
+    </div>
+
+    <div class="controls">
+      <button (click)="setTo(10)" class="btn btn-small">Set 10</button>
+      <button (click)="setTo(100)" class="btn btn-small">Set 100</button>
+    </div>
+  </div>
+
+  <div class="computed-section">
+    <h3>Computed Values</h3>
+    <p><strong>doubled:</strong> {{ doubled() }}</p>
+    <p><strong>isPositive:</strong> {{ isPositive() }}</p>
+  </div>
+</div>

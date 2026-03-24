@@ -1,0 +1,209 @@
+.mission-form-page h1 {
+  margin: 0 0 8px 0;
+  color: #38bdf8;
+}
+
+.subtitle {
+  margin: 0 0 24px 0;
+  color: #94a3b8;
+}
+
+.form-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .form-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-container {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* NOTE: Angular добавя тези класове за reactive форми също */
+.form-group input.ng-invalid.ng-touched,
+.form-group select.ng-invalid.ng-touched {
+  border-color: #ef4444;
+}
+
+.form-group input.ng-valid.ng-touched,
+.form-group select.ng-valid.ng-touched {
+  border-color: #22c55e;
+}
+
+.error-message {
+  margin-top: 6px;
+  color: #ef4444;
+  font-size: 12px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.submit-btn {
+  flex: 1;
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.submit-btn:disabled {
+  background: #475569;
+  cursor: not-allowed;
+}
+
+.example-btn {
+  padding: 12px 20px;
+  background: #334155;
+  border: none;
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.example-btn:hover {
+  background: #475569;
+}
+
+/* Preview Panel */
+.preview-panel {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.preview-panel h2 {
+  margin: 0 0 4px 0;
+  color: #38bdf8;
+  font-size: 18px;
+}
+
+.preview-note {
+  margin: 0 0 20px 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.preview-content {
+  margin-bottom: 24px;
+}
+
+.preview-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #334155;
+}
+
+.preview-item:last-child {
+  border-bottom: none;
+}
+
+.preview-item .label {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.preview-item .value {
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-state {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.form-state h3 {
+  margin: 0 0 12px 0;
+  color: #94a3b8;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-state p {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.form-state p:last-child {
+  margin-bottom: 0;
+}
+
+.state-label {
+  margin-right: 8px;
+}
+
+.form-state .valid {
+  color: #22c55e;
+}
+
+.form-state .invalid {
+  color: #ef4444;
+}
