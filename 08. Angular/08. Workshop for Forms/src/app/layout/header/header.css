@@ -1,0 +1,6 @@
+/* Header logo image override */
+img {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+}

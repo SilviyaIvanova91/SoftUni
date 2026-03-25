@@ -1,0 +1,97 @@
+<div class="container">
+  @if (user()) {
+    <div class="profile">
+      <img src="/images/profile.png" alt="default user" />
+      <h3>User Info:</h3>
+      @if (!isEditMode) {
+        <div class="flex">
+          <p>Username:</p>
+          <p>{{ user()?.username }}</p>
+        </div>
+        <div class="flex">
+          <p>Email:</p>
+          <p>{{ user()?.email }}</p>
+        </div>
+        <div class="flex">
+          <p>Phone:</p>
+          <p>{{ user()?.tel || 'Not provided' }}</p>
+        </div>
+        <button class="edit-button" (click)="toggleEditMode()">Edit</button>
+      } @else {
+        <form #profileForm="ngForm">
+          <div class="flex">
+            <p>Username:</p>
+            <div>
+              <input
+                appInputError
+                type="text"
+                name="username"
+                id="username"
+                [(ngModel)]="editUsername"
+                required
+                minlength="5"
+                #usernameCtrl="ngModel"
+                [class.input-error]="usernameCtrl.invalid && usernameCtrl.touched"
+              />
+            </div>
+          </div>
+          @if (usernameCtrl.touched && usernameCtrl.invalid) {
+            <p class="error edit-error">Username must be at least 5 characters!</p>
+          }
+
+          <div class="flex">
+            <p>Email:</p>
+            <div>
+              <input
+                appInputError
+                appEmailValidator
+                type="email"
+                name="email"
+                id="email"
+                [(ngModel)]="editEmail"
+                required
+                #emailCtrl="ngModel"
+                [class.input-error]="emailCtrl.invalid && emailCtrl.touched"
+              />
+            </div>
+          </div>
+          @if (emailCtrl.touched && emailCtrl.invalid) {
+            <p class="error edit-error">Email is not valid!</p>
+          }
+
+          <div class="flex">
+            <p>Phone:</p>
+            <div class="phone-input">
+              <select name="select-tel" id="select-tel">
+                <option value="359">+359</option>
+              </select>
+              <input type="text" name="tel" id="tel" [(ngModel)]="editTel" />
+            </div>
+          </div>
+
+          @if (errorMessage()) {
+            <p class="error edit-error">{{ errorMessage }}</p>
+          }
+
+          <div class="button-group">
+            <button type="button" class="red-button" (click)="onCancel()" [disabled]="isLoading()">
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="green-button"
+              [disabled]="profileForm.invalid || isLoading()"
+              (click)="onSave()"
+            >
+              {{ isLoading() ? 'Saving...' : 'Save' }}
+            </button>
+          </div>
+        </form>
+      }
+    </div>
+  } @else {
+    <div class="profile">
+      <p class="loading-text">Loading profile...</p>
+    </div>
+  }
+</div>

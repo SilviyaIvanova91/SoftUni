@@ -1,0 +1,75 @@
+/* Responsive breakpoints */
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 96% !important;
+    flex-direction: column !important;
+  }
+
+  main,
+  aside {
+    width: 100% !important;
+  }
+
+  header ul {
+    width: 100% !important;
+  }
+
+  header li {
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 0.4em 0.8em !important;
+    font-size: 0.85em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 95% !important;
+    flex-direction: column !important;
+  }
+
+  main,
+  aside {
+    width: 100% !important;
+  }
+
+  header li {
+    width: auto !important;
+    min-width: 80px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 93%;
+  }
+
+  header li {
+    width: 12vw !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+}

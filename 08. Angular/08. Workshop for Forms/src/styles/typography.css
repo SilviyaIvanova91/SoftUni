@@ -1,0 +1,68 @@
+/* Typography */
+
+html {
+  font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1e2a38;
+}
+
+body,
+form,
+input,
+textarea,
+option,
+select,
+button {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Nunito Sans', 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1e2a38;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+h5 {
+  font-size: 1.05rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+blockquote {
+  padding: 0.75em 1.5em;
+  border-left: 4px solid #4ebced;
+  font-style: italic;
+  color: #5a7085;
+  margin-bottom: 1.5em;
+  background-color: rgba(78, 188, 237, 0.06);
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+time {
+  font-weight: 600;
+  color: #234465;
+}
