@@ -1,0 +1,108 @@
+.signals-demo h1 {
+  margin: 0 0 24px 0;
+  color: #38bdf8;
+  text-align: center;
+}
+
+.counter-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.count-display {
+  font-size: 72px;
+  font-weight: bold;
+  color: #22c55e;
+  margin-bottom: 24px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #3b82f6;
+  color: white;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
+.btn-reset {
+  background: #64748b;
+}
+
+.btn-reset:hover {
+  background: #475569;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 14px;
+  background: #334155;
+}
+
+.btn-small:hover {
+  background: #475569;
+}
+
+.computed-section {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.computed-section h3 {
+  margin: 0 0 12px 0;
+  color: #e2e8f0;
+}
+
+.computed-section p {
+  margin: 8px 0;
+  color: #94a3b8;
+}
+
+.info-section {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.info-section h3 {
+  margin: 0 0 12px 0;
+  color: #e2e8f0;
+}
+
+.info-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #94a3b8;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+}
+
+.info-section code {
+  background: #0f172a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #38bdf8;
+}

@@ -1,0 +1,126 @@
+<div class="crew-registration">
+  <h1>Crew Registration</h1>
+  <p class="subtitle">Register new crew members for upcoming missions</p>
+
+  <div class="form-container">
+    <form #crewForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="crewMember.name"
+          required
+          minlength="2"
+          maxlength="50"
+          #nameInput="ngModel"
+          placeholder="Enter full name"
+        />
+
+        @if (nameInput.invalid && nameInput.touched) {
+          <div class="error-message">
+            @if (nameInput.errors?.['required']) {
+              Name is required
+            }
+            @if (nameInput.errors?.['minlength']) {
+              Name must be at least 2 characters
+            }
+          </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="crewMember.email"
+          required
+          email
+          #emailInput="ngModel"
+          placeholder="your-email@gmail.com"
+        />
+
+        @if (emailInput.invalid && emailInput.touched) {
+          <div class="error-message">
+            @if (nameInput.errors?.['required']) {
+              Email is required
+            }
+            @if (nameInput.errors?.['email']) {
+              Please enter valid email
+            }
+          </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="role">Role</label>
+
+        <select id="role" name="role" [(ngModel)]="crewMember.role" required #roleInput="ngModel">
+          <option value="">Select a role</option>
+
+          @for (role of roles; track role) {
+            <option [value]="role">{{ role }}</option>
+          }
+        </select>
+
+        @if (roleInput.invalid && roleInput.touched) {
+          <div class="error-message">Please select a role</div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="email">Years Experience</label>
+
+        <input
+          type="number"
+          id="experience"
+          name="experience"
+          [(ngModel)]="crewMember.experience"
+          required
+          min="0"
+          max="50"
+          #expInput="ngModel"
+        />
+
+        @if (expInput.invalid && expInput.touched) {
+          <div class="error-message">
+            @if (expInput.errors?.['required']) {
+              Experience is required
+            }
+            @if (expInput.errors?.['min']) {
+              Experience cannot be negative
+            }
+            @if (expInput.errors?.['max']) {
+              Experience cannot exceed 50 years
+            }
+          </div>
+        }
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="crewForm.invalid">
+        Register Crew Member
+      </button>
+    </form>
+  </div>
+
+  @if (registeredCrew.length > 0) {
+    <div class="registered-list">
+      <h2>Registered Crew Members</h2>
+      <div class="crew-cards">
+        @for (member of registeredCrew; track $index) {
+          <div class="crew-card">
+            <h3>{{ member.name }}</h3>
+            <p><strong>Role:</strong> {{ member.role }}</p>
+            <p><strong>Experience:</strong> {{ member.experience }} years</p>
+            <p><strong>Email:</strong> {{ member.email }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>
