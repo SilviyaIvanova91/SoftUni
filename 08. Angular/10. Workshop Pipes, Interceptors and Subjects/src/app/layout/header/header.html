@@ -1,0 +1,51 @@
+<header>
+  <div class="mini-navbar-wrap">
+    <div class="logo-wrap">
+      <img src="/images/logo.png" />
+      <p class="logo">SoftUni Forum</p>
+    </div>
+    <div class="mini-navbar">
+      @if (!isLoggedIn()) {
+        <ul>
+          <li>
+            <a routerLink="/login" routerLinkActive="active">Login</a>
+          </li>
+          <li>
+            <a routerLink="/register" routerLinkActive="active">Register</a>
+          </li>
+        </ul>
+      } @else {
+        <ul>
+          <li>
+            <a routerLink="/profile">{{ username() }}'s profile</a>
+          </li>
+          <li>
+            <a (click)="onLogout()">Logout</a>
+          </li>
+        </ul>
+      }
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li>
+        <a routerLink="/themes" routerLinkActive="active">Themes</a>
+      </li>
+      <li>
+        <a routerLink="/add-theme" routerLinkActive="active">New Theme</a>
+      </li>
+    </ul>
+  </nav>
+  @if (notification()) {
+    <p
+      class="notification"
+      [class.error-message]="notification()?.type === 'error'"
+      [class.success-message]="notification()?.type === 'success'"
+    >
+      {{ notification()?.message }}
+    </p>
+  }
+</header>
