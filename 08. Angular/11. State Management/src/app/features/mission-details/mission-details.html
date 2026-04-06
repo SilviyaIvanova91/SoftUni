@@ -1,0 +1,35 @@
+<div class="mission-detail">
+  @if (mission) {
+    <div class="mission-header">
+      <h1>{{ mission.name }}</h1>
+      <span class="status status-{{ mission.status }}">{{ mission.status }}</span>
+    </div>
+
+    <div class="mission-info">
+      <div class="info-row">
+        <span class="label">Destination:</span>
+        <span class="value">{{ mission.destination }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Launch Date:</span>
+        <span class="value">{{ mission.launchDate }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Crew Size:</span>
+        <span class="value">{{ mission.crew }} astronauts</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Mission ID:</span>
+        <span class="value">#{{ mission.id }}</span>
+      </div>
+    </div>
+
+    <a routerLink="/missions" class="back-btn">Back to Missions</a>
+  } @else {
+    <div class="not-found">
+      <h2>Mission Not Found</h2>
+      <p>The requested mission does not exist.</p>
+      <a routerLink="/missions" class="back-btn">Back to Missions</a>
+    </div>
+  }
+</div>

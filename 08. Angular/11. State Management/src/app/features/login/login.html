@@ -1,0 +1,17 @@
+<div class="login">
+  <div class="login-card">
+    <h1>Control Login</h1>
+
+    @if (!(isLoggedIn$ | async)) {
+      <p class="info-text">Enter access to Command Center</p>
+      <button (click)="onLogin()" class="btn btn-login">🚀 Login</button>
+    } @else {
+      @if (user$ | async; as user) {
+        <p class="status-logged">Welcome, {{ user.username }}</p>
+        <p class="user-role">Role: {{ user.role }}</p>
+      }
+
+      <button (click)="onLogout()" class="btn btn-logout">Logout</button>
+    }
+  </div>
+</div>

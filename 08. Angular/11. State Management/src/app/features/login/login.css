@@ -1,0 +1,102 @@
+.login {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.login-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-card h1 {
+  margin: 0 0 16px 0;
+  color: #38bdf8;
+}
+
+.description {
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.btn {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-login {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-login:hover {
+  background: #16a34a;
+}
+
+.btn-logout {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-logout:hover {
+  background: #dc2626;
+}
+
+.hint {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.status-logged {
+  color: #22c55e;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.info-section {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.info-section h3 {
+  margin: 0 0 12px 0;
+  color: #e2e8f0;
+}
+
+.info-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #94a3b8;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+}
+
+.info-section code {
+  background: #0f172a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #38bdf8;
+  font-size: 13px;
+}

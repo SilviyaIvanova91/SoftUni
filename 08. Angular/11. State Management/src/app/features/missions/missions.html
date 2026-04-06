@@ -1,0 +1,24 @@
+<div class="missions">
+  <h1>Here see the missions</h1>
+
+  <p class="highlight-demo" appHighlight="#fef08a">Hover over for surprise!</p>
+
+  <div class="mission-grid">
+    @for (mission of missions$ | async; track mission.id) {
+      <div class="mission-card" appHighlight="#1e3a5f">
+        <div class="mission-status status-{{ mission.status }}">
+          <span>{{ mission.status | missionStatus }}</span>
+        </div>
+        <h3>{{ mission.name }}</h3>
+        <p class="destination">{{ mission.destination }}</p>
+        <p class="launch-date">Launch: {{ mission.launchDate | timeUntil }}</p>
+        <p class="crew">Crew: {{ mission.crew }} astronauts</p>
+
+        <div class="mission-actions">
+          <a [routerLink]="['/missions', mission.id]" class="details-btn"> View Details </a>
+          <button class="delete-btn" (click)="onDelete(mission.id)">Delete</button>
+        </div>
+      </div>
+    }
+  </div>
+</div>
