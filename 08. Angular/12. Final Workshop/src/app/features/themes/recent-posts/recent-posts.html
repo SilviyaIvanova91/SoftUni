@@ -1,0 +1,10 @@
+<aside>
+  <div class="aside">
+    <h2 class="title">Recent posts</h2>
+    <div>
+      @for (post of posts; track post._id) {
+        <app-post-item [post]="post" />
+      }
+    </div>
+  </div>
+</aside>

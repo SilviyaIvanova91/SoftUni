@@ -1,0 +1,57 @@
+<div class="container">
+  <form class="login" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <fieldset>
+      <h2>Login Form</h2>
+
+      <p class="field field-icon">
+        <label for="email"
+          ><span><i class="fas fa-envelope"></i></span
+        ></label>
+        <input
+          appInputError
+          class="input-error"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john.doe@gmail.com"
+          formControlName="email"
+        />
+      </p>
+
+      @if (loginForm.get('email')?.touched && loginForm.get('email')?.invalid) {
+        <p class="error">Email is not valid!</p>
+      }
+
+      <p class="field field-icon">
+        <label for="password"
+          ><span><i class="fas fa-lock"></i></span
+        ></label>
+        <input
+          appInputError
+          type="password"
+          name="password"
+          id="password"
+          placeholder="******"
+          formControlName="password"
+        />
+      </p>
+
+      @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
+        <p class="error">Password must be at least 5 characters!</p>
+      }
+
+      @if (loginForm.invalid && loginForm.touched) {
+        <p class="error">You can't continue until you provide valid data!</p>
+      }
+
+      <button type="submit" [disabled]="loginForm.invalid || isLoading">
+        {{ isLoading ? 'Logging in...' : 'Login' }}
+      </button>
+
+      <p class="text-center">
+        Have an account?
+        <a routerLink="/register">Register</a>
+      </p>
+    </fieldset>
+  </form>
+</div>

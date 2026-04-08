@@ -1,0 +1,10 @@
+<main>
+  <div class="theme-title">
+    @if (isLoading$ | async) {
+      <p>Loading themes...</p>
+    }
+    @for (theme of themes$ | async; track theme._id) {
+      <app-theme-item [theme]="theme" />
+    }
+  </div>
+</main>
