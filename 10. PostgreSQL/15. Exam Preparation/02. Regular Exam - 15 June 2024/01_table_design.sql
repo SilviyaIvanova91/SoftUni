@@ -1,0 +1,68 @@
+CREATE TABLE accounts (
+	id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	username VARCHAR(30) NOT NULL UNIQUE,
+	password VARCHAR(30) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	gender CHAR(1) NOT NULL Check (gender IN ('M', 'F')),
+	age int NOT NULL,
+	job_title VARCHAR(40) NOT NULL,
+	ip VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE addresses  (
+	id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	street VARCHAR(30) NOT NULL,
+	town varchar(30) NOT NULL,
+	country VARCHAR(30) NOT NULL,
+	account_id int 
+		REFERENCES accounts(id) 
+		ON UPDATE CASCADE 
+		ON DELETE CASCADE 
+		NOT NULL 
+);
+
+CREATE TABLE photos (
+	id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	description TEXT,
+	capture_date TIMESTAMP NOT NULL,
+	views int DEFAULT 0 CHECK(views >= 0) NOT NULL
+);
+
+CREATE TABLE comments (
+	id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	content VARCHAR(255) NOT NULL,
+	published_on TIMESTAMP NOT NULL,
+	photo_id int
+		REFERENCES photos(id) 
+		ON UPDATE CASCADE 
+		ON DELETE CASCADE 
+		NOT NULL
+);
+
+CREATE TABLE accounts_photos  (
+	account_id int
+		REFERENCES accounts(id) 
+		ON UPDATE CASCADE 
+		ON DELETE CASCADE 
+		NOT NULL,
+	photo_id int
+		REFERENCES photos(id) 
+		ON UPDATE CASCADE 
+		ON DELETE CASCADE 
+		NOT NULL,
+	PRIMARY KEY (account_id, photo_id)
+);
+
+CREATE TABLE likes (
+	id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	photo_id int
+		REFERENCES photos(id) 
+		ON UPDATE CASCADE 
+		ON DELETE CASCADE 
+		NOT NULL,
+	account_id int
+		REFERENCES accounts(id) 
+		ON UPDATE CASCADE 
+		ON DELETE CASCADE 
+		NOT NULL	
+);
